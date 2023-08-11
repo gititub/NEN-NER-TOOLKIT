@@ -1,0 +1,7 @@
+# pip install -r requirements.txt
+requests==2.22.0
+pandas==1.1.5
+nltk==3.6.2
+openpyxl==3.0.10
+selenium
+beautifulsoup4
