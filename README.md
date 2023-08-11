@@ -13,7 +13,7 @@ cd test; pip install -r requirements.txt
 
 $ python ptc_extract_pmids.py [file_path_pmids] [output_format] [output_filename]
 
-example: 
+Run example: 
 ```
 python ptc_extract_pmids.py pmids.tsv biocjson output_pmids.json
 ```
@@ -32,7 +32,7 @@ python bern_extract_pmids.py list_of_pmids.txt output_file.json
 
 $ python ptc_extract_ann.py [file_path_pmcs] [output_format] [output_filename]
 
-example:
+Run example:
 ```
 python ptc_extract_pmc.py pmcs.txt biocjson output_pmc.json
 ```
@@ -48,7 +48,7 @@ Plain text is limited to 5000 characters. To expedite the process, you can distr
 
 $ python download_fulltext_bern.py [filepath_pmcs] [output_dir]
 
-example: 
+Run example: 
 ```
 python download_fulltext_bern.py pmcs.txt bern_ft
 ```
