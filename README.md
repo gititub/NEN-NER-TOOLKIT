@@ -57,3 +57,8 @@ python download_fulltext_bern.py pmcs.txt bern_ft
 From PDF files:
 
 $ python convert_pdf.py [pdf_directory] [output_directory]
+
+Run example: 
+```
+python convert_pdf.py gkw943.pdf bern_ft
+```
