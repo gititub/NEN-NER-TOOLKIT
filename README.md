@@ -62,3 +62,22 @@ Run example:
 ```
 python convert_pdf.py gkw943.pdf bern_ft
 ```
+
+## NER and NEN from query
+
+Pubmed abstracts
+
+$ python ptc_extract_pmids_query.py [query] [output_format] [output_filename]
+
+Run example: 
+```
+python ptc_extract_pmids_query.py 'melanoma' df output_df.tsv
+```
+PMC articles
+
+#python ptc_extract_pmc_query.py [query] [output_format] [output_filename]
+
+Run example: 
+```
+python ptc_extract_pmc_query.py 'breast cancer' biocjson output_pmc2.json
+```
