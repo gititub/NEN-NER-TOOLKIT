@@ -65,9 +65,9 @@ python convert_pdf.py gkw943.pdf bern_ft
 
 ## NER and NEN from query
 
-This command will search for PMC articles related to a query, for example "breast cancer", and save the results in the specified output file in biocjson or tsv format. The fourth command-line argument is the number of IDs to retrieve.
+This command will search for PMC articles related to a query, for example *biotin*, using Bio.Entrez (Spaces may be replaced by '+' signs). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
 
-ESearch searches and retrieves primary IDs (for use in EFetch, ELink and ESummary) and term translations, and optionally retains results for future use in the user’s environment.
+Entrez.ESearch searches and retrieves primary IDs and term translations, and optionally retains results for future use in the user’s environment. The fourth command-line argument is the number of IDs to retrieve.
 
 The last command-line argument is the oldest publication date. If you don't want to filter by date, simply omit the --pub_date argument.
 
@@ -77,7 +77,7 @@ $ python ptc_extract_pmids_query.py [query] [output_format] [output_filename] [m
 
 Run example: published after January 1, 2023
 ```
-python ptc_extract_pmids_query.py 'melanoma' df output_df.tsv 50 --pub_date "2023/01/01"
+python ptc_extract_pmids_query.py biotin df output_df.tsv 50 --pub_date "2023/01/01"
 ```
 
 **PMC articles**
@@ -86,5 +86,5 @@ python ptc_extract_pmids_query.py 'melanoma' df output_df.tsv 50 --pub_date "202
 
 Run example: 
 ```
-python ptc_extract_pmc_query.py 'breast cancer' biocjson output_pmc2.json 35
+python ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
 ```
