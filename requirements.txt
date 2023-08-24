@@ -5,3 +5,8 @@ nltk==3.6.2
 openpyxl==3.0.10
 selenium
 beautifulsoup4
+PyPDF2 
+tqdm
+biopython
+Bio
+argparse
