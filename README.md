@@ -60,7 +60,7 @@ $ python convert_pdf.py [pdf_directory] [output_directory]
 
 Run example: 
 ```
-python convert_pdf.py pdf_files bern_ft_pdf
+python convert_pdf.py pdf_files bern_ft/bern_pdf
 ```
 Then, you can run BERN2:
 
