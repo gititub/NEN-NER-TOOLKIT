@@ -42,9 +42,9 @@ python ptc_extract_pmc.py pmcs.txt df output_pmc.tsv
 
 ## NER and NEN for plain text with BERN2
 
-$ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
+Plain text is limited to 5000 characters. To expedite the process, you can distribute the texts (each no longer than 5000 characters) into subdirectories within the designated input directory (with no more than 120 files per subdirectory). This process is parallelized to concurrently process the subdirectories. The outcome is acquired in a file bearing the same name as the subdirectory, following the specified format (JSON or TSV) – one result file per subdirectory. 
 
-Plain text is limited to 5000 characters. To expedite the process, you can distribute the texts (each no longer than 5000 characters) into subdirectories within the designated input directory (with no more than 120 files per subdirectory). This process is parallelized to concurrently process the subdirectories. The outcome is acquired in a file bearing the same name as the subdirectory, following the specified format (JSON or TSV) – one result file per subdirectory. You can download the full text automatically divided into subdirectories yourself, from a PMC list or from a folder with pdf files.
+You can download the full text automatically divided into subdirectories yourself, from a PMC list or from a folder with pdf files.
 
 From PMC list:
 
@@ -60,7 +60,15 @@ $ python convert_pdf.py [pdf_directory] [output_directory]
 
 Run example: 
 ```
-python convert_pdf.py gkw943.pdf bern_ft
+python convert_pdf.py pdf_files bern_ft_pdf
+```
+Then, you can run BERN2:
+
+$ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
+
+Run example: 
+```
+python bern_extract_ann.py bern_ft bern_results_ft df
 ```
 
 ## NER and NEN from query
