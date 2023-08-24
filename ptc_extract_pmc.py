@@ -1,4 +1,4 @@
-#python ptc_extract_ann.py [file_path_pmcs] [output_format] [output_filename]
+#python ptc_extract_pmc.py [file_path_pmcs] [output_format] [output_filename]
 #example: python ptc_extract_pmc.py pmcs.txt biocjson output_pmc.json
 import os
 import requests
@@ -32,6 +32,7 @@ def extract_pubtator_from_pmcs(pmcs, output):
             print("Error parsing JSON data:", e)
             print("URL:", url)
             print("Response:", response.content)
+            error_sum += 1
         else:
             list_of_pubtators.append(json_data)
             pmc_sum += 1
