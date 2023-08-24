@@ -23,10 +23,10 @@ python ptc_extract_pmids.py pmids.tsv df output_df.tsv
 ## NER and NEN for PubMed abstracts with BERN2
 
 ```
-python bern_extract_pmids.py list_of_pmids.txt output_file.tsv
+python bern_extract_pmids.py pmids2.csv output_file.tsv
 ```
 ```
-python bern_extract_pmids.py list_of_pmids.txt output_file.json
+python bern_extract_pmids.py pmids.tsv output_file.json
 ```
 ## NER and NEN for PMC full-text articles with PubTator
 
