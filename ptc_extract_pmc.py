@@ -149,7 +149,7 @@ if output_format == 'biocjson':
 elif output_format == 'df':
     # Save the merged DataFrame to a CSV file with output_filename
     merged_df = extract_pubtator_from_pmcs(pmcs, 'df')
-    merged_df.to_csv(output_filename, index=False)
+    merged_df.to_csv(output_filename, sep='\t', index=False)
     print(f"DataFrame saved to {output_filename}")
 else:
     print("Invalid output format. Please choose 'biocjson' or 'df'.")
