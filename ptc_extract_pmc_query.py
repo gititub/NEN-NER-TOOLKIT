@@ -1,5 +1,5 @@
 #python ptc_extract_pmc_query.py [query] [output_format] [output_filename] [retmax]
-#example: python ptc_extract_pmc_query.py 'breast cancer' biocjson output_pmc2.json 30
+#example: python ptc_extract_pmc_query.py biotin biocjson output_pmc2.json 30
 import os
 import requests
 import json
@@ -161,7 +161,7 @@ if output_format == 'biocjson':
 elif output_format == 'df':
     # Save the merged DataFrame to a CSV file with output_filename
     merged_df = extract_pubtator_from_pmcs(pmc_ids, 'df')
-    merged_df.to_csv(output_filename, index=False)
+    merged_df.to_csv(output_filename, sep='\t', index=False)
     print(f"DataFrame saved to {output_filename}")
 else:
     print("Invalid output format. Please choose 'biocjson' or 'df'.")
