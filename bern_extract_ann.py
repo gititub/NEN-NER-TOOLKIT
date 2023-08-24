@@ -19,9 +19,9 @@ def process_file(file_path):
 
         try:
             result = requests.post(url, json={'text': text}).json()
-            pattern = r'PMC\d+'
+            pattern = r'\/([^\/]+)\.txt$'
             match = re.search(pattern, file_path)
-            pmid = match.group()
+            pmid = match.group(1)
             result['pmid'] = pmid
             results.append(result)
         except json.JSONDecodeError as e:
