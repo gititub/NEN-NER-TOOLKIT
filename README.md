@@ -30,7 +30,7 @@ python bern_extract_pmids.py pmids.tsv output_file.json
 ```
 ## NER and NEN for PMC full-text articles with PubTator
 
-$ python ptc_extract_ann.py [file_path_pmcs] [output_format] [output_filename]
+$ python ptc_extract_pmc.py [file_path_pmcs] [output_format] [output_filename]
 
 Run example:
 ```
