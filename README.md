@@ -97,7 +97,7 @@ Run example:
 python ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
 ```
 
-## Convert pmids in PMCids
+## PMC ID converter
 
 Here, pmids is your input file containing the list of pmids (tsv, csv and txt format allowed), output_directory is the directory where you want to save the output file, and _pmc is the suffix you want to add to the output file's name. This script will read the input pmids, retrieve PMC IDs, and save the output file in the specified directory with the desired name.
 
