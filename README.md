@@ -60,7 +60,7 @@ $ python convert_pdf.py [pdf_directory] [output_directory]
 
 Run example: 
 ```
-python convert_pdf.py pdf_files bern_ft_pdf/subdir
+python convert_pdf.py pdf_files bern_ft_pdf
 ```
 Then, you can run BERN2:
 
@@ -68,7 +68,7 @@ $ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
 
 Run example: 
 ```
-python bern_extract_ann.py bern_ft_pdf bern_results_pdf df
+python bern_extract_ann.py bern_ft_pdf bern_ft_pdf_results df
 ```
 
 ## NER and NEN from query
