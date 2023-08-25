@@ -90,9 +90,20 @@ python ptc_extract_pmids_query.py biotin df output_df.tsv 50 --pub_date "2023/01
 
 **PMC articles**
 
-#python ptc_extract_pmc_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
+$ python ptc_extract_pmc_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
 
 Run example: 
 ```
 python ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
+```
+
+## Convert pmids in PMCids
+
+Here, pmids is your input file containing the list of pmids (tsv, csv and txt format allowed), output_directory is the directory where you want to save the output file, and _pmc is the suffix you want to add to the output file's name. This script will read the input pmids, retrieve PMC IDs, and save the output file in the specified directory with the desired name.
+
+$ python pmc_from_pmid.py [pmids] [output_directory] [_pmc]
+ 
+Run example: 
+```
+python pmc_from_pmid.py pmids.tsv '.' _pmc
 ```
