@@ -51,6 +51,11 @@ From PMC list:
 $ python download_fulltext_bern.py [filepath_pmcs] [output_dir]
 
 Run example: 
+
+```
+python download_pmc_fulltext.py pmcs.txt bern_ft
+```
+Or using Chromedriver:
 ```
 python download_fulltext_bern.py pmcs.txt bern_ft
 ```
