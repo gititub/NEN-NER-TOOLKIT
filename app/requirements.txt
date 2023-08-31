@@ -1,0 +1,10 @@
+shiny
+requests
+pandas
+json
+shinyswatch
+beautifulsoup4
+PyPDF2
+tqdm
+biopython
+Bio
