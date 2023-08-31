@@ -112,3 +112,11 @@ Run example:
 ```
 python pmc_from_pmid.py pmids.tsv '.' _pmc
 ```
+## NER-App
+
+Run NER-App in Linux: 
+```
+cd app; pip install -r requirements.txt
+shiny run --reload
+```
+Run NER-App in Windows: 
