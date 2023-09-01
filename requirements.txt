@@ -11,5 +11,4 @@ biopython
 Bio
 argparse
 shiny
-json
 shinyswatch
