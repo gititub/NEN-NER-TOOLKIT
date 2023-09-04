@@ -204,7 +204,6 @@ def query_plain(text, output):
     extracted_data = []
     annotations = result.get('annotations', [])
     for annotation in annotations:
-        pmid = result.get('pmid')
         annotation_id = annotation.get('id', [])
         is_neural_normalized = annotation.get('is_neural_normalized')
         prob = annotation.get('prob')
@@ -216,7 +215,6 @@ def query_plain(text, output):
         span_end = annotation['span']['end']
 
         extracted_item = {
-            'PMC': pmid,
             'id': annotation_id,
             'is_neural_normalized': is_neural_normalized,
             'prob': prob,
@@ -230,7 +228,6 @@ def query_plain(text, output):
 
         extracted_data.append(extracted_item)
     df = pd.DataFrame(extracted_data)
-    df['PMC'] = df['PMC'].str.replace(r'\(.*\)', '', regex=True)
     df['dbSNP'] = df['normalized_name'].str.extract(r'(?:rs|RS#:)(\d+)', expand=False)
     df['dbSNP'] = 'rs' + df['dbSNP']
 
