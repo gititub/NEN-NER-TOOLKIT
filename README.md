@@ -116,6 +116,8 @@ python pmc_from_pmid.py pmids.tsv '.' _pmc
 ```
 ## NER&NEN-App
 
+![Screenshot](Screenshot 2023-09-04 at 12-12-26 Screenshot.png)
+
 Run NER-App in Linux: 
 ```
 cd app; pip install -r requirements.txt
