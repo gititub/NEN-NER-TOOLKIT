@@ -116,7 +116,7 @@ python pmc_from_pmid.py pmids.tsv '.' _pmc
 ```
 ## NER&NEN-App
 
-![Alt text]([https://github.com/gititub/test/blob/main/Screenshot%202023-09-04%20at%2012-12-26%20Screenshot.png)
+![Alt text]([https://github.com/gititub/test/blob/main/Screenshot%202023-09-04%20at%2012-12-26%20Screenshot.png])
 
 Run NER-App in Linux: 
 ```
