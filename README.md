@@ -127,7 +127,20 @@ Run NER-App in Linux:
 cd app; pip install -r requirements.txt
 shiny run --reload
 ```
-Run NER-App in Windows: 
+You can also run NER-App in Windows
+
+
+Run NEN-App in Linux: 
+```
+cd appNEN; pip install -r requirements.txt
+shiny run --reload
+```
+
+<img
+  src="https://github.com/gititub/test/blob/main/Screenshot2.png"
+  alt="Alt text"
+  title="NER&NEN app"
+  style="display: inline-block; margin: 0 auto; max-width: 30px">
 
 ## NER with SynVar and LitVar
 
