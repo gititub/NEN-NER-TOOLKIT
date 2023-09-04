@@ -117,9 +117,9 @@ python pmc_from_pmid.py pmids.tsv '.' _pmc
 ## NER&NEN-App
 
 <img
-  src="https://github.com/gititub/test/blob/main/Screenshot%202023-09-04%20at%2012-12-26%20Screenshot.png"
+  src="https://github.com/gititub/test/blob/main/Screenshot.png"
   alt="Alt text"
-  title="Optional title"
+  title="NER&NEN app"
   style="display: inline-block; margin: 0 auto; max-width: 30px">
 
 Run NER-App in Linux: 
