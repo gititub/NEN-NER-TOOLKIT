@@ -112,7 +112,7 @@ Run example:
 ```
 python pmc_from_pmid.py pmids.tsv '.' _pmc
 ```
-## NER-App
+## NER&NEN-App
 
 Run NER-App in Linux: 
 ```
@@ -120,3 +120,13 @@ cd app; pip install -r requirements.txt
 shiny run --reload
 ```
 Run NER-App in Windows: 
+
+## NER with SynVar and LitVar
+
+To run example use test.tsv or test2.csv as input file, or use your own data with 3 columns: pmid, gene, HGVS. Returns two files in the specified output directory, one with LitVar normalization and the second one with SynVar normalization.
+
+$ python normalize.py [input_file] [output_directory] 
+
+```
+python normalize.py test2.csv '.'
+```
