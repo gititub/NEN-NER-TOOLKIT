@@ -1,31 +1,25 @@
 import requests
 import json
 import pandas as pd
-from Bio import Entrez
 from bs4 import BeautifulSoup
 
-import datetime
-import time
 
 def get_gene_info_by_gene_number(gene_numbers):
     data = []
-
-    number_list = gene_numbers.split(',')
+    number_list = [num.strip() for num in gene_numbers.split(',') if num.strip()]
     for number in number_list:
         url = f"https://www.ncbi.nlm.nih.gov/gene/{number}"
-
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
-
         word_element = soup.find('dd', class_='noline')
         word = word_element.contents[0] if word_element else "Not Found"
         sp_element = soup.find('dd', class_='tax')
         sp = sp_element.find('a').contents[0] if sp_element else "Not Found"
-
         data.append([number, word, sp, url])
 
     df = pd.DataFrame(data, columns=['gene', 'gene_name', 'sp', 'url'])
     return df
+
 
 def get_gene_info_by_gene_name(gene, species=None):
     data = []
@@ -56,21 +50,25 @@ def get_gene_info_by_gene_name(gene, species=None):
     df = pd.DataFrame(data, columns=['gene_name', 'sp', 'id', 'url'])
     return df
 
-def get_gene_info_by_rsid(rsid):
+
+def get_gene_info_by_rsid(rsids):
     data = []
-    url = f"https://www.ncbi.nlm.nih.gov/snp/{rsid}"
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    rsid_list = [num.strip() for num in rsids.split(',') if num.strip()]
+    for rsid in rsid_list:
+        url = f"https://www.ncbi.nlm.nih.gov/snp/{rsid}"
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        sp_element = soup.select_one(
+            "#main_content > main > div > div.summary-box.usa-grid-full > dl:nth-child(1) > dd.species_name")
+        sp = sp_element.get_text() if sp_element else "Species Not Found"
+        gene_element = soup.select_one(
+            "#main_content > main > div > div.summary-box.usa-grid-full > dl:nth-child(2) > dd:nth-child(4) > span")
+        gene = gene_element.get_text() if gene_element else "Gene Not Found"
 
-    sp = soup.find('dd', class_='species_name').contents[0]
-    gene_dd = soup.find_all('dl', class_='usa-width-one-half')[1].find_all('dd')[1]
-    gene_element = gene_dd.find('span') if gene_dd else None
-    gene = gene_element.get_text() if gene_element else "Not Found"
-
-    data.append([rsid, sp, gene, url])
-
+        data.append([rsid, sp, gene, url])
     df = pd.DataFrame(data, columns=['rsid', 'sp', 'gene:variant type', 'link'])
     return df
+
 
 def fetch_litvar_data(file):
     file['litvar'] = file['gene'] + " " + file['HGVS']
@@ -101,6 +99,7 @@ def fetch_litvar_data(file):
 
     litvar = pd.DataFrame(data_dict)
     return litvar
+
 
 def litvar_data(input):
     query_list = input.split(',')
