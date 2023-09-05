@@ -18,9 +18,10 @@ def ui_card(title, *args):
         ),
     )
 
-
 app_ui = ui.page_fluid(
-    shinyswatch.theme.superhero(),
+    shinyswatch.theme.minty(),
+    # shinyswatch.theme.darkly(),
+    # shinyswatch.theme.sketchy(),
     # ui.include_css("style.css"),
     ui.h2("Biomedical Entity Normalization"),
     ui.input_select(
@@ -48,7 +49,6 @@ app_ui = ui.page_fluid(
     ui.output_data_frame("table"),
 )
 
-
 def server(input, output, session):
     @output
     @render.text
@@ -56,89 +56,47 @@ def server(input, output, session):
         if input.input_type() == "gene":
             return "e.g. BRAF or braf homo sapiens"
         elif input.input_type() == 'gene_name':
-            return "e.g. 7157"
+            return "e.g. 7157,657,4234"
         elif input.input_type() == 'gene_info':
             return "e.g. rs5030858"
         else:
             return "e.g. BRAFp.V600E (or upload CSV file with two mandatory columns,'gene' and 'HGVS)"
 
-
-    @reactive.Effect
-    @output
-    @render.data_frame
-    @reactive.event(input.action)
-    def table():
+    @reactive.Calc
+    def result():
         if input.input_type() == "gene":
             result = get_gene_info_by_gene_name(input.id())
-            if input.all_results():
-                return render.DataGrid(
-                    result,
-                    width="100%",
-                    height="100%",
-                    filters=input.filters()  # True,
-                )
-            else:
-                return result.head(15)
         elif input.input_type() == 'gene_name':
             result = get_gene_info_by_gene_number(input.id())
-            if input.all_results():
-                return render.DataGrid(
-                    result,
-                    width="100%",
-                    height="100%",
-                    filters=input.filters()  # True,
-                )
-            else:
-                return result.head(15)
         elif input.input_type() == 'gene_info':
             result = get_gene_info_by_rsid(input.id())
-            if input.all_results():
-                return render.DataGrid(
-                    result,
-                    width="100%",
-                    height="100%",
-                    filters=input.filters()  # True,
-                )
-            else:
-                return result.head(15)
-        else:
-            if input.file():
-                f: list[FileInfo] = input.file()
-                file = pd.read_csv(f[0]["datapath"], header=0, sep='\t')
-                return fetch_litvar_data(file)
-            else:
-                return litvar_data(input.id())
-
-    @session.download()
-    def download():
-        if input.input_type() == "gene":
-            result = get_gene_info_by_gene_name(input.id())
-            result.to_csv('results.tsv', sep='\t', index=False)
-            path = os.path.join(os.path.dirname(__file__), "results.tsv")
-            return path
-        elif input.input_type() == 'gene_name':
-            result = get_gene_info_by_gene_number(input.id())
-            result.to_csv('results.tsv', sep='\t', index=False)
-            path = os.path.join(os.path.dirname(__file__), "results.tsv")
-            return path
-        elif input.input_type() == 'gene_info':
-            result = get_gene_info_by_rsid(input.id())
-            result.to_csv('results.tsv', sep='\t', index=False)
-            path = os.path.join(os.path.dirname(__file__), "results.tsv")
-            return path
         else:
             if input.file():
                 f: list[FileInfo] = input.file()
                 file = pd.read_csv(f[0]["datapath"], header=0, sep='\t')
                 result = fetch_litvar_data(file)
-                result.to_csv('results.tsv', sep='\t', index=False)
-                path = os.path.join(os.path.dirname(__file__), "results.tsv")
-                return path
             else:
                 result = litvar_data(input.id())
-                result.to_csv('results.tsv', sep='\t', index=False)
-                path = os.path.join(os.path.dirname(__file__), "results.tsv")
-                return path
+        return result
 
+    @output
+    @render.data_frame
+    @reactive.event(input.action)
+    def table():
+        if input.all_results():
+            return render.DataGrid(
+                result(),
+                width="100%",
+                height="100%",
+                filters=input.filters()  # True,
+            )
+        else:
+            return result.head(15)
+
+    @session.download()
+    def download():
+        result().to_csv('results.tsv', sep='\t', index=False)
+        path = os.path.join(os.path.dirname(__file__), "results.tsv")
+        return path
 
 app = App(app_ui, server)
