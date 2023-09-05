@@ -2,10 +2,9 @@ import requests
 import json
 import pandas as pd
 from Bio import Entrez
-import datetime
 
 def extract_pubtator(ids, output):
-    id_list = ids.split(',')
+    id_list = [num.strip() for num in ids.split(',') if num.strip()]
     results_json = []
     results = []
 
@@ -86,6 +85,9 @@ def extract_pubtator(ids, output):
 
         results.append(df)
 
+    if len(results) == 0:
+        print("No dataframes to concatenate.")
+
     if output == 'biocjson':
         return json.dumps(results_json, indent=4)
     elif output == 'df':
@@ -96,7 +98,7 @@ def extract_pubtator(ids, output):
 
 
 def extract_pubtator_from_pmcs(ids, output):
-    id_list = ids.split(',')
+    id_list = [num.strip() for num in ids.split(',') if num.strip()]
     list_of_pubtators = []
     error_ids = []
     results = []
@@ -188,6 +190,9 @@ def extract_pubtator_from_pmcs(ids, output):
         })
         results.append(df)
 
+    if len(results) == 0:
+        print("No dataframes to concatenate.")
+
     if output == 'biocjson':
         return json.dumps(list_of_pubtators, indent=4)
     elif output == 'df':
@@ -227,6 +232,9 @@ def query_plain(text, output):
         }
 
         extracted_data.append(extracted_item)
+
+    if len(extracted_data) == 0:
+        print("No dataframes to concatenate.")
     df = pd.DataFrame(extracted_data)
     df['dbSNP'] = df['normalized_name'].str.extract(r'(?:rs|RS#:)(\d+)', expand=False)
     df['dbSNP'] = 'rs' + df['dbSNP']
@@ -349,6 +357,9 @@ def extract_pubtator_from_pmcs_query(query, pub_date, retmax, output):
 
         df = df[df['identifier'].notna()]
         df_list.append(df)
+
+    if len(df_list) == 0:
+        print("No dataframes to concatenate.")
 
     merged_df = pd.concat(df_list, ignore_index=True)
 
