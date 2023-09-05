@@ -22,17 +22,18 @@ app_ui = ui.page_fluid(
     ui.h3("Biomedical Entity Recognition"),
     ui.input_select(
         "input_type",
-        "id type",
+        "Query Type",
         {
             "PMC": "PMC",
-            "pmid": "pmid",
-            "plain_text": "plain text",
-            "query": "query",
+            "pmid": "PubMed ID",
+            "plain_text": "Plain Text",
+            "query": "Word in PubMed Central",
         },
-        selected='PMC',
+        selected='Plain Text',
     ),
-    ui.input_text_area("id", "PMC, pmid or plain text",
-                       placeholder='eg.PMC2882923 or 34216518 for pmids or biotin for query',
+    ui.input_text_area("id",
+                       "PMC or pmid (one or more, comma separated), word or plain text (less than 5000 characters)",
+                       placeholder='eg.PMC2882923 or 34216518 or Hardy&Weinberg for query',
                        width='800px', height='200px'),
     ui.input_date('x', 'Date from'),
     ui.input_numeric('retmax', 'Max. retrievals', value=25),
@@ -57,127 +58,61 @@ app_ui = ui.page_fluid(
 
 
 def server(input, output, session):
-    @reactive.Effect
+    # @reactive.Effect
     @output
     @render.text
     @reactive.event(input.action)
     def txt():
         if input.output_type() == 'biocjson':
-            if input.input_type() == "PMC":
-                return extract_pubtator_from_pmcs(input.id(), input.output_type())
-            elif input.input_type() == 'plain_text':
-                return query_plain(input.id(), input.output_type())
-            elif input.input_type() == 'pmid':
-                return extract_pubtator(input.id(), input.output_type())
+            if result():
+                return result()
             else:
-                return extract_pubtator_from_pmcs_query(input.id(), input.x(),
-                                                        input.retmax(),
-                                                        input.output_type())
+                return f"No results found. Try again."
+
+    @reactive.Calc
+    def result():
+        if input.input_type() == "PMC":
+            result = extract_pubtator_from_pmcs(input.id(), input.output_type())
+        elif input.input_type() == 'plain_text':
+            result = query_plain(input.id(), input.output_type())
+        elif input.input_type() == 'pmid':
+            result = extract_pubtator(input.id(), input.output_type())
+        else:
+            result = extract_pubtator_from_pmcs_query(input.id(), input.x(),
+                                                      input.retmax(),
+                                                      input.output_type())
+        return result
 
     @output
     @render.data_frame
     @reactive.event(input.action)
     def table():
         if input.output_type() == 'df':
-            if input.input_type() == "PMC":
-                result = extract_pubtator_from_pmcs(input.id(), input.output_type())
-                if input.all_results():
-                    return render.DataGrid(
-                        result,
-                        width="100%",
-                        height="100%",
-                        filters=input.filters()  # True,
-                    )
-                else:
-                    return result.head(15)
-            elif input.input_type() == 'plain_text':
-                result = query_plain(input.id(), input.output_type())
-                if input.all_results():
-                    return render.DataGrid(
-                        result,
-                        width="100%",
-                        height="100%",
-                        filters=input.filters()  # True,
-                    )
-                else:
-                    return result.head(15)
-            elif input.input_type() == 'pmid':
-                result = extract_pubtator(input.id(), input.output_type())
-                if input.all_results():
-                    return render.DataGrid(
-                        result,
-                        width="100%",
-                        height="100%",
-                        filters=input.filters()  # True,
-                    )
-                else:
-                    return result.head(15)
+            if input.all_results():
+                return render.DataGrid(
+                    result(),
+                    width="100%",
+                    height="100%",
+                    filters=input.filters()  # True,
+                )
             else:
-                result = extract_pubtator_from_pmcs_query(input.id(), input.x(),
-                                                        input.retmax(),
-                                                        input.output_type())
-                if input.all_results():
-                    return render.DataGrid(
-                        result,
-                        width="100%",
-                        height="100%",
-                        filters=input.filters()  # True,
-                    )
-                else:
-                    return result.head(15)
-
+                return render.DataGrid(
+                    result().head(15),
+                    width="100%",
+                    height="100%",
+                    filters=input.filters()  # True,
+                )
 
     @session.download()
     def download():
         if input.output_type() == 'df':
-            if input.input_type() == "PMC":
-                result = extract_pubtator_from_pmcs(input.id(), input.output_type())
-                result.to_csv('results.tsv', sep='\t', index=False)
-                path = os.path.join(os.path.dirname(__file__), "results.tsv")
-                return path
-            elif input.input_type() == 'plain_text':
-                result = query_plain(input.id(), input.output_type())
-                result.to_csv('results.tsv', sep='\t', index=False)
-                path = os.path.join(os.path.dirname(__file__), "results.tsv")
-                return path
-            elif input.input_type() == 'pmid':
-                result = extract_pubtator(input.id(), input.output_type())
-                result.to_csv('results.tsv', sep='\t', index=False)
-                path = os.path.join(os.path.dirname(__file__), "results.tsv")
-                return path
-            else:
-                result = extract_pubtator_from_pmcs_query(input.id(), input.x(),
-                                                          input.retmax(),
-                                                          input.output_type())
-                result.to_csv('results.tsv', sep='\t', index=False)
-                path = os.path.join(os.path.dirname(__file__), "results.tsv")
-                return path
+            result().to_csv('results.tsv', sep='\t', index=False)
+            path = os.path.join(os.path.dirname(__file__), "results.tsv")
+            return path
 
         elif input.output_type() == 'biocjson':
-            if input.input_type() == "PMC":
-                result = extract_pubtator_from_pmcs(input.id(), input.output_type())
-                with open('results.json', 'w') as json_file:
-                    json.dump(result, json_file, indent=4)
-                path = os.path.join(os.path.dirname(__file__), "results.json")
-                return path
-            elif input.input_type() == 'plain_text':
-                result = query_plain(input.id(), input.output_type())
-                with open('results.json', 'w') as json_file:
-                    json.dump(result, json_file, indent=4)
-                path = os.path.join(os.path.dirname(__file__), "results.json")
-                return path
-            elif input.input_type() == 'pmid':
-                result = extract_pubtator(input.id(), input.output_type())
-                with open('results.json', 'w') as json_file:
-                    json.dump(result, json_file, indent=4)
-                path = os.path.join(os.path.dirname(__file__), "results.json")
-                return path
-            else:
-                result = extract_pubtator_from_pmcs_query(input.id(), input.x(),
-                                                          input.retmax(),
-                                                          input.output_type())
-                with open('results.json', 'w') as json_file:
-                    json.dump(result, json_file, indent=4)
+            with open('results.json', 'w') as json_file:
+                json.dump(result(), json_file, indent=4)
                 path = os.path.join(os.path.dirname(__file__), "results.json")
                 return path
 
