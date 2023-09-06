@@ -22,6 +22,8 @@ python ptc_extract_pmids.py pmids.tsv df output_df.tsv
 ```
 ## NER and NEN for PubMed abstracts with BERN2
 
+$ python bern_extract_pmids.py [file_path_pmids] [output_filename]
+
 ```
 python bern_extract_pmids.py pmids2.csv output_file.tsv
 ```
