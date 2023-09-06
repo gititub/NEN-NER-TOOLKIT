@@ -50,10 +50,13 @@ You can download the full text automatically divided into subdirectories yoursel
 
 From PMC list:
 
+$ python download_pmc_fulltext.py [filepath_pmcs] [output_dir]
+
+Additionally, you can use **Chromedriver**:
+
 $ python download_fulltext_bern.py [filepath_pmcs] [output_dir]
 
 Run example: 
-
 ```
 python download_pmc_fulltext.py pmcs.txt bern_ft
 ```
@@ -61,7 +64,7 @@ Or using Chromedriver:
 ```
 python download_fulltext_bern.py pmcs.txt bern_ft
 ```
-From PDF files:
+From **PDF files**:
 
 $ python convert_pdf.py [pdf_directory] [output_directory]
 
@@ -69,7 +72,7 @@ Run example:
 ```
 python convert_pdf.py pdf_files bern_ft_pdf
 ```
-Then, you can run BERN2. This process usually takes a long time:
+Then, you can run **BERN2**. This process can take several minutes:
 
 $ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
 
