@@ -3,51 +3,66 @@ import json
 import shinyswatch
 import os
 from shiny import App, Inputs, Outputs, Session, reactive, render, req, ui
-from code import extract_pubtator, extract_pubtator_from_pmcs, query_plain, extract_pubtator_from_pmcs_query
-
-
-def ui_card(title, *args):
-    return (
-        ui.div(
-            {"class": "card mb-4"},
-            ui.div(title, class_="card-header"),
-            ui.div({"class": "card-body"}, *args),
-        ),
-    )
-
+from shiny.types import ImgData
+from code import count_characters, extract_pubtator, extract_pubtator_from_pmcs, query_plain, \
+    extract_pubtator_from_pmcs_query
 
 app_ui = ui.page_fluid(
     shinyswatch.theme.superhero(),
     # ui.include_css("style.css"),
-    ui.h3("Biomedical Entity Recognition"),
-    ui.input_select(
-        "input_type",
-        "Query Type",
-        {
-            "PMC": "PMC",
-            "pmid": "PubMed ID",
-            "plain_text": "Plain Text",
-            "query": "Word in PubMed Central",
-        },
-        selected='Plain Text',
+    ui.br(),
+    ui.row(
+        ui.column(
+            1,
+            ui.br(),
+        ),
+        ui.column(
+            2,
+            ui.output_image("imagen", height="90px"),
+        ),
+        ui.column(
+            6,
+            ui.h2("Biomedical Entity Recognition"),
+        ),
+    ),
+    ui.row(
+        ui.column(
+            4,
+            ui.input_select(
+                "input_type",
+                "Query Type",
+                {
+                    "PMC": "PMC",
+                    "pmid": "PubMed ID",
+                    "plain_text": "Plain Text",
+                    "query": "Word in PubMed Central",
+                },
+                selected='Plain Text',
+            ),
+        ),
+        ui.column(
+            4,
+            ui.input_select(
+                "output_type",
+                "Output type",
+                {
+                    "df": "Dataframe",
+                    "biocjson": "BioCjson"
+                },
+                selected="BioCjson",
+            ),
+
+        ),
     ),
     ui.input_text_area("id",
                        "PMC or pmid (one or more, comma separated), word or plain text (less than 5000 characters)",
                        placeholder='eg.PMC2882923 or 34216518 or Hardy&Weinberg for query',
                        width='800px', height='200px'),
-    ui.input_date('x', 'Date from'),
-    ui.input_numeric('retmax', 'Max. retrievals', value=25),
-    ui.input_select(
-        "output_type",
-        "Output type",
-        {
-            "df": "Dataframe",
-            "biocjson": "BioCjson"
-        },
-        selected="BioCjson",
-    ),
-    ui.input_switch("all_results", "View all results", True),
-    ui.input_switch("filters", "Filter complete results", True),
+    ui.output_text('ch'),
+    ui.br(),
+    ui.input_date('x', 'Date From (Only For Query):', value='2022-01-01'),
+    ui.input_numeric('retmax', 'Max. Retrievals (Only For Query):', value=25),
+    ui.input_switch("all_results", "Show All", True),
     ui.input_action_button(
         "action", "Submit", class_="btn-primary"
     ),
@@ -58,16 +73,18 @@ app_ui = ui.page_fluid(
 
 
 def server(input, output, session):
-    # @reactive.Effect
+    @output
+    @render.image
+    def imagen():
+        return {
+            "src": 'literatura.png',
+            "style": "width: 80px; max-height: 80px;",
+        }
+
     @output
     @render.text
-    @reactive.event(input.action)
-    def txt():
-        if input.output_type() == 'biocjson':
-            if result():
-                return result()
-            else:
-                return f"No results found. Try again."
+    def ch():
+        return f"Character counter: {count_characters(input.id())}"
 
     @reactive.Calc
     def result():
@@ -77,7 +94,7 @@ def server(input, output, session):
             result = query_plain(input.id(), input.output_type())
         elif input.input_type() == 'pmid':
             result = extract_pubtator(input.id(), input.output_type())
-        else:
+        elif input.input_type() == 'query':
             result = extract_pubtator_from_pmcs_query(input.id(), input.x(),
                                                       input.retmax(),
                                                       input.output_type())
@@ -93,15 +110,25 @@ def server(input, output, session):
                     result(),
                     width="100%",
                     height="100%",
-                    filters=input.filters()  # True,
+                    filters=True,
                 )
             else:
                 return render.DataGrid(
                     result().head(15),
                     width="100%",
                     height="100%",
-                    filters=input.filters()  # True,
+                    filters=True,
                 )
+
+    @output
+    @render.text
+    @reactive.event(input.action)
+    def txt():
+        if input.output_type() == 'biocjson':
+            if result():
+                return result()
+            else:
+                return f"No results found. Try again."
 
     @session.download()
     def download():
@@ -115,6 +142,11 @@ def server(input, output, session):
                 json.dump(result(), json_file, indent=4)
                 path = os.path.join(os.path.dirname(__file__), "results.json")
                 return path
+
+    @reactive.Effect
+    def _():
+        req(input.action())
+        ui.notification_show("Retrieving Entities!", duration=5, type="message")
 
 
 app = App(app_ui, server)
