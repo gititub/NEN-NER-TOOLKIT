@@ -369,3 +369,11 @@ def extract_pubtator_from_pmcs_query(query, pub_date, retmax, output):
         return merged_df
     else:
         print("Invalid output format. Please choose 'biocjson' or 'df'.")
+
+
+def count_characters(input_text):
+    character_count = len(input_text)
+    if character_count > 4990:
+        return "You exceeded the character limit"
+    else:
+        return character_count
