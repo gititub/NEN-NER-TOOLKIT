@@ -69,7 +69,7 @@ Run example:
 ```
 python convert_pdf.py pdf_files bern_ft_pdf
 ```
-Then, you can run BERN2:
+Then, you can run BERN2. This process usually takes a long time:
 
 $ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
 
