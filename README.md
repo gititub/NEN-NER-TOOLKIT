@@ -1,3 +1,4 @@
+
 # test
 This repository provides the code for automatic system to retrieve annotations of biomedical concepts such as genes and mutations in PubMed abstracts, PMC full-text articles or plain text.
 
@@ -129,16 +130,14 @@ python pmc_from_pmid.py pmids.tsv '.' _pmc
 
 Run NER-App in Linux: 
 ```
-cd app; pip install -r requirements.txt
-shiny run --reload
+cd app;shiny run --reload
 ```
 You can also run NER-App in Windows
 
 
 Run NEN-App in Linux: 
 ```
-cd appNEN; pip install -r requirements.txt
-shiny run --reload
+cd appNEN;shiny run --reload
 ```
 
 <img
