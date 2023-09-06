@@ -73,7 +73,10 @@ Run example:
 ```
 python convert_pdf.py pdf_files bern_ft_pdf
 ```
-Then, you can run **BERN2**. This process can take several minutes:
+Then, you can run **BERN2**. 
+
+⚠️ This process can take several minutes.
+
 
 $ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
 
@@ -123,10 +126,9 @@ python pmc_from_pmid.py pmids.tsv '.' _pmc
 ## NER&NEN-App
 
 <img
-  src="https://github.com/gititub/test/blob/main/Screenshot.png"
+  src="https://github.com/gititub/test/blob/main/app.png"
   alt="Alt text"
-  title="NER&NEN app"
-  style="display: inline-block; margin: 0 auto; max-width: 30px">
+  style="display: block; width:400px">
 
 Run NER-App in Linux: 
 ```
@@ -144,7 +146,7 @@ cd appNEN;shiny run --reload
   src="https://github.com/gititub/test/blob/main/Screenshot2.png"
   alt="Alt text"
   title="NER&NEN app"
-  style="display: inline-block; margin: 0 auto; max-width: 30px">
+  style="display: inline-block; margin: 10 auto; max-width: 20px">
 
 ## NER with SynVar and LitVar
 
