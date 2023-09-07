@@ -143,10 +143,9 @@ cd appNEN;shiny run --reload
 ```
 
 <img
-  src="https://github.com/gititub/test/blob/main/Screenshot2.png"
+  src="https://github.com/gititub/test/blob/main/appNEN.png"
   alt="Alt text"
-  title="NER&NEN app"
-  style="display: inline-block; margin: 10 auto; max-width: 20px">
+  style="display: block; width: 400px">
 
 ## NER with SynVar and LitVar
 
