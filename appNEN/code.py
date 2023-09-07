@@ -102,7 +102,7 @@ def fetch_litvar_data(file):
 
 
 def litvar_data(input):
-    query_list = input.split(',')
+    query_list = [num.strip() for num in input.split(',') if num.strip()]
     data_dict = {
         'Query': [],
         'rsid': [],
