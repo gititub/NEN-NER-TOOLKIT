@@ -130,23 +130,35 @@ python pmc_from_pmid.py pmids.tsv '.' _pmc
   alt="Alt text"
   style="display: block; width:400px">
 
-Run NER-App in Linux: 
+**Run NER-App in Linux:**
 ```
 cd app;shiny run --reload
 ```
-You can also run NER-App in Windows
+You can also run NER-App in Windows.  
+1. Make a query:  
+- PMC id (one or more, comma separated)  
+- PubMed id (one or more, comma separated)  
+- Plain Text (max. 5000 characters)  
+- Query: Word (replace space with ‘&’) + Publication Date + max. Retrievals
+2. Select output type  
 
 
-Run NEN-App in Linux: 
+**Run NEN-App in Linux:**
 ```
 cd appNEN;shiny run --reload
 ```
-
 <img
   src="https://github.com/gititub/test/blob/main/appNEN.png"
   alt="Alt text"
   style="display: block; width: 400px">
 
+1.	Make a query  
+- Variant Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV file with two mandatory columns,'gene' and 'HGVS. → dbSNP rs ID  
+- Gene Normalization to gene ID (one by one, only a gene name or gene + specie)  
+- Gene ID → Gene Name (one or more, comma separated)  
+- Rs id → Gene Info (one or more, comma separated)   
+2.	Download results  
+   
 ## NER with SynVar and LitVar
 
 To run example use test.tsv or test2.csv as input file, or use your own data with 3 columns: pmid, gene, HGVS. Returns two files in the specified output directory, one with LitVar normalization and the second one with SynVar normalization.
