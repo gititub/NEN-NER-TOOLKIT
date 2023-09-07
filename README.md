@@ -12,35 +12,35 @@ cd test; pip install -r requirements.txt
 
 ## NER and NEN for PubMed abstracts with PubTator
 
-$ python ptc_extract_pmids.py [file_path_pmids] [output_format] [output_filename]
+$ python source/ptc_extract_pmids.py [file_path_pmids] [output_format] [output_filename]
 
 Run example: 
 ```
-python ptc_extract_pmids.py pmids.tsv biocjson output_pmids.json
+python source/ptc_extract_pmids.py example/pmids.tsv biocjson output_pmids.json
 ```
 ```
-python ptc_extract_pmids.py pmids.tsv df output_df.tsv
+python source/ptc_extract_pmids.py example/pmids.tsv df output_df.tsv
 ```
 ## NER and NEN for PubMed abstracts with BERN2
 
-$ python bern_extract_pmids.py [file_path_pmids] [output_filename]
+$ python source/bern_extract_pmids.py [file_path_pmids] [output_filename]
 
 ```
-python bern_extract_pmids.py pmids2.csv output_file.tsv
+python source/bern_extract_pmids.py example/pmids2.csv output_file.tsv
 ```
 ```
-python bern_extract_pmids.py pmids.tsv output_file.json
+python source/bern_extract_pmids.py example/pmids.tsv output_file.json
 ```
 ## NER and NEN for PMC full-text articles with PubTator
 
-$ python ptc_extract_pmc.py [file_path_pmcs] [output_format] [output_filename]
+$ python source/ptc_extract_pmc.py [file_path_pmcs] [output_format] [output_filename]
 
 Run example:
 ```
-python ptc_extract_pmc.py pmcs.txt biocjson output_pmc.json
+python source/ptc_extract_pmc.py example/pmcs.txt biocjson output_pmc.json
 ```
 ```
-python ptc_extract_pmc.py pmcs.txt df output_pmc.tsv
+python source/ptc_extract_pmc.py example/pmcs.txt df output_pmc.tsv
 ```
 
 ## NER and NEN for plain text with BERN2
@@ -51,38 +51,38 @@ You can download the full text automatically divided into subdirectories yoursel
 
 From PMC list:
 
-$ python download_pmc_fulltext.py [filepath_pmcs] [output_dir]
+$ python source/download_pmc_fulltext.py [filepath_pmcs] [output_dir]
 
 Additionally, you can use **Chromedriver**:
 
-$ python download_fulltext_bern.py [filepath_pmcs] [output_dir]
+$ python source/download_fulltext_bern.py [filepath_pmcs] [output_dir]
 
 Run example: 
 ```
-python download_pmc_fulltext.py pmcs.txt bern_ft
+python source/download_pmc_fulltext.py example/pmcs.txt bern_ft
 ```
 Or using Chromedriver:
 ```
-python download_fulltext_bern.py pmcs.txt bern_ft
+python source/download_fulltext_bern.py example/pmcs.txt bern_ft
 ```
 From **PDF files**:
 
-$ python convert_pdf.py [pdf_directory] [output_directory]
+$ python source/convert_pdf.py [pdf_directory] [output_directory]
 
 Run example: 
 ```
-python convert_pdf.py pdf_files bern_ft_pdf
+python source/convert_pdf.py pdf_files bern_ft_pdf
 ```
 Then, you can run **BERN2**. 
 
 ⚠️ This process can take several minutes.
 
 
-$ python bern_extract_ann.py [input_dir] [output_dir] [json/df]
+$ python source/bern_extract_ann.py [input_dir] [output_dir] [json/df]
 
 Run example: 
 ```
-python bern_extract_ann.py bern_ft_pdf bern_ft_pdf_results df
+python source/bern_extract_ann.py bern_ft_pdf bern_ft_pdf_results df
 ```
 
 ## NER and NEN from query
@@ -95,38 +95,38 @@ The last command-line argument is the oldest publication date. If you don't want
 
 **Pubmed abstracts**
 
-$ python ptc_extract_pmids_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
+$ python source/ptc_extract_pmids_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
 
 Run example: published after January 1, 2023
 ```
-python ptc_extract_pmids_query.py biotin df output_df.tsv 50 --pub_date "2022/01/01"
+python source/ptc_extract_pmids_query.py biotin df output_df.tsv 50 --pub_date "2022/01/01"
 ```
 
 **PMC articles**
 
-$ python ptc_extract_pmc_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
+$ python source/ptc_extract_pmc_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
 
 Run example: 
 ```
-python ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
+python source/ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
 ```
 ```
-python ptc_extract_pmc_query.py Hodgkin+Lymphoma df output_lymphoma.tsv 25 --pub_date "2021/01/01"
+python source/ptc_extract_pmc_query.py Hodgkin+Lymphoma df output_lymphoma.tsv 25 --pub_date "2021/01/01"
 ```
 ## PMC ID converter
 
 Here, pmids is your input file containing the list of pmids (tsv, csv and txt format allowed), output_directory is the directory where you want to save the output file, and _pmc is the suffix you want to add to the output file's name. This script will read the input pmids, retrieve PMC IDs, and save the output file in the specified directory with the desired name.
 
-$ python pmc_from_pmid.py [pmids] [output_directory] [_pmc]
+$ python source/pmc_from_pmid.py [pmids] [output_directory] [_pmc]
  
 Run example: 
 ```
-python pmc_from_pmid.py pmids.tsv '.' _pmc
+python source/pmc_from_pmid.py example/pmids.tsv '.' _pmc
 ```
 ## NER&NEN-App
 
 <img
-  src="https://github.com/gititub/test/blob/main/app.png"
+  src="https://github.com/gititub/test/blob/main/resources/app.png"
   alt="Alt text"
   style="display: block; width:400px">
 
@@ -148,7 +148,7 @@ You can also run NER-App in Windows.
 cd appNEN;shiny run --reload
 ```
 <img
-  src="https://github.com/gititub/test/blob/main/appNEN.png"
+  src="https://github.com/gititub/test/blob/main/resources/appNEN.png"
   alt="Alt text"
   style="display: block; width: 400px">
 
@@ -163,8 +163,8 @@ cd appNEN;shiny run --reload
 
 To run example use test.tsv or test2.csv as input file, or use your own data with 3 columns: pmid, gene, HGVS. Returns two files in the specified output directory, one with LitVar normalization and the second one with SynVar normalization.
 
-$ python normalize.py [input_file] [output_directory] 
+$ python source/normalize.py [input_file] [output_directory] 
 
 ```
-python normalize.py test2.csv '.'
+python normalize.py example/test2.csv '.'
 ```
