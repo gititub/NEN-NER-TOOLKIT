@@ -49,12 +49,12 @@ def save_text_to_files(pmc_list, max_length, output_directory):
                 paragraph_text = paragraph_text[last_space_index:].strip()
                 
                 output_file_path = os.path.join(output_directory, f"{pmc}({file_number}).txt")
-                with open(output_file_path, 'w') as output_file:
+                with open(output_file_path, 'w', encoding='utf-8') as output_file:
                     output_file.write(split_text)
                     file_number += 1
             if len(paragraph_text) > 0:
                 output_file_path = os.path.join(output_directory, f"{pmc}({file_number}).txt")
-                with open(output_file_path, 'w') as output_file:
+                with open(output_file_path, 'w', encoding='utf-8') as output_file:
                     output_file.write(paragraph_text)
                 file_number += 1
 
@@ -73,8 +73,7 @@ def save_text_to_files(pmc_list, max_length, output_directory):
              source_path = os.path.join(output_directory, file_name)
              destination_path = os.path.join(subdirectory_path, file_name)
              shutil.move(source_path, destination_path)
-
-    print(f'Subdirectory "{subdirectory_name}" created with {len(files_to_move)} files.')
+        print(f'Subdirectory "{subdirectory_name}" created with {len(files_to_move)} files.')
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
