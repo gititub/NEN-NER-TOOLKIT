@@ -173,5 +173,5 @@ To run example use test.tsv or test2.csv as input file, or use your own data wit
 $ python source/normalize.py [input_file] [output_directory] 
 
 ```
-python normalize.py example/test2.csv '.'
+python source/normalize.py example/test2.csv '.'
 ```
