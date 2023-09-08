@@ -113,8 +113,9 @@ python source/ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
 ```
 python source/ptc_extract_pmc_query.py Hodgkin+Lymphoma df output_lymphoma.tsv 25 --pub_date "2021/01/01"
 ```
-## PMC ID converter
+## ID converter
 
+**Convert PubMed ids to PMC ids**  
 Here, pmids is your input file containing the list of pmids (tsv, csv and txt format allowed), output_directory is the directory where you want to save the output file, and _pmc is the suffix you want to add to the output file's name. This script will read the input pmids, retrieve PMC IDs, and save the output file in the specified directory with the desired name.
 
 $ python source/pmc_from_pmid.py [pmids] [output_directory] [_pmc]
@@ -123,6 +124,12 @@ Run example:
 ```
 python source/pmc_from_pmid.py example/pmids.tsv '.' _pmc
 ```
+**Convert PMC ids to pmids**  
+Run example: 
+```
+python source/pmid_from_pmc.py example/pmcs.txt '.' _pmid
+```
+
 ## NER&NEN-App
 
 <img
