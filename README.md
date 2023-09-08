@@ -6,7 +6,7 @@ This repository provides the code for automatic system to retrieve annotations o
 <img
   src="https://github.com/gititub/test/blob/main/resources/workflow2.png"
   alt="Alt text"
-  style="display: block; height:600px; width:800px">
+  style="display: block; height:450px; width:800px">
 
 
 ## Installation
