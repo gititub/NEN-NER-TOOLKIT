@@ -25,7 +25,7 @@ def save_text_to_files(pmc_list, max_length, output_directory):
                 
                 for chunk_number, chunk in enumerate(chunks, start=1):
                     output_file_path = os.path.join(output_directory, f"{pmc}({chunk_number}).txt")
-                    with open(output_file_path, 'w') as output_file:
+                    with open(output_file_path, 'w', encoding='utf-8') as output_file:
                         output_file.write(chunk)
 
         except Exception as e:
