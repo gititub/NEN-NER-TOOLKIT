@@ -3,6 +3,12 @@
 This repository provides the code for automatic system to retrieve annotations of biomedical concepts such as genes and mutations in PubMed abstracts, PMC full-text articles or plain text.
 
 
+<img
+  src="https://github.com/gititub/test/blob/main/resources/workflow2.png"
+  alt="Alt text"
+  style="display: block; width:400px">
+
+
 ## Installation
 
 ```
