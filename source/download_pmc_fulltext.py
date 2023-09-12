@@ -60,8 +60,11 @@ input_file = args.input_file
 output_directory = args.output_directory
 
 # Read PMCs from the input file
-with open(input_file, 'r') as f:
-    pmc_list = [line.strip() for line in f]
+if input_file.startswith('PMC'):
+    pmc_list = [num.strip() for num in input_file.split(',') if num.strip()]
+else:
+    with open(input_file, 'r') as f:
+        pmc_list = [line.strip() for line in f]
 
 start_time = time.time()
 max_length = 4900
