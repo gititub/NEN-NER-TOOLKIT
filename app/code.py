@@ -393,6 +393,7 @@ def plain_drugs(txt, output):
     mesh_ids = []
     drugbank_ids = []
     medline_ids = []
+    nhs_urls = []
     wikipedia_urls = []
     positions = []
 
@@ -417,6 +418,10 @@ def plain_drugs(txt, output):
             medline_ids.append(data[0]['medline_plus_id'])
         else:
             medline_ids.append(None)
+        if 'nhs_url' in data[0]:
+            nhs_urls.append(data[0]['nhs_url'])
+        else:
+            nhs_urls.append(None)
         if 'wikipedia_url' in data[0]:
             wikipedia_urls.append(data[0]['wikipedia_url'])
         else:
