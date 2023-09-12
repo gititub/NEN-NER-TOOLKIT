@@ -433,6 +433,7 @@ def plain_drugs(txt, output):
                        'MESH id': mesh_ids,
                        'Drugbank_ID': drugbank_ids,
                        'MedlinePlus id': medline_ids,
+                       'NHS URL': nhs_urls,
                        'Wikipedia URL': wikipedia_urls,
                        'Position': positions})
 
