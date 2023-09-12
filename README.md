@@ -59,15 +59,19 @@ From PMC list:
 
 $ python source/download_pmc_fulltext.py [filepath_pmcs] [output_dir]
 
-Additionally, you can use **Selenium** and **ChromeDriver**. ℹ️ The ChromeDriver’s primary function is to start Google Chrome. Without them, it is impossible to automate any website and run Selenium. To use ChromeDriver, you need to first download it from the Chromium website and then install it. https://chromedriver.chromium.org/downloads  
-
-$ python source/download_fulltext_bern.py [filepath_pmcs] [output_dir]
-
 Run example: 
 ```
 python source/download_pmc_fulltext.py example/pmcs.txt bern_ft
 ```
-Or using ChromeDriver:
+Or from a one or more PMCs:
+```  
+python source/download_pmc_fulltext.py PMC2907921,PMC2907921 bern_ft2
+```
+
+Additionally, you can use **Selenium** and **ChromeDriver**. ℹ️ The ChromeDriver’s primary function is to start Google Chrome. Without them, it is impossible to automate any website and run Selenium. To use ChromeDriver, you need to first download it from the Chromium website and then install it. https://chromedriver.chromium.org/downloads  
+
+$ python source/download_fulltext_bern.py [filepath_pmcs] [output_dir]
+
 ```
 python source/download_fulltext_bern.py example/pmcs.txt bern_ft
 ```
