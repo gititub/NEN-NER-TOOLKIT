@@ -4,6 +4,7 @@ import pandas as pd
 from Bio import Entrez
 from drug_named_entity_recognition import find_drugs
 import spacy
+from bs4 import BeautifulSoup
 import warnings
 warnings.simplefilter('ignore')
 
@@ -205,6 +206,82 @@ def extract_pubtator_from_pmcs(ids, output):
     else:
         print("Invalid output format. Please choose 'biocjson' or 'df'.")
 
+def bern_extract_pmids(pmids, output):
+    pmid_list = [num.strip() for num in pmids.split(',') if num.strip()]
+    url = "http://bern2.korea.ac.kr/pubmed/" + ",".join(pmid_list)
+    response = requests.get(url)
+    json_data = response.json()
+    df = json_to_df(json_data)
+
+    if output == 'biocjson':
+        return json.dumps(json_data, indent=4)
+    elif output == 'df':
+        return df
+    else:
+        print("Invalid output format. Please choose 'biocjson' or 'df'.")
+
+
+def json_to_df(json_data):
+    pmid_list = []
+    id_list = []
+    is_neural_normalized_list = []
+    prob_list = []
+    mention_list = []
+    obj_list = []
+    begin_list = []
+    end_list = []
+    norm_list = []
+    mut_type_list = []
+
+    # Iterate over the JSON dictionaries and extract the information
+    for item in json_data:
+        if item['pmid'] is not None:
+            pmid = item['pmid']
+        else:
+            pmid = item.get("pmid")
+        annotations = item.get("annotations", [])
+        for annotation in annotations:
+            annotation_id = annotation["id"][0]
+            is_neural_normalized = annotation["is_neural_normalized"]
+            prob = annotation.get("prob")
+            mention = annotation["mention"]
+            mutation_type = annotation.get('mutationType')
+            norm = annotation.get('normalizedName')
+            obj = annotation["obj"]
+            span = annotation.get("span", {})
+            begin = span.get("begin")
+            end = span.get("end")
+
+            # Append the extracted information to the respective lists
+            pmid_list.append(pmid)
+            id_list.append(annotation_id)
+            is_neural_normalized_list.append(is_neural_normalized)
+            prob_list.append(prob)
+            mention_list.append(mention)
+            obj_list.append(obj)
+            begin_list.append(begin)
+            end_list.append(end)
+            norm_list.append(norm)
+            mut_type_list.append(mutation_type)
+
+    # Create a DataFrame using the extracted information
+    df = pd.DataFrame({
+        "pmid": pmid_list,
+        "id": id_list,
+        #"is_neural_normalized": is_neural_normalized_list,
+        "prob": prob_list,
+        "mention": mention_list,
+        "normalized name": norm_list,
+        "mutation type": mut_type_list,
+        "obj": obj_list,
+        "span_begin": begin_list,
+        "span_end": end_list
+    })
+    df['Wikipedia URL'] = df['mention'].apply(lambda x: 'https://en.wikipedia.org/wiki/' + x)
+    df['PubChem'], df['chEBI'], df['DrugBank'] = zip(*df['mention'].apply(db_from_wikipedia))
+
+    return df
+
 
 def query_plain(text, output):
     url = "http://bern2.korea.ac.kr/plain"
@@ -242,6 +319,8 @@ def query_plain(text, output):
     df = pd.DataFrame(extracted_data)
     df['dbSNP'] = df['normalized_name'].str.extract(r'(?:rs|RS#:)(\d+)', expand=False)
     df['dbSNP'] = 'rs' + df['dbSNP']
+    df['Wikipedia URL'] = df['mention'].apply(lambda x: 'https://en.wikipedia.org/wiki/' + x)
+    df['PubChem'], df['chEBI'], df['DrugBank'] = zip(*df['mention'].apply(db_from_wikipedia))
 
     if output == 'biocjson':
         return json.dumps(result, indent=4)
@@ -250,6 +329,28 @@ def query_plain(text, output):
     else:
         print("Invalid output format. Please choose 'biocjson' or 'df'.")
 
+
+def db_from_wikipedia(mention):
+    url = f"https://en.wikipedia.org/wiki/{mention}"
+    response = requests.get(url)
+    pubchem = ""
+    chebi = ""
+    drugbank = ""
+
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        infobox = soup.find('table', class_='infobox')
+        if infobox:
+            id_elements = infobox.find_all('a', href=True)
+            for id_element in id_elements:
+                if 'pubchem.ncbi.nlm.nih.gov' in id_element['href']:
+                    pubchem = id_element.contents[0]
+                elif 'www.drugbank.ca' in id_element['href']:
+                    drugbank = id_element.contents[0]
+                elif 'www.ebi.ac.uk' in id_element['href']:
+                    chebi = id_element.contents[0]
+
+    return pubchem, chebi, drugbank
 
 
 def extract_pubtator_from_pmcs_query(query, pub_date, retmax, output):
@@ -437,6 +538,7 @@ def plain_drugs(txt, output):
                        'NHS URL': nhs_urls,
                        'Wikipedia URL': wikipedia_urls,
                        'Position': positions})
+    df['PubChem'], df['chEBI'], df['DrugBank'] = zip(*df['Name'].apply(db_from_wikipedia))
 
     if output == 'biocjson':
         result = []
