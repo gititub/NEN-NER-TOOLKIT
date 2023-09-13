@@ -429,7 +429,8 @@ def plain_drugs(txt, output):
 
         positions.append(data[1])
 
-    df = pd.DataFrame({'Name': names, 'Synonyms': synonyms,
+    df = pd.DataFrame({'Name': names, 
+                       'Synonyms': synonyms,
                        'MESH id': mesh_ids,
                        'Drugbank_ID': drugbank_ids,
                        'MedlinePlus id': medline_ids,
@@ -438,7 +439,13 @@ def plain_drugs(txt, output):
                        'Position': positions})
 
     if output == 'biocjson':
-        return json_data
+        result = []
+        for item in json_data:
+            # Convert set of synonyms to a list
+            item[0]['synonyms'] = list(item[0]['synonyms'])
+            json_str = json.dumps(item[0], separators=(',', ':'))
+            result.append(json_str)
+        return result
     elif output == 'df':
         return df
 
@@ -448,6 +455,17 @@ def download_from_PMC(pmcids):
     text = []
     for pmcid in pmcid_list:
         URL = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{pmcid}/unicode"
+        response = requests.get(URL)
+        data = response.text
+        text.append(data)
+    joined_text = '.'.join(text)  # Join the text data with '.'
+    return joined_text
+
+def download_from_PubMed(pmids):
+    pmid_list = [num.strip() for num in pmids.split(',') if num.strip()]
+    text = []
+    for pmid in pmid_list:
+        URL = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pubmed.cgi/BioC_json/{pmid}/unicode"
         response = requests.get(URL)
         data = response.text
         text.append(data)
