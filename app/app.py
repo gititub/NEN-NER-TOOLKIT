@@ -5,7 +5,7 @@ import os
 from shiny import App, Inputs, Outputs, Session, reactive, render, req, ui
 from shiny.types import ImgData
 from code import count_characters, extract_pubtator, extract_pubtator_from_pmcs, query_plain, \
-    extract_pubtator_from_pmcs_query, plain_drugs, download_from_PMC, download_from_PubMed
+    extract_pubtator_from_pmcs_query, plain_drugs, download_from_PMC, download_from_PubMed, bern_extract_pmids
 
 app_ui = ui.page_fluid(
     shinyswatch.theme.superhero(),
@@ -35,6 +35,7 @@ app_ui = ui.page_fluid(
                     "PMC": "PMC (PubTator)",
                     "pmid": "PubMed ID (PubTator)",
                     "plain_text": "Plain Text (BERN2)",
+                    "pmid_bern": "PubMed ID (BERN2)",
                     "plain_drugs": "Plain Text (Drug NER)",
                     "pmc_drugs": "PMC (Drug NER)",
                     "pmid_drugs": "PubMed ID (Drug NER)",
@@ -97,6 +98,8 @@ def server(input, output, session):
             result = query_plain(input.id(), input.output_type())
         elif input.input_type() == 'pmid':
             result = extract_pubtator(input.id(), input.output_type())
+        elif input.input_type() == 'pmid_bern':
+            result = bern_extract_pmids(input.id(), input.output_type())
         elif input.input_type() == 'query':
             result = extract_pubtator_from_pmcs_query(input.id(), input.x(),
                                                       input.retmax(),
