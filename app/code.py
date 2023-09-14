@@ -207,18 +207,37 @@ def extract_pubtator_from_pmcs(ids, output):
         print("Invalid output format. Please choose 'biocjson' or 'df'.")
 
 def bern_extract_pmids(pmids, output):
+    results = []
     pmid_list = [num.strip() for num in pmids.split(',') if num.strip()]
-    url = "http://bern2.korea.ac.kr/pubmed/" + ",".join(pmid_list)
-    response = requests.get(url)
-    json_data = response.json()
-    df = json_to_df(json_data)
-
+    for pmid in pmid_list:
+        json_data, df = process_pmid(pmid)  # Capture both JSON data and DataFrame
+        if df is not None:
+            results.append(df)
+    if results:
+        bern = pd.concat(results)
     if output == 'biocjson':
         return json.dumps(json_data, indent=4)
     elif output == 'df':
-        return df
+        return bern  # Return the DataFrame
     else:
         print("Invalid output format. Please choose 'biocjson' or 'df'.")
+
+
+def process_pmid(pmid):
+    print(f"Processing PMID {pmid} with BERN2...")
+    url = f"http://bern2.korea.ac.kr/pubmed/{pmid}"
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            json_data = response.json()
+            df = json_to_df(json_data)
+            return json_data, df
+        else:
+            print(f"Request for PMID {pmid} failed with status code:", response.status_code)
+            return None
+    except Exception as e:
+        print(f"Error processing PMID {pmid}: {str(e)}")
+        return None
 
 
 def json_to_df(json_data):
