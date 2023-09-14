@@ -1,12 +1,10 @@
 #python bern_extract_pmids.py list_of_pmids.txt output_file.tsv
 
-
 import sys
 import time
 import json
 import requests
 import pandas as pd
-from concurrent.futures import ThreadPoolExecutor
 
 def json_to_df(json_data):
     # Convert json_data to DataFrame and return
@@ -68,53 +66,59 @@ def json_to_df(json_data):
 
     return df
 
-def process_chunk(pmid_chunk):
-    print("Processing pmids BERN...")
-    url = "http://bern2.korea.ac.kr/pubmed/" + ",".join(map(str, pmid_chunk))
-    response = requests.get(url)
-    
-    if response.status_code == 200:
-        json_data = response.json()
-        df = json_to_df(json_data)
-        return df
-    else:
-        print(f"Request for PMIDs {pmid_chunk} failed with status code:", response.status_code)
+
+def process_pmid(pmid):
+    print(f"Processing PMID {pmid} with BERN...")
+    url = f"http://bern2.korea.ac.kr/pubmed/{pmid}"
+    try:
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            json_data = response.json()
+            df = json_to_df(json_data)
+            return df
+        else:
+            print(f"Request for PMID {pmid} failed with status code:", response.status_code)
+            return None
+    except Exception as e:
+        print(f"Error processing PMID {pmid}: {str(e)}")
         return None
 
 def main():
     if len(sys.argv) != 3:
         print("Usage: python ann_pmids.py list_of_pmids.txt output_file")
         return
-    
+
     input_file = sys.argv[1]
     output_file = sys.argv[2]
-    
+
     with open(input_file, 'r') as f:
         pmids_total = [line.strip() for line in f]
 
-    pmid_chunks = [pmids_total[i:i+500] for i in range(0, len(pmids_total), 500)]
-
     start_time = time.time()
 
-    with ThreadPoolExecutor() as executor:
-        results = executor.map(process_chunk, pmid_chunks)
+    results = []
 
-    results = [result for result in results if result is not None]
-    bern = pd.concat(results)
+    for pmid in pmids_total:
+        df = process_pmid(pmid)
+        if df is not None:
+            results.append(df)
 
-    if output_file.endswith(".json"):
-        bern.to_json(output_file, orient='records', lines=True)
-    elif output_file.endswith(".tsv"):
-        bern.to_csv(output_file, sep='\t', index=False)
-    else:
-        print("Invalid output file format. Please choose .json or .tsv.")
+    if results:
+        bern = pd.concat(results)
+
+        if output_file.endswith(".json"):
+            bern.to_json(output_file, orient='records', lines=True)
+        elif output_file.endswith(".tsv"):
+            bern.to_csv(output_file, sep='\t', index=False)
+        else:
+            print("Invalid output file format. Please choose .json or .tsv.")
 
     end_time = time.time()
     total_time = end_time - start_time
-    
-    print(f"{len(pmids_total)} pmids annotated")
+
+    print(f"{len(pmids_total)} PMIDs annotated")
     print("Total time taken to extract annotations using BERN2:", total_time, "seconds")
 
 if __name__ == "__main__":
     main()
-
