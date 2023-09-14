@@ -1,9 +1,0 @@
-shiny
-requests
-pandas
-shinyswatch
-beautifulsoup4
-PyPDF2
-tqdm
-biopython
-Bio
