@@ -159,6 +159,10 @@ You can also run NER-App in Windows.
 - Query: Word (replace space with ‘&’) + Publication Date + max. Retrievals
 2. Select output type  
 
+<img
+  src="https://github.com/gititub/test/blob/main/resources/Captura.png"
+  alt="Alt text"
+  style="display: block; width:400px">
 
 **Run NEN-App in Linux:**
 ```
