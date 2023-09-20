@@ -108,7 +108,7 @@ def server(input, output, session):
             result = plain_drugs(input.id(), input.output_type())
         elif input.input_type() == 'pmid_drugs':
             input_text = download_from_PubMed(input.id())
-            result = plain_drugs(input_text, input.output_type()
+            result = plain_drugs(input_text, input.output_type())
         else:
             input_text = download_from_PMC(input.id())
             result = plain_drugs(input_text, input.output_type())
