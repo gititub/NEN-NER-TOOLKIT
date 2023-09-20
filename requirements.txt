@@ -8,7 +8,7 @@ nltk==3.6.2
 openpyxl==3.0.10
 pandas==1.1.5
 PyPDF2 
-requests==2.22.0
+requests
 selenium
 shiny
 shinyswatch
