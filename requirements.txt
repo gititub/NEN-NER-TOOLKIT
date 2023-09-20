@@ -14,4 +14,3 @@ shiny
 shinyswatch
 spacy
 tqdm
-warnings
