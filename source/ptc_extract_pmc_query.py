@@ -1,5 +1,6 @@
-#python ptc_extract_pmc_query.py [query] [output_format] [output_filename] [retmax]
-#example: python ptc_extract_pmc_query.py biotin biocjson output_pmc2.json 30
+#python ptc_extract_pmc_query.py [query] [output_filename] [retmax]
+#example: python ptc_extract_pmc_query.py biotin output_pmc2.json 30
+
 import os
 import requests
 import json
@@ -127,7 +128,6 @@ def extract_pubtator_from_pmcs(pmcs, output):
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("query", help="PubMed query")
-parser.add_argument("output_format", help="Output format: 'biocjson' or 'df'")
 parser.add_argument("output_filename", help="Output filename")
 parser.add_argument("retmax", type=int, help="Maximum number of PMIDs to retrieve")
 parser.add_argument("--pub_date", help="Publication date (YYYY/MM/DD)")
@@ -135,7 +135,6 @@ args = parser.parse_args()
 
 # Set input arguments
 query = args.query
-output_format = args.output_format
 output_filename = args.output_filename
 retmax = args.retmax
 pub_date = args.pub_date
@@ -152,13 +151,13 @@ pmc_ids = record["IdList"]
 
 start_time = time.time()
 
-if output_format == 'biocjson':
+if output_filename.endswith(".json"):
     # Save the output_data to a file with output_filename
-    output_data = extract_pubtator_from_pmcs(pmc_ids, output_format)
+    output_data = extract_pubtator_from_pmcs(pmc_ids, 'biocjson')
     with open(output_filename, 'w') as output_file:
         json.dump(output_data, output_file, indent=2)
     print(f"Biocjson data saved to {output_filename}")
-elif output_format == 'df':
+elif output_filename.endswith(".tsv"):
     # Save the merged DataFrame to a CSV file with output_filename
     merged_df = extract_pubtator_from_pmcs(pmc_ids, 'df')
     merged_df.to_csv(output_filename, sep='\t', index=False)
