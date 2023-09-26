@@ -22,6 +22,25 @@ conda activate env_app
 pip install -r requirements.txt
 ```
 
+## Run from the Command Line on Linux:
+
+$ ./ann.sh [input file or directory] [json/tsv]
+
+This code first checks if the input is a directory and then process each file within the directory while applying the appropriate logic based on the file content, PubMed ID or PMC ID. Based on which function is being executed, the output files will have distinct names: "pmids", "PMC", "bern" and "ptc" will be appended to the output file name. Additionally, the script distinguishes between two output formats: 'biocjson' or 'dataframe' depending on whether the second argument is 'json' or 'tsv' respectively.
+
+Accepted file input extensions include .txt, .tsv, or .csv.
+
+Run example of a directory: 
+```
+chmod +x ann.sh
+./ann.sh example tsv
+```
+Or of a single file:
+```
+./ann.sh example/pmids.tsv json
+```
+ 
+
 ## NER and NEN for PubMed abstracts with PubTator
 
 $ python source/ptc_extract_pmids.py [file_path_pmids] [output_format] [output_filename]
