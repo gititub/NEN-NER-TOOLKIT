@@ -28,7 +28,7 @@ $ ./ann.sh [input file or directory] [json/tsv]
 
 This code first checks if the input is a directory and then process each file within the directory while applying the appropriate logic based on the file content, PubMed ID or PMC ID. Based on which function is being executed, the output files will have distinct names: "pmids", "PMC", "bern" and "ptc" will be appended to the output file name. Additionally, the script distinguishes between two output formats: 'biocjson' or 'dataframe' depending on whether the second argument is 'json' or 'tsv' respectively.
 
-Accepted file input extensions include .txt, .tsv, or .csv.
+Accepted file input extensions include .txt, .tsv, or .csv. The data must be organized into a single column of elements. The first row may also include a column name, which can be either 'pmid' or 'PMC'.
 
 Run example of a directory: 
 ```
