@@ -28,7 +28,7 @@ $ ./ann.sh [input file or directory] [json/tsv]
 
 This code first checks if the input is a directory and then process each file within the directory while applying the appropriate logic based on the file content, PubMed ID or PMC ID. Based on which function is being executed, the output files will have distinct names: "pmids", "PMC", "bern" and "ptc" will be appended to the output file name. Additionally, the script distinguishes between two output formats: 'biocjson' or 'dataframe' depending on whether the second argument is 'json' or 'tsv' respectively.
 
-Accepted file input extensions include .txt, .tsv, or .csv. The data must be organized into a single column of elements. The first row may also include a column name, which can be either 'pmid' or 'PMC'.
+Results will be saved in a directory named "results_[datetime]".
 
 Run example of a directory: 
 ```
@@ -39,39 +39,40 @@ Or of a single file:
 ```
 ./ann.sh example/pmids.tsv json
 ```
- 
+
+ℹ️ **Accepted file input extensions for all commands include .txt, .tsv, or .csv. The data must be organized into a single column of elements. The first row may also include a column name, which can be either 'pmid' or 'PMC'. If the output filename concludes with '.tsv', you will receive the results as a DataFrame. However, if it concludes with '.json', the results will be provided in the bioCjson format.**
 
 ## NER and NEN for PubMed abstracts with PubTator
 
-$ python source/ptc_extract_pmids.py [file_path_pmids] [output_format] [output_filename]
+$ python source/ptc_extract_pmids.py [file_path_pmids] [output_filename]
 
 Run example: 
 ```
-python source/ptc_extract_pmids.py example/pmids.tsv biocjson output_pmids.json
+python source/ptc_extract_pmids.py example/pmids.tsv output.json
 ```
 ```
-python source/ptc_extract_pmids.py example/pmids.tsv df output_df.tsv
+python source/ptc_extract_pmids.py example/pmids.tsv output.tsv
 ```
 ## NER and NEN for PubMed abstracts with BERN2
 
 $ python source/bern_extract_pmids.py [file_path_pmids] [output_filename]
 
 ```
-python source/bern_extract_pmids.py example/pmids2.csv output_file.tsv
+python source/bern_extract_pmids.py example/pmids2.csv output_bern.tsv
 ```
 ```
-python source/bern_extract_pmids.py example/pmids.tsv output_file.json
+python source/bern_extract_pmids.py example/pmids.tsv output_bern.json
 ```
 ## NER and NEN for PMC full-text articles with PubTator
 
-$ python source/ptc_extract_pmc.py [file_path_pmcs] [output_format] [output_filename]
+$ python source/ptc_extract_pmc.py [file_path_pmcs] [output_filename]
 
 Run example:
 ```
-python source/ptc_extract_pmc.py example/pmcs.txt biocjson output_pmc.json
+python source/ptc_extract_pmc.py example/pmcs.txt output_pmc.json
 ```
 ```
-python source/ptc_extract_pmc.py example/pmcs.txt df output_pmc.tsv
+python source/ptc_extract_pmc.py example/pmcs.txt output_pmc.tsv
 ```
 
 ## NER and NEN for plain text with BERN2
@@ -130,23 +131,23 @@ The last command-line argument is the oldest publication date. If you don't want
 
 **Pubmed abstracts**
 
-$ python source/ptc_extract_pmids_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
+$ python source/ptc_extract_pmids_query.py [query] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
 
 Run example: published after January 1, 2023
 ```
-python source/ptc_extract_pmids_query.py biotin df output_df.tsv 50 --pub_date "2022/01/01"
+python source/ptc_extract_pmids_query.py biotin output_biotin.tsv 50 --pub_date "2022/01/01"
 ```
 
 **PMC articles**
 
-$ python source/ptc_extract_pmc_query.py [query] [output_format] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
+$ python source/ptc_extract_pmc_query.py [query] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
 
 Run example: 
 ```
-python source/ptc_extract_pmc_query.py BRAF biocjson output_pmc.json 35
+python source/ptc_extract_pmc_query.py BRAF output_braf.json 35
 ```
 ```
-python source/ptc_extract_pmc_query.py Hodgkin+Lymphoma df output_lymphoma.tsv 25 --pub_date "2021/01/01"
+python source/ptc_extract_pmc_query.py Hodgkin+Lymphoma output_lymphoma.tsv 25 --pub_date "2021/01/01"
 ```
 ## ID converter
 
@@ -178,9 +179,13 @@ cd app;shiny run --reload
 ```
 You can also run NER-App in Windows.  
 1. Make a query:  
-- PMC id (one or more, comma separated)  
-- PubMed id (one or more, comma separated)  
-- Plain Text (max. 5000 characters)  
+- PMC id PubTator (one or more, comma separated)  
+- PubMed id PubTator (one or more, comma separated)  
+- Plain Text BERN2 (max. 5000 characters)
+- PubMed id BERN2 (one or more, comma separated)
+- Plain Text Drug Named Entity Recognition 
+- PMC Drug Named Entity Recognition (one or more, comma separated)
+- PubMed id Drug Named Entity Recognition (one or more, comma separated)
 - Query: Word (replace space with ‘&’) + Publication Date + max. Retrievals
 2. Select output type  
 
