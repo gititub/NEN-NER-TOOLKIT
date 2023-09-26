@@ -1,5 +1,6 @@
-#python ptc_extract_pmc.py [file_path_pmcs] [output_format] [output_filename]
-#example: python ptc_extract_pmc.py pmcs.txt biocjson output_pmc.json
+#python ptc_extract_pmc.py [file_path_pmcs] [output_filename]
+#example: python ptc_extract_pmc.py pmcs.txt output_pmc.json
+
 import os
 import requests
 import json
@@ -124,29 +125,26 @@ def extract_pubtator_from_pmcs(pmcs, output):
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("input_file", help="Path to the input file containing PMCIDs")
-parser.add_argument("output_format", help="Output format: 'biocjson' or 'df'")
 parser.add_argument("output_filename", help="Output filename")
 args = parser.parse_args()
 
 # Set input arguments
 input_file = args.input_file
-output_format = args.output_format
 output_filename = args.output_filename
 
 # Read PMCIDs from the input file
 with open(input_file, 'r') as f:
     pmcs = [line.strip() for line in f]
 
-
 start_time = time.time()
 
-if output_format == 'biocjson':
+if output_filename.endswith(".json"):
     # Save the output_data to a file with output_filename
-    output_data = extract_pubtator_from_pmcs(pmcs, output_format)
+    output_data = extract_pubtator_from_pmcs(pmcs, 'biocjson')
     with open(output_filename, 'w') as output_file:
         json.dump(output_data, output_file, indent=2)
     print(f"Biocjson data saved to {output_filename}")
-elif output_format == 'df':
+elif output_filename.endswith(".tsv"):
     # Save the merged DataFrame to a CSV file with output_filename
     merged_df = extract_pubtator_from_pmcs(pmcs, 'df')
     merged_df.to_csv(output_filename, sep='\t', index=False)
