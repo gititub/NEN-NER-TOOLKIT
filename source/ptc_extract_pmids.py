@@ -1,6 +1,6 @@
-#python ptc_extract_pmids.py [file_path_pmids] [output_format] [output_filename]
-#example: python ptc_extract_ann.py pmids.tsv df output_df.tsv
-#output_format: df or biocjson
+#python ptc_extract_pmids.py [file_path_pmids] [output_filename]
+#example: python ptc_extract_ann.py pmids.tsv output_df.tsv
+
 import os
 import requests
 import json
@@ -113,13 +113,11 @@ def extract_pubtator(pmids, output):
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("input_file", help="Path to the input file containing PMIDs")
-parser.add_argument("output_format", help="Output format: 'biocjson' or 'df'")
 parser.add_argument("output_filename", help="Output filename")
 args = parser.parse_args()
 
 # Set input arguments
 input_file = args.input_file
-output_format = args.output_format
 output_filename = args.output_filename
 
 # Read PMIDs from the input file
@@ -128,13 +126,13 @@ with open(input_file, 'r') as f:
 
 start_time = time.time()
 
-if output_format == 'biocjson':
+if output_filename.endswith(".json"):
     output_data, error_count = extract_pubtator(pmids,'biocjson')
     # Save the output_data to a file with output_filename
     with open(output_filename, 'w') as output_file:
         json.dump(output_data, output_file, indent=2)
     print(f"Biocjson data saved to {output_filename}")
-elif output_format == 'df':
+elif output_filename.endswith(".tsv"):
     # Extract PubTator data once and store in merged_df
     merged_df, error_count = extract_pubtator(pmids, 'df')
     # Save the merged DataFrame to a CSV file with output_filename
