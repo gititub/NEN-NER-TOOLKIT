@@ -62,18 +62,44 @@ Or of a single file:
 
 If the output filename concludes with '.tsv', you will receive the results as a DataFrame. However, if it concludes with '.json', the results will be provided in the bioCjson format.
 
+# PubTator3
+
 ## NER, NEN and RE for full-text articles with PubTator3 from PubMedIDs or PMCIDs.
 
-$ python src/ptc.py [file_path_pmids/pmcids] [output_filename]
+$ python src/ptc.py -i [file_path_pmids/pmcids] -o [output_filename]
 
 Run example: 
 ```
-python src/ptc.py example/pmids.tsv output.json
+python src/ptc.py -i example/pmids.tsv -o output.json
 ```
 ```
-python src/ptc.py example/pmcs.txt output.tsv
+python src/ptc.py -i example/pmcs.txt -o output.tsv
 ```
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
+
+
+## NER,NEN and Relations with PubTator from a query.
+
+This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by '+' sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
+
+The fourth command-line argument is the number of IDs to retrieve. The last command-line argument is the oldest publication date. If you don't want to filter by date, simply omit the `-date` argument. This last argument is not mandatory.
+
+
+$ python src/ptc_extract_pmc_query.py -q [query] -o [output_filename] -max [max retrievals] -date ["YYYY/MM/DD"]
+
+Run example: published after January 1, 2022
+
+```
+python src/ptc.py -q biotin -o biotin.tsv -max 20 -date "2022/01/01"
+```
+
+```
+python src/ptc.py -q multiple+sclerosis -o MS.json -max 10
+
+```
+
+
+# BERN2
 
 ## NER and NEN for PubMed abstracts with BERN2
 
@@ -132,32 +158,7 @@ Run example:
 python src/bern_extract_ann.py bern_ft_pdf bern_ft_pdf_results df
 ```
 
-## NER and NEN from query
 
-This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by '+' sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
-
-The fourth command-line argument is the number of IDs to retrieve. The last command-line argument is the oldest publication date. If you don't want to filter by date, simply omit the --pub_date argument. This argument is not mandatory but it is recommended to use it.
-
-**Pubmed abstracts**
-
-$ python src/ptc_extract_pmids_query.py [query] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
-
-Run example: published after January 1, 2023
-```
-python src/ptc_extract_pmids_query.py biotin output_biotin.tsv 50 --pub_date "2022/01/01"
-```
-
-**PMC articles**
-
-$ python src/ptc_extract_pmc_query.py [query] [output_filename] [max retrievals] --pub_date ["YYYY/MM/DD"]
-
-Run example: 
-```
-python src/ptc_extract_pmc_query.py BRAF output_braf.json 35 --pub_date "2021/01/01"
-```
-```
-python src/ptc_extract_pmc_query.py Hardy+Weinberg output_hw.tsv 25 
-```
 
 ## Normalize Variants with SynVar and LitVar
 
