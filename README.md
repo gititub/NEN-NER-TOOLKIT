@@ -62,16 +62,16 @@ Or of a single file:
 
 If the output filename concludes with '.tsv', you will receive the results as a DataFrame. However, if it concludes with '.json', the results will be provided in the bioCjson format.
 
-## NER, NEN and RE for PubMed abstracts with PubTator3
+## NER, NEN and RE for full-text articles with PubTator3 from PubMedIDs or PMCIDs.
 
-$ python src/ptc_extract_pmids.py [file_path_pmids] [output_filename]
+$ python src/ptc.py [file_path_pmids/pmcids] [output_filename]
 
 Run example: 
 ```
-python src/ptc_extract_pmids.py example/pmids.tsv output.json
+python src/ptc.py example/pmids.tsv output.json
 ```
 ```
-python src/ptc_extract_pmids.py example/pmids.tsv output.tsv
+python src/ptc.py example/pmcs.txt output.tsv
 ```
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
@@ -85,22 +85,6 @@ python src/bern_extract_pmids.py example/pmids2.csv output_bern.tsv
 ```
 python src/bern_extract_pmids.py example/pmids.tsv output_bern.json
 ```
-## NER, NEN and RE for PMC full-text articles with PubTator3
-
-From a list of PMCIDs or PubMedIDs:
-
-$ python src/ptc_extract_pmc.py [file_path_pmcs] [output_filename]
-
-$ python src/ptc_extract_pmc_from_pmid.py [file_path_pmids] [output_filename]
-
-Run example:
-```
-python src/ptc_extract_pmc.py example/pmcs.txt output_pmc.json
-```
-```
-python src/ptc_extract_pmc_from_pmid.py example/pmids2.csv output_pmc_from_pmid.tsv
-```
-In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
 ## NER and NEN for plain text with BERN2
 
