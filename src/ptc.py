@@ -177,7 +177,7 @@ class Pubtator():
         input_group.add_argument("-q", "--query", help="PubMed query")
 
         parser.add_argument("-o", "--output_file", help="Output filename", required=True)
-        parser.add_argument("-max", "--retmax", type=int, help="Maximum number of articles to retrieve", required=True)
+        parser.add_argument("-max", "--retmax", type=int, help="Maximum number of articles to retrieve")
         parser.add_argument("-date", "--pub_date", help="Publication date (YYYY/MM/DD)")
 
         args = parser.parse_args()
