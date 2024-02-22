@@ -12,7 +12,7 @@ output_directory="results_${current_date}"
 
 # Create the output directory if it doesn't exist
 mkdir -p "$output_directory"
-
+current_dir=$(pwd)
 # Function to process a single file
 process_file() {
   file="$1"
@@ -21,10 +21,18 @@ process_file() {
   output_file="${file_name_without_extension}.${output_type}"
 
   if [[ $file_content =~ ^[0-9]+$ ]] || [[ $file_content == "pmid" ]]; then
-    python source/bern_extract_pmids.py "$file" "${output_directory}/bern_pmid_${output_file}"
-    python source/ptc_extract_pmids.py "$file" "${output_directory}/ptc_pmid_${output_file}"
+    python src/bern_extract_pmids.py "$file" "${output_directory}/bern_pmid_${output_file}"
+    python src/ptc_extract_pmids.py "$file" "${output_directory}/ptc_pmid_${output_file}"
   elif [[ $file_content =~ ^PMC[0-9]+$ ]] || [[ $file_content == "PMC" ]]; then
-    python source/ptc_extract_pmc.py "$file" "${output_directory}/ptc_pmc_${output_file}"
+    python src/ptc_extract_pmc.py "$file" "${output_directory}/ptc_pmc_${output_file}"
+    input_filename=$(basename "$file")
+    cp "$file" ./src/GWAS-Miner/GWAS_Miner/"$input_filename"
+    (
+    cd src/GWAS-Miner/GWAS_Miner/
+    ./gwasminer.sh "$input_filename"
+    cp tables_GWASminer.tsv "${current_dir}/${output_directory}/tables_GWASminer.tsv"
+    cp data_GWASminer.tsv "${current_dir}/${output_directory}/data_GWASminer.tsv"
+    )
   fi
 }
 
@@ -33,7 +41,7 @@ if [ -d "$input" ]; then
   # Input is a directory, process each file within it
   for file in "$input"/*; do
     # Check if the file is a regular file
-    if [ -f "$file" ]; then
+    if [ ! -d "$file" ]; then
       process_file "$file"
     fi
   done
@@ -41,4 +49,3 @@ else
   # Input is not a directory, treat it as a single file
   process_file "$input"
 fi
-
