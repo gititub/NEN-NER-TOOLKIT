@@ -1,10 +1,10 @@
 
 import argparse
+from Bio import Entrez
 import json
 import pandas as pd
 import requests
 import time
-
 
 class Pubtator():
 
@@ -28,7 +28,7 @@ class Pubtator():
                             columns=['ID', 'relation_id', 'score', 'role1_type', 'role1_id', 'role2_type', 'role2_id', 'type'])
 
     @staticmethod
-    def extract_pubtator(ids, output):
+    def extract_pubtator(ids, output_format):
         """Python function to extract full-text Pubtator results from a list of PMCIDs or PubMedIDs.
         Returns results in biocjson format if output = "biocjson" and returns results
         in pandas DataFrame format if output = "df".
@@ -118,13 +118,16 @@ class Pubtator():
             df = df[df['identifier'].notna()]
             df_list.append(df)
 
-        all_relations_df = pd.concat(all_relations_df_list, ignore_index=True)
-        all_relations_df[['correlation_type', 'entity1', 'entity2']] = all_relations_df['type'].str.split('|', expand=True)
-        all_relations_df = all_relations_df.drop('type', axis=1)
+        try:
+            all_relations_df = pd.concat(all_relations_df_list, ignore_index=True)
+            all_relations_df[['correlation_type', 'entity1', 'entity2']] = all_relations_df['type'].str.split('|', expand=True)
+            all_relations_df = all_relations_df.drop('type', axis=1)
+        except:
+            pass
 
-        if output == 'biocjson':
+        if output_format == 'biocjson':
             return list_of_pubtators, id_sum, error_sum
-        elif output == 'df':
+        elif output_format == 'df':
             if not df_list:
                 print("No articles with annotations found.")
                 return pd.DataFrame(), id_sum, error_sum
@@ -132,21 +135,32 @@ class Pubtator():
                 merged_df = pd.concat(df_list, ignore_index=True)
                 return merged_df, all_relations_df, id_sum, error_sum
         else:
-            print("Invalid output format. Please choose 'biocjson' or 'df'.")
             return None, None, id_sum, error_sum
 
     @staticmethod
-    def run_extraction(ids, output_format):
-        if output_format == 'biocjson':
+    def query(query, retmax, pub_date=None):
+        email = "weliw001@hotmail.com"
+        Entrez.email = email
+        if pub_date:
+            query += f" AND {pub_date}[Date - Publication]"
+        handle = Entrez.esearch(db="pmc", term=query, retmax=retmax)
+        record = Entrez.read(handle)
+        handle.close()
+        ids = record["IdList"]
+        return ids
+
+    @staticmethod
+    def run_extraction(ids, output_file):
+        if output_file.endswith(".json"):
             output_data, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'biocjson')
-            with open(output_filename, 'w') as output_file:
+            with open(output_file, 'w') as output_file:
                 json.dump(output_data, output_file, indent=2)
-            print(f"Biocjson data saved to {output_filename}")
-        elif output_format == 'df':
+            print(f"Biocjson data saved to {output_file}")
+        elif output_file.endswith(".tsv"):
             merged_df, all_relations_df, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'df')
-            merged_df.to_csv(output_filename, sep='\t', index=False)
-            print(f"DataFrame saved to {output_filename}")
-            relations_filename = output_filename.replace(".tsv", "_relations.tsv")
+            merged_df.to_csv(output_file, sep='\t', index=False)
+            print(f"DataFrame saved to {output_file}")
+            relations_filename = output_file.replace(".tsv", "_relations.tsv")
             all_relations_df.to_csv(relations_filename, sep='\t', index=False)
             print(f"All Relations DataFrames saved to {relations_filename}")
         else:
@@ -154,34 +168,41 @@ class Pubtator():
 
         return id_sum, error_sum
 
-
-class Parse():
     @staticmethod
     def parse_arguments():
-        parser = argparse.ArgumentParser()
-        parser.add_argument("input_file", help="Path to the input file containing PMCIDs")
-        parser.add_argument("output_filename", help="Output filename")
+        parser = argparse.ArgumentParser(description="Extract PubTator data")
+
+        input_group = parser.add_mutually_exclusive_group(required=True)
+        input_group.add_argument("-i", "--input_file", help="Path to the input file containing PMCIDs or PubedIDs")
+        input_group.add_argument("-q", "--query", help="PubMed query")
+
+        parser.add_argument("-o", "--output_file", help="Output filename", required=True)
+        parser.add_argument("-max", "--retmax", type=int, help="Maximum number of articles to retrieve", required=True)
+        parser.add_argument("-date", "--pub_date", help="Publication date (YYYY/MM/DD)")
+
         args = parser.parse_args()
-        return args.input_file, args.output_filename
+        return args
 
+def main():
+    # Parse command-line arguments
+    args = Pubtator.parse_arguments()
 
-# Parse command-line arguments
-input_file, output_filename = Parse.parse_arguments()
-with open(input_file, 'r') as f:
-    ids = [line.strip() for line in f]
+    # Read IDs from the input file if provided
+    if args.input_file:
+        with open(args.input_file, 'r') as f:
+            ids = [line.strip() for line in f]
+    elif args.query:
+        ids = Pubtator.query(args.query, args.retmax, args.pub_date)
 
-start_time = time.time()
+    start_time = time.time()
+    # Run extraction
+    id_sum, error_sum = Pubtator.run_extraction(ids, args.output_file)
 
-# Run extraction
-if output_filename.endswith(".json"):
-    id_sum, error_sum = Pubtator.run_extraction(ids, 'biocjson')
-elif output_filename.endswith(".tsv"):
-    id_sum, error_sum = Pubtator.run_extraction(ids, 'df')
-else:
-    print("Invalid output format. Please choose 'json' or 'tsv' output file")
+    end_time = time.time()
+    total_time = end_time - start_time
 
-end_time = time.time()
-total_time = end_time - start_time
+    print(f"Total time taken to extract {id_sum} annotations with PTC: {total_time} seconds")
+    print(f"Total number of errors encountered: {error_sum}")
 
-print("Total time taken to extract annotations with PTC:", total_time, "seconds")
-print("Total number of errors encountered:", error_sum)
+if __name__ == "__main__":
+    main()
