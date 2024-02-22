@@ -1,16 +1,20 @@
-# pip install -r requirements.txt
 argparse
-beautifulsoup4
 Bio
-biopython
+bioc==1.3.7
 drug-named-entity-recognition
-nltk==3.6.2
+fuzzywuzzy
+lxml
+networkx
+nltk
+opencv-python
 openpyxl==3.0.10
-pandas==1.1.5
-PyPDF2 
-requests
+pandas==2.0.3
+PyPDF2
+pytesseract
+requests==2.31.0
+requests-html==0.10.0
 selenium
 shiny
 shinyswatch
-spacy
-tqdm
+tqdm==4.66.1
+# https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.0/en_core_sci_scibert-0.5.0.tar.gz
