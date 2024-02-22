@@ -156,7 +156,7 @@ class Pubtator():
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("input_file", help="Path to the input file containing PMCIDs")
+    parser.add_argument("input_file", help="Path to the input file containing PubMedIDs or PMCIDs")
     parser.add_argument("output_filename", help="Output filename")
     args = parser.parse_args()
     return args.input_file, args.output_filename
