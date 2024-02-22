@@ -1,14 +1,13 @@
 
-
 import argparse
 import json
 import pandas as pd
 import requests
 import time
 
-
 class Pubtator():
 
+    @staticmethod
     def extract_relations(pubtator, id):
         relations_list = pubtator.get('relations', [])
         relations_display_list = pubtator.get('relations_display', [])
@@ -25,9 +24,9 @@ class Pubtator():
                 [id, relation_id, score, role1['type'], role1['identifier'], role2['type'], role2['identifier'], relation_type])
 
         return pd.DataFrame(relations_data,
-                            columns=['PMID', 'relation_id', 'score', 'role1_type', 'role1_id', 'role2_type', 'role2_id', 'type'])
+                            columns=['ID', 'relation_id', 'score', 'role1_type', 'role1_id', 'role2_type', 'role2_id', 'type'])
 
-
+    @staticmethod
     def extract_pubtator(ids, output):
         """Python function to extract full-text Pubtator results from a list of PMCIDs or PubMedIDs.
         Returns results in biocjson format if output = "biocjson" and returns results
@@ -136,14 +135,6 @@ class Pubtator():
             return None, None, id_sum, error_sum
 
     @staticmethod
-    def parse_arguments():
-        parser = argparse.ArgumentParser()
-        parser.add_argument("input_file", help="Path to the input file containing PMCIDs")
-        parser.add_argument("output_filename", help="Output filename")
-        args = parser.parse_args()
-        return args.input_file, args.output_filename
-
-    @staticmethod
     def run_extraction(ids, output_format):
         if output_format == 'biocjson':
             output_data, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'biocjson')
@@ -163,8 +154,16 @@ class Pubtator():
         return id_sum, error_sum
 
 
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file", help="Path to the input file containing PMCIDs")
+    parser.add_argument("output_filename", help="Output filename")
+    args = parser.parse_args()
+    return args.input_file, args.output_filename
+
+
 # Parse command-line arguments
-input_file, output_filename = Pubtator.parse_arguments()
+input_file, output_filename = parse_arguments()
 
 # Read PMCIDs from the input file
 with open(input_file, 'r') as f:
