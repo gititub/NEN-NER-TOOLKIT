@@ -98,7 +98,7 @@ Run example:
 python src/ptc_extract_pmc.py example/pmcs.txt output_pmc.json
 ```
 ```
-python src/ptc_extract_pmc_from_pmid.py example/pmcs.txt output_pmc.tsv
+python src/ptc_extract_pmc_from_pmid.py example/pmids2.csv output_pmc_from_pmid.tsv
 ```
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
