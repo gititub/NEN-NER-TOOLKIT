@@ -73,7 +73,7 @@ def save_text_to_files(pmc_list, max_length, output_directory):
              source_path = os.path.join(output_directory, file_name)
              destination_path = os.path.join(subdirectory_path, file_name)
              shutil.move(source_path, destination_path)
-        print(f'Subdirectory "{subdirectory_name}" created with {len(files_to_move)} files.')
+         print(f'Subdirectory "{subdirectory_name}" created with {len(files_to_move)} files.')
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
