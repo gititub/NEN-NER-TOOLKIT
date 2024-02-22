@@ -22,9 +22,9 @@ process_file() {
 
   if [[ $file_content =~ ^[0-9]+$ ]] || [[ $file_content == "pmid" ]]; then
     python src/bern_extract_pmids.py "$file" "${output_directory}/bern_pmid_${output_file}"
-    python src/ptc_extract_pmids.py "$file" "${output_directory}/ptc_pmid_${output_file}"
+    python src/ptc.py -i "$file" -o "${output_directory}/ptc_pmid_${output_file}"
   elif [[ $file_content =~ ^PMC[0-9]+$ ]] || [[ $file_content == "PMC" ]]; then
-    python src/ptc_extract_pmc.py "$file" "${output_directory}/ptc_pmc_${output_file}"
+    python src/ptc.py -i "$file" -o "${output_directory}/ptc_pmc_${output_file}"
     input_filename=$(basename "$file")
     cp "$file" ./src/GWAS-Miner/GWAS_Miner/"$input_filename"
     (
