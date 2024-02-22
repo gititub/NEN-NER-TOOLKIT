@@ -143,7 +143,7 @@ class Pubtator():
         Entrez.email = email
         if pub_date:
             query += f" AND {pub_date}[Date - Publication]"
-        handle = Entrez.esearch(db="pmc", term=query, retmax=retmax)
+        handle = Entrez.esearch(db="pmc", term=query, retmax=retmax) #db="pubmed"
         record = Entrez.read(handle)
         handle.close()
         ids = record["IdList"]
