@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 import time
 
+
 class Pubtator():
 
     @staticmethod
@@ -154,18 +155,18 @@ class Pubtator():
         return id_sum, error_sum
 
 
-def parse_arguments():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("input_file", help="Path to the input file containing PubMedIDs or PMCIDs")
-    parser.add_argument("output_filename", help="Output filename")
-    args = parser.parse_args()
-    return args.input_file, args.output_filename
+class Parse():
+    @staticmethod
+    def parse_arguments():
+        parser = argparse.ArgumentParser()
+        parser.add_argument("input_file", help="Path to the input file containing PMCIDs")
+        parser.add_argument("output_filename", help="Output filename")
+        args = parser.parse_args()
+        return args.input_file, args.output_filename
 
 
 # Parse command-line arguments
-input_file, output_filename = parse_arguments()
-
-# Read PMCIDs from the input file
+input_file, output_filename = Parse.parse_arguments()
 with open(input_file, 'r') as f:
     ids = [line.strip() for line in f]
 
