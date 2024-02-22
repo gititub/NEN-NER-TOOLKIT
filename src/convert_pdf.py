@@ -27,9 +27,15 @@ def convert_directory_to_text(input_directory, output_directory, max_length):
         pdf_text = convert_pdf_to_text(pdf_file_path)
 
         while len(pdf_text) > max_length:
-            split_text = pdf_text[:max_length]
-            pdf_text = pdf_text[max_length:]
-
+            last_period_index = pdf_text.rfind('.', 0, max_length)  # Find the last period within max_length
+            if last_period_index == -1:  # If no period is found, split at max_length
+                split_index = max_length
+            else:
+                split_index = last_period_index + 1  # Include the last period in the chunk
+    
+            split_text = pdf_text[:split_index]
+            pdf_text = pdf_text[split_index:]
+    
             output_file_path = os.path.join(output_directory, f"{pdf_file}({file_number}).txt")
             with open(output_file_path, "w") as output_file:
                 output_file.write(split_text)
