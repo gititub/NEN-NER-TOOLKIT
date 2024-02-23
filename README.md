@@ -4,7 +4,7 @@ This repository provides the code for automatic system to retrieve annotations o
 
 ## NerVerseToolkit 
 
-https://nerversetoolkit.shinyapps.io/nerversetoolkit/
+[https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
 ## NormaMed Toolbox
 
