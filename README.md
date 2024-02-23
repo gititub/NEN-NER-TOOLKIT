@@ -200,16 +200,16 @@ python src/pmid_from_pmc.py example/pmcs.txt '.' _pmid
 
 
 1. Make a query:  
-- PMC or PubMed id to **PubTator** (One or more, comma separated).
+- PMCID or PubMedID to **PubTator** (One or more, comma separated).
   For example, "36064841, PMC9797458" (They can be mixed together).  
-- PMC or PubMed id to **PubTator3 Relation Extraction** (One or more, comma separated).
-  For example, "36064841". PMC queries are allowed but, due to the large number of results, certain queries may take a considerable amount of time to complete.  
-- Query to **PubTator**: Word (replace space with ‘&’) + Publication Date + max. Retrievals
+- PMCID or PubMedID to **PubTator3 Relation Extraction** (One or more, comma separated).
+  For example, "36064841"
+- Entities or relations from a query with **PubTator**: Word (replace space with ‘&’) + Publication Date + max. Retrievals
 - Plain Text to **BERN2** (max. 5000 characters)
-- PubMed id to **BERN2** (one or more, comma separated)
+- PubMedID to **BERN2** (one or more, comma separated)
 - Plain Text to **Drug Named Entity Recognition**
-- PMC or PubMed id to **Drug Named Entity Recognition** (one or more, comma separated. They can be mixed together)
-- PubMed id to **Variomes**: For genes and drugs in abstracts.
+- PMCID or PubMedID to **Drug Named Entity Recognition** (one or more, comma separated. They can be mixed together)
+- PubMedID to **Variomes**: Retrieves genes and drugs from abstracts.
 
 2. Select output type: DataFrame or BioCjson.  
 3. Download results
