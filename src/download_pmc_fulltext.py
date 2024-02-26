@@ -9,6 +9,7 @@ import uuid
 
 warnings.filterwarnings("ignore")
 
+
 def save_text_to_files(pmc_list, max_length, output_directory):
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
@@ -18,18 +19,53 @@ def save_text_to_files(pmc_list, max_length, output_directory):
         try:
             url = f'https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{pmc}/ascii'
             response = requests.get(url)
-            print(f'Response status for PMC {pmc}: {response.status_code}')
+            print(f'Response status for {pmc}: {response.status_code}')
             if response.status_code == 200:
                 content = response.content.decode()
-                chunks = [content[i:i + max_length] for i in range(0, len(content), max_length)]
-                
+                chunks = []
+                while content:
+                    last_period_index = content.rfind('.', 0, max_length)
+                    if last_period_index == -1:
+                        last_period_index = max_length
+                    chunk = content[:last_period_index + 1]  # Include the last period in the chunk
+                    content = content[last_period_index + 1:].strip()
+                    chunks.append(chunk)
+
                 for chunk_number, chunk in enumerate(chunks, start=1):
                     output_file_path = os.path.join(output_directory, f"{pmc}({chunk_number}).txt")
                     with open(output_file_path, 'w', encoding='utf-8') as output_file:
                         output_file.write(chunk)
+            else:
+                url = f"https://www.ncbi.nlm.nih.gov/research/pubtator3-api/publications/pmc_export/biocjson?pmcids={pmc}"
+                response = requests.get(url)
+                print(f'Retry: Response status for {pmc}: {response.status_code}')
+                json_data = response.json()
+                text_content = []
+                if not json_data.get('passages'):
+                    print(f"No text found for ID: {pmc}")
+                    continue
+                else:
+                    for passage in json_data['passages']:
+                        text = passage['text']
+                        text_content.append(text)
+                    joined_text = '.'.join(text_content)
+                    chunks_pubtator3 = []
+                    while joined_text:
+                        last_period_index = joined_text.rfind('.', 0, max_length)
+                        if last_period_index == -1:
+                            last_period_index = max_length
+                        chunk_pubtator3 = joined_text[:last_period_index + 1]
+                        joined_text = joined_text[last_period_index + 1:].strip()
+                        chunks_pubtator3.append(chunk_pubtator3)
+
+                    for chunk_number, chunk_pubtator3 in enumerate(chunks_pubtator3, start=1):
+                        output_file_path_pubtator3 = os.path.join(output_directory,
+                                                                  f"{pmc}_pubtator3({chunk_number}).txt")
+                        with open(output_file_path_pubtator3, 'w', encoding='utf-8') as output_file_pubtator3:
+                          output_file_pubtator3.write(chunk_pubtator3)
 
         except Exception as e:
-            print("Error occurred while processing PMC {}: {}".format(pmc, e))
+            print("Error occurred while processing {}: {}".format(pmc, e))
             
     file_list = os.listdir(output_directory)
     num_subdirectories = len(file_list) // 120 + 1
