@@ -78,7 +78,7 @@ python src/ptc.py -i example/pmcs.txt -o output.tsv
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
 
-## NER,NEN and Relations with PubTator from a query.
+## NER, NEN and Relations with PubTator from a query.
 
 This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by '+' sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
 
