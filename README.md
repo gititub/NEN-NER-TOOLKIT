@@ -47,7 +47,7 @@ Results will be saved in a directory named "results_[datetime]".
 
 Run example of a directory: 
 ```
-chmod +x ann.sh
+chmod +x *.sh
 ./ann.sh example tsv
 ```
 Or of a single file:
