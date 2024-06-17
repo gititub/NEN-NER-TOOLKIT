@@ -8,7 +8,8 @@ This repository provides the code for automatic system to retrieve annotations o
 
 ## Biomedical Entity Normalization
 
-[https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
+[Biomedical Entity Normalization](https://nerversetoolkit.shinyapps.io/normamedtoolbox1/)
+
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/workflow2.png"
@@ -225,9 +226,9 @@ cd app;shiny run --reload
 ```
 You can also run NER-App in Windows.  
 
-## NormaMed Toolbox
+## Biomedical Entity Normalization
 
-https://nerversetoolkit.shinyapps.io/normamedtoolbox1/
+[Biomedical Entity Normalization](https://nerversetoolkit.shinyapps.io/normamedtoolbox1/)
 
 **Run NormaMed Toolbox in Linux:**
 ```
