@@ -2,9 +2,9 @@
 # NER-NEN-RE-TOOLKIT
 This repository provides the code for automatic system to retrieve annotations of biomedical concepts such as genes, mutations and chemicals, from PubMed abstracts, PMC full-text articles, or plain text. The system utilizes API tools such as PubTator, BERN2, and Variomes for Named Entity Recognition (NER), Named Entity Normalization (NEN), and related entities (RE) with PubTator3. Additionally, it incorporates Auto-CORPus+GWASMiner that allows retrieval of information about diseases, variants, and significance values (p-values) from full-text articles, including data from inner tables. LitVar and SynVar are used for NEN. The workflow is integrated into the development of a web application using Shiny for Python.
 
-## NerVerseToolkit 
+## Biomedical Entity Recognition, Normalization and Relation Extraction
 
-[https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
+[Biomedical Entity Recognition, Normalization and Relation Extraction](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
 ## Biomedical Entity Normalization
 
@@ -190,9 +190,9 @@ python src/pmid_from_pmc.py example/pmcs.txt '.' _pmid
 
 # NER-NEN-RE-App 
 
-## Biomedical Entity Normalization
+## Biomedical Entity Recognition, Normalization and Relation Extraction
 
-[https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
+[Biomedical Entity Recognition, Normalization and Relation Extraction](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/APP.png"
