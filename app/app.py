@@ -1,4 +1,4 @@
-# app.py
+#  app.py
 import json
 import os
 import pandas as pd
@@ -6,8 +6,7 @@ import shinyswatch
 from shiny import App, Inputs, Outputs, Session, reactive, render, req, ui
 from shiny.types import ImgData
 from code import count_characters, extract_pubtator, query_plain, \
-    query, plain_drugs, download_from_PMC, download_from_PubMed, \
-    bern_extract_pmids, synvar_ann, download_data, apply_db_from_wikipedia
+    query, plain_drugs, bern_extract_pmids, synvar_ann, apply_db_from_wikipedia, extract_sibils
 
 app_ui = ui.page_fluid(
     shinyswatch.theme.superhero(),
@@ -50,7 +49,7 @@ app_ui = ui.page_fluid(
                     "plain_drugs": "Plain Text (Drug NER)",
                     "id_drugs": "PMCID or PubMedID (Drug NER)",
                     "pmid_synvar": "PubMedID (Variomes)",
-                    "download_text": "See Article by ID",
+                    "sibils": "PMCID or PubMedID (Sibils)"
                 },
                 selected='Plain Text',
             ),
@@ -136,9 +135,9 @@ def server(input, output, session):
         elif input.input_type() == 'plain_drugs':
             return "e.g. Ruxolitinib also is approved for treatment of patients with polycythemia vera who have had an inadequate response to or are intolerant of hydroxyurea."
         elif input.input_type() == 'relations_query':
-            return "e.g. multiple&sclerosis"
+            return "e.g. melanoma"
         else:
-            return "e.g. 27432226, 22383897 or 27432226, PMC5010513, PMC2907921"
+            return "e.g. 28721050, 22383897 or 27432226, PMC5010513, PMC1936307"
 
     @output
     @render.text
@@ -165,8 +164,8 @@ def server(input, output, session):
             result = plain_drugs(input.id(), input.output_type())
         elif input.input_type() == 'pmid_synvar':
             result = synvar_ann(input.id(), input.output_type())
-        elif input.input_type() == "download_text":
-            result = extract_pubtator(input.id(), input.output_type())[2]
+        elif input.input_type() == 'sibils':
+            result = extract_sibils(input.id(), input.output_type())
         else:
             input_text = extract_pubtator(input.id(), 'df')[2]
             result = plain_drugs(input_text, input.output_type())
