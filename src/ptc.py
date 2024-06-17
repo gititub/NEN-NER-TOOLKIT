@@ -29,17 +29,13 @@ class Pubtator():
 
     @staticmethod
     def extract_pubtator(ids, output_format):
-        if not isinstance(ids, list):
-            id_list = [num.strip() for num in ids.split(',') if num.strip()]
-        else:
-            id_list = ids
         print("Extracting PubTator results ...")
         list_of_pubtators = []
         error_sum = 0
         id_sum = 0
         all_relations_df_list = []
     
-        for id in id_list:
+        for id in ids:
             print(f"Processing ID: {id}")
             if id.startswith('PMC'):
                 url = f"https://www.ncbi.nlm.nih.gov/research/pubtator3-api/publications/pmc_export/biocjson?pmcids={id}"
