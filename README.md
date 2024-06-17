@@ -6,9 +6,6 @@ This repository provides the code for automatic system to retrieve annotations o
 
 [https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
-## NormaMed Toolbox
-
-https://nerversetoolkit.shinyapps.io/normamedtoolbox/
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/workflow2.png"
@@ -227,7 +224,11 @@ You can also run NER-App in Windows.
 
 ## NormaMed Toolbox
 
-https://nerversetoolkit.shinyapps.io/normamedtoolbox/
+
+**Run NormaMed Toolbox in Linux:**
+```
+cd appNEN;shiny run --reload
+```
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/NEN.png"
@@ -247,7 +248,3 @@ https://nerversetoolkit.shinyapps.io/normamedtoolbox/
   
 2.	Download results  
 
-**Run NormaMed Toolbox in Linux:**
-```
-cd appNEN;shiny run --reload
-```
