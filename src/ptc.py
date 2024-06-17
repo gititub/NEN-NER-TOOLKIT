@@ -57,7 +57,7 @@ class Pubtator():
                         list_of_pubtators.append(item)
                         id_sum += 1
                         # Extract relations DataFrame and append to the list
-                        relations_df = extract_relations(item, id)
+                        relations_df = Pubtator.extract_relations(item, id)
                         all_relations_df_list.append(relations_df)
     
             except requests.exceptions.RequestException as e:
