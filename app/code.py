@@ -1,18 +1,21 @@
 import requests
+
 import json
 import pandas as pd
 from Bio import Entrez
 from drug_named_entity_recognition import find_drugs
 import spacy
 from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 from json import JSONEncoder
 
 
-class SetEncoder(JSONEncoder):
+class SetEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, set):
             return list(obj)
-        return JSONEncoder.default(self, obj)
+        return json.JSONEncoder.default(self, obj)
+
 
 def extract_relations(pubtator, id):
     relations_list = pubtator.get('relations', [])
@@ -33,6 +36,77 @@ def extract_relations(pubtator, id):
     return pd.DataFrame(relations_data,
                         columns=['ID', 'relation_id', 'score', 'role1_type', 'role1_id', 'role2_type', 'role2_id',
                                  'type'])
+
+
+def extract_sibils(ids, output_format):
+    if not isinstance(ids, list):
+        id_list = [num.strip() for num in ids.split(',') if num.strip()]
+    else:
+        id_list = ids
+
+    print("Extracting Sibils results ...")
+    list_of_sibils = []
+    error_sum = 0
+    id_sum = 0
+
+    for id in id_list:
+        print(f"Processing ID: {id}")
+        if id.startswith('PMC'):
+            url = f"https://sibils.text-analytics.ch/api/fetch?ids={id}&col=pmc"
+        else:
+            url = f"https://sibils.text-analytics.ch/api/fetch?ids={id}&col=medline"
+        try:
+            response = requests.post(url)
+            response.raise_for_status()
+            sibil_data = response.json()
+            list_of_sibils.extend(sibil_data.get("sibils_article_set", []))
+            id_sum += len(sibil_data.get("sibils_article_set", []))
+        except requests.exceptions.RequestException as e:
+            print(f"Error for {id}: {e}")
+            error_sum += 1
+
+    print(f"Total number of errors extracting Sibils data: {error_sum}")
+    print(f"Total number of articles annotated: {id_sum}")
+
+    df_list = []
+    for article in list_of_sibils:
+        id = article["document"]["_id"]
+        # mesh_terms = ", ".join(article["document"]["mesh_terms"]) if article["document"]["mesh_terms"] else ""
+        # chemicals = ", ".join([chem.split(',')[1] for chem in article["document"]["chemicals"]]) if article["document"]["chemicals"] else ""
+        annotations = []
+        for annotation in article.get('annotations', []):
+            annotations.append({
+                "ID": id,
+                "Type": annotation['type'],
+                "Concept Source": annotation['concept_source'],
+                "Version": annotation['version'],
+                "Concept ID": annotation['concept_id'],
+                "Concept Form": annotation['concept_form'],
+                "Preferred Term": annotation['preferred_term'],
+                "Nature": annotation['nature'],
+                "Field": annotation['field'],
+                "Start Index": annotation['start_index'],
+                "End Index": annotation['end_index']
+            })
+
+        df_list.append(pd.DataFrame(annotations))
+
+    if output_format == 'biocjson':
+        if list_of_sibils:
+            return json.dumps(list_of_sibils, indent=4)
+        else:
+            return f'No results found. Check if the PubMed or PMC ID is correct.'
+    elif output_format == 'df':
+        if not df_list:
+            print("No articles with annotations found.")
+            return pd.DataFrame()
+        else:
+            merged_df = pd.concat(df_list, ignore_index=True)
+            return merged_df
+    else:
+        print("Invalid output format. Please specify 'df' or 'biocjson'.")
+        return None
+
 
 def extract_pubtator(ids, output_format):
     if not isinstance(ids, list):
@@ -55,9 +129,17 @@ def extract_pubtator(ids, output_format):
             response = requests.get(url)
             response.raise_for_status()
             json_data = response.json()
-            if not json_data.get('passages'):
-                print(f"No PubTator results found for ID: {id}")
-                continue
+
+            # Extracting PubTator data from new JSON structure
+            for item in json_data["PubTator3"]:
+                passages = item.get("passages", [])
+                if passages:
+                    list_of_pubtators.append(item)
+                    id_sum += 1
+                    # Extract relations DataFrame and append to the list
+                    relations_df = extract_relations(item, id)
+                    all_relations_df_list.append(relations_df)
+
         except requests.exceptions.RequestException as e:
             print(f"Error for {id}: {e}")
             error_sum += 1
@@ -66,14 +148,8 @@ def extract_pubtator(ids, output_format):
             print("URL:", url)
             print("Response:", response.content)
             error_sum += 1
-        else:
-            list_of_pubtators.append(json_data)
-            id_sum += 1
-            # Extract relations DataFrame and append to the list
-            relations_df = extract_relations(json_data, id)
-            all_relations_df_list.append(relations_df)
 
-    print(f"Total number of errors extracting full-text Pubtator data from PubMedIDs: {error_sum}")
+    print(f"Total number of errors extracting Pubtator data: {error_sum}")
     print(f"Total number of articles annotated: {id_sum}")
 
     df_list = []
@@ -135,14 +211,16 @@ def extract_pubtator(ids, output_format):
 
     try:
         all_relations_df = pd.concat(all_relations_df_list, ignore_index=True)
-        all_relations_df[['correlation_type', 'entity1', 'entity2']] = all_relations_df['type'].str.split('|', expand=True)
+        all_relations_df[['correlation_type', 'entity1', 'entity2']] = all_relations_df['type'].str.split('|',
+                                                                                                          expand=True)
         all_relations_df = all_relations_df.drop('type', axis=1)
     except:
         pass
 
     if output_format == 'biocjson':
         if list_of_pubtators:
-            return json.dumps(list_of_pubtators, indent=4), json.dumps(list_of_pubtators, indent=4), json.dumps(texts_list, indent=4)
+            return json.dumps(list_of_pubtators, indent=4), json.dumps(list_of_pubtators, indent=4), json.dumps(
+                texts_list, indent=4)
         else:
             return f'No results found. Check if the PubMed or PMC ID is correct.'
     elif output_format == 'df':
@@ -152,6 +230,7 @@ def extract_pubtator(ids, output_format):
         else:
             merged_df = pd.concat(df_list, ignore_index=True)
             return merged_df, all_relations_df, df_cleaned
+
 
 def query(query, retmax, pub_date=None):
     email = "weliw001@hotmail.com"
@@ -164,6 +243,7 @@ def query(query, retmax, pub_date=None):
     handle.close()
     ids = record["IdList"]
     return ids
+
 
 def bern_extract_pmids(pmids, output):
     results = []
@@ -189,6 +269,7 @@ def bern_extract_pmids(pmids, output):
             bern_cleaned = bern.dropna(axis=1, how='all')
             return bern_cleaned
 
+
 def process_pmid(pmid):
     print(f"Processing PMID {pmid} with BERN2...")
     url = f"http://bern2.korea.ac.kr/pubmed/{pmid}"
@@ -207,6 +288,7 @@ def process_pmid(pmid):
             print(f"Request for PMID {pmid} failed with status code:", response.status_code)
     except Exception as e:
         print(f"Error processing PMID {pmid}: {str(e)}")
+
 
 def json_to_df(json_data):
     pmid_list = []
@@ -255,7 +337,7 @@ def json_to_df(json_data):
     df = pd.DataFrame({
         "pmid": pmid_list,
         "id": id_list,
-        #"is_neural_normalized": is_neural_normalized_list,
+        # "is_neural_normalized": is_neural_normalized_list,
         "prob": prob_list,
         "mention": mention_list,
         "normalized name": norm_list,
@@ -267,6 +349,7 @@ def json_to_df(json_data):
     df[['PubChem', 'chEBI', 'DrugBank']] = df.apply(apply_db_from_wikipedia, axis=1, result_type='expand')
     df_cleaned = df.dropna(axis=1, how='all')
     return df_cleaned
+
 
 def query_plain(text, output):
     url = "http://bern2.korea.ac.kr/plain"
@@ -313,12 +396,14 @@ def query_plain(text, output):
             df_cleaned = df.dropna(axis=1, how='all')
             return df_cleaned
 
+
 def apply_db_from_wikipedia(row):
     if row['obj'] == 'drug':
         pubchem, chebi, drugbank = db_from_wikipedia(row['mention'])
         return pubchem, chebi, drugbank
     else:
         return None, None, None
+
 
 def db_from_wikipedia(mention):
     url = f"https://en.wikipedia.org/wiki/{mention}"
@@ -342,12 +427,14 @@ def db_from_wikipedia(mention):
 
     return pubchem, chebi, drugbank
 
+
 def count_characters(input_text):
     character_count = len(input_text)
     if character_count > 4990:
         return "You exceeded the character limit"
     else:
         return character_count
+
 
 def plain_drugs(input_data, output):
     nlp = spacy.blank("en")
@@ -359,7 +446,7 @@ def plain_drugs(input_data, output):
         df = pd.DataFrame({'Text': [input_data]})
     else:
         return f'No results found. Check if your PMC ID or PubMed ID is correct.'
-        #raise ValueError("Invalid input data type. Please provide a DataFrame or a plain text string.")
+        # raise ValueError("Invalid input data type. Please provide a DataFrame or a plain text string.")
 
     for index, row in df.iterrows():
         text = row['Text']
@@ -420,69 +507,6 @@ def plain_drugs(input_data, output):
             df_cleaned = df.dropna(axis=1, how='all')
             return df_cleaned
 
-def download_from_PMC(pmcids):
-    pmcid_list = [num.strip() for num in pmcids.split(',') if num.strip()]
-    text = []
-    for pmcid in pmcid_list:
-        print(f"Downloading {pmcid}...")
-        URL = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{pmcid}/unicode"
-        response = requests.get(URL)
-        data = response.text
-        text.append(data)
-    joined_text = '.'.join(text)  # Join the text data with '.'
-    return joined_text
-
-def download_from_PubMed(pmids):
-    pmid_list = [num.strip() for num in pmids.split(',') if num.strip()]
-    text = []
-    for pmid in pmid_list:
-        print(f"Downloading {pmid}...")
-        URL = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pubmed.cgi/BioC_json/{pmid}/unicode"
-        response = requests.get(URL)
-        data = response.text
-        text.append(data)
-    joined_text = '.'.join(text)  # Join the text data with '.'
-    return joined_text
-
-def download_data(id_input, output):
-    id_list = [num.strip() for num in id_input.split(',') if num.strip()]
-    text_list = []
-    for item in id_list:
-        if item.startswith("PMC"):
-            print(f"Downloading {item} from PMC...")
-            URL = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{item}/unicode"
-        else:
-            print(f"Downloading {item} from PubMed...")
-            URL = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pubmed.cgi/BioC_json/{item}/unicode"
-
-        response = requests.get(URL)
-        data = response.text
-        try:
-            data = json.loads(data)
-            source = data.get('source', 'N/A')
-            date = data.get('date', 'N/A')
-            item_text_list = []
-            for document in data['documents']:
-                document_id = document['id']
-                id = source + document_id + ' | date: ' + date
-                for passage in document['passages']:
-                    section_type = passage['infons'].get('section_type', passage['infons'].get('type', 'N/A'))
-                    raw_text = passage['text']
-                    item_text_list.append({'ID': id, 'Section': section_type, 'Text': raw_text})
-            text_list.extend(item_text_list)
-        except json.JSONDecodeError:
-            print(f"Failed to parse JSON response for ID: {item}")
-            continue
-
-    if output == 'biocjson':
-        return json.dumps(text_list, indent=4, cls=SetEncoder)
-
-    elif output == 'df':
-        df = pd.DataFrame(text_list)
-        if not df.empty:
-            df_grouped = df.groupby(['ID','Section'], sort=False).agg({'Text': ' '.join}).reset_index()
-            df_cleaned = df_grouped.dropna(axis=1, how='all')
-            return df_cleaned
 
 def synvar_ann(ids, output):
     id_list = [num.strip() for num in ids.split(',') if num.strip()]
@@ -520,8 +544,8 @@ def synvar_ann(ids, output):
             return f'No results found. Check if the PubMed InoD is correct.'
     elif output == 'df':
         if not synvar_df.empty:
-            #synvar_df = synvar_df.explode('genes', ignore_index=True)
-            #synvar_df = synvar_df.explode('drugs', ignore_index=True)
+            # synvar_df = synvar_df.explode('genes', ignore_index=True)
+            # synvar_df = synvar_df.explode('drugs', ignore_index=True)
             df_cleaned = synvar_df.dropna(axis=1, how='all')
             pd.set_option('display.max_colwidth', 30)
             return df_cleaned
