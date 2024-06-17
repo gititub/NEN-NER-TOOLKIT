@@ -6,6 +6,9 @@ This repository provides the code for automatic system to retrieve annotations o
 
 [https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
+## Biomedical Entity Normalization
+
+[https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/workflow2.png"
@@ -186,7 +189,7 @@ python src/pmid_from_pmc.py example/pmcs.txt '.' _pmid
 
 # NER-NEN-RE-App 
 
-## NerVerseToolkit 
+## Biomedical Entity Normalization
 
 [https://nerversetoolkit.shinyapps.io/nerversetoolkit/](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
@@ -224,6 +227,7 @@ You can also run NER-App in Windows.
 
 ## NormaMed Toolbox
 
+https://nerversetoolkit.shinyapps.io/normamedtoolbox1/
 
 **Run NormaMed Toolbox in Linux:**
 ```
