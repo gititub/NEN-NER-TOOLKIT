@@ -240,7 +240,8 @@ Run example:
 ```
 python src/pmc_from_pmid.py example/pmids_sample.tsv '.' _pmc
 ```
-**Convert PMC ids to PubMedIDs**  
+### Convert PMC ids to PubMedIDs
+
 Run example: 
 ```
 python src/pmid_from_pmc.py example/pmcs_sample.txt '.' _pmid
