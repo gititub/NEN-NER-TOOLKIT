@@ -1,1 +1,0 @@
-", "type": "ref", "volume": "123", "year": "2014"}, "text": "OKT3 prevents xenogeneic GVHD and allows reliable xenograft initiation from unfractionated human hematopoietic tissues", "sentences": [], "annotations": [], "relations": []}], "annotations": [], "relations": []}]}]
