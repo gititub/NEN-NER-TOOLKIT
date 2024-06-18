@@ -130,7 +130,6 @@ def extract_pubtator(ids, output_format):
             response.raise_for_status()
             json_data = response.json()
 
-            # Extracting PubTator data from new JSON structure
             for item in json_data["PubTator3"]:
                 passages = item.get("passages", [])
                 if passages:
