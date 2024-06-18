@@ -1,0 +1,66 @@
+ Bound
+antibody was detected using SureBlue Reserve TMB Microwell Peroxidase
+Substrate (Kirkegaard and Perry Laboratories, Gaithersburg, MD) as absorbance
+change at 450 nm. The PS level measured in wild-type mouse plasma was
+arbitrarily de ﬁned as 100%.
+APC cofactor activity analysis of recombinant mouse PS
+proteins in vitro
+Recombinant mouse wild-type PS and PS-K196E mutant proteins were made as
+described.33SDS-PAGE analysis under reducing conditions revealed that the
+recombinant proteins were ;95% pure (data not shown). APC cofactor activity
+of recombinant PS was determined by modi ﬁed APTT and FXa 1-stage clotting
+assays as described previously.33In a modi ﬁed APTT assay, 10 mLn o r m a l
+mouse pooled plasma (BioreclamationIVT, Baltimore, MD), 5 mLh u m a n ﬁ-
+brinogen (2 mg/mL; Enzyme Research Laboratories, South Bend, IN), 25 mL
+recombinant mouse APC (36 nM), 25 mL recombinant mouse PS (0, 3.38, 6.75,
+13.5, and 27 nM), and 25 mL APTT-XL (Thermo Fisher Scienti ﬁc, Waltham,
+MA) were mixed and incubated for 3 mi nutes at 37°C. The clotting time was
+recorded after adding 25 mLC a C l 2( 2 5m M ) .I na nF X a1 - s t a g ec l o t t i n ga s s a y ,
+10mL normal mouse pooled plasma, 25 mL of a mixture (4:1) of phospholipid
+vesicles (25 mM, 80% 1,2-dioleoyl-sn-glycero-3-phosphatidylcholine/20%
+1,2-dioleoyl-sn-glycero-3-phosphatidylserine; Avanti Polar Lipids, Alabaster,
+AL) plus human ﬁbrinogen (2 mg/mL), 25 mL recombinant mouse APC
+(53 nM), 25 mL recombinant mouse PS (0, 0.63, 1.25, 2.5, 5, and 10 nM), and
+25mL mouse FXa (Haematologic Technologies, Essex Junction, VT) were
+mixed and incubated for 3 minutes at 37°C . The clotting time was recorded after
+adding 25 mLC a C l 2(25 mM). Each assay was perfo rmed in triplicate. The APC
+cofactor activity of recombinant mouse PS was evaluated based on the slope of
+a linear increase in clotting time wit h the dosage of recombinant mouse PS.
+DVT model
+A mouse DVT model of electrolytic inf erior vena cava (IVC) injury was
+performed according to the metho d of Diaz et al, with minor modi ﬁcations.34,35
+Mice were anesthetized with 2.5% 2,2,2-tribromoethanol and kept around 37°C
+using a heating pad (Bio Research Center, Nagoya, Japan). The IVC was exposed
+through a midline laparotomy, and all side branches between the renal and iliac
+veins were ligated with a 7 -0 polypropylene suture. An anode of 27G stainless-
+steel needle electrode (NE-115B; Nihon Koden, Tokyo, Japan) was inserted into
+the caudal IVC and attached to the anterior wall. A cathode was inserted
+subcutaneously to co mplete a circuit. A dir ect current of 200 mA was applied for
+10 minutes using an electric stimulator (SEN-3041; Nihon Koden) with an
+isolator unit (SS-203J; Nihon Koden). After current load, the needle was gently
+removed from the IVC and the abdomen was closed by polyglycolic acid suture
+and cyanoacrylate glue. At 2 days postsurgery, blood was collected and platelet
+counts were determ ined using an automatic cell counter (KX-21NV; Sysmex,
+Kobe, Japan). Thrombi formed in the IVC were removed, weighed in wet
+condition, and photographed using a digital microscope (VHX-1000; Keyence,
+Osaka, Japan). Plasma thrombin-antith rombin complex (TAT) and interleukin-6
+(IL-6) levels were measured using an Enzygnost TAT micro kit (Siemens AG,
+Munich, Germany) and a BD OptEIA mouse IL-6 ELISA kit (BD Biosciences,
+San Jose, CA), respectively.
+PE models
+A recombinant human tissue factor (TF) reagent (Dade Innovin) containing
+phospholipids and calcium was purchased from S iemens AG. A high-molecular-
+weight polyphosphate (HMW polyP) was prepared as reported by Smith et al.36
+Sodium metaphosphate (Sigma-Aldrich Japan, Tokyo, Japan) was washed twice
+with puri ﬁed water and solubilized in 250 mM LiCl. The soluble HMW polyP
+(40-1200 phosphate units long) was precipitated by adding 2.5 volumes of
+acetone and dissolved in puri ﬁed water. The concentrations of HMW polyP were
+determined as phosphate monomer using BIOMOL Green reagent (Enzo Life
+Sciences, Farmingdale, NY) after complete hydrolysis in 1 N HCl.
+Mice were anesthetized with 2.5% 2,2,2-tribromoethanol, and 15 mL/g body
+weight of the TF reagent (1/30 dilution) or HMW polyP (1.67 g/L) was infused
+into the IVC.37The dose of TF and HMW polyP was chosen such that ;20% of2248 BANNO et al BLOOD, 5 NOVEMBER 2015 xVOLUME 126, NUMBER 19wild-type mice survived after the infus ion. Survival time was recorded until 20
+minutes after the infusion, while de ﬁning death as respiratory arrest that persisted
+for at least 2 minutes. Two minutes after the respiratory arrest (but while the heart
+was still beating) or at the completion o f the 20-minute observation period, mice
+were perfused with 0.5 mL 1% Evans blue via right ventricle.

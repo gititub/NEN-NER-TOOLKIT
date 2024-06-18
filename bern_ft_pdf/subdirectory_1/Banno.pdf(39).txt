@@ -1,0 +1,71 @@
+Regular Article
+THROMBOSIS AND HEMOSTASIS
+Exacerbated venous thromboembolism in mice carrying a protein S
+K196E mutation
+Fumiaki Banno,1Toshiyuki Kita,1Jos´e A. Fern´ andez,2Hiroji Yanamoto,3Yuko Tashima,1Koichi Kokame,1John H. Griffin,2
+and Toshiyuki Miyata1,4
+1Department of Molecular Pathogenesis, National Cerebral and Cardiovascular Center, Suita, Japan;2Department of Molecular and Experimental Medicine,
+The Scripps Research Institute, La Jolla, CA; and3Laboratory of Neurology and Neurosurgery and4Department of Cerebrovascular Medicine, National
+Cerebral and Cardiovascular Center, Suita, Japan
+Key Points
+ A protein S-K196E mutation
+reduced its activated protein C
+cofactor activity in recombinant
+murine protein S-K196E
+and in K196E mutant mice.
+ Mice carrying a protein S-K196E
+mutation or heterozygous
+protein S deficiency were more
+vulnerable to venous
+thrombosis than wild-type mice.Protein S (PS) acts as an anticoagulant cofactor for activated protein C in regulation of
+blood coagulation. The K196E mutation in PS is a race-specific genetic risk factor for
+venous thromboembolism with a prevalence of ∼2% within the Japanese population. To
+evaluate the thrombosis risk of the PS-K196E mutation, we generated PS-K196E knockin
+mice and heterozygous PS-deficient mice. We analyzed their thrombotic states, com-
+paring with mice carrying the factor V Leiden mutation(FV-R504Q), a race-specific genetic
+risk for venous thrombosis in whites. PS-K196E mice grew normally but had decreased
+activated protein C cofactor activity in plasma. Purified recombinant murine PS-K196E
+showed the same decreased activated protein C cofactor activity. A deep vein thrombosis
+model of electrolytic inferior vena cava injury and pulmonary embolism models induced
+by infusion of tissue factor or polyphosphates revealed that PS-K196E mice, heterozy-
+gous PS-deficient mice, and FV-R504Q mice were much more susceptible to venous
+thrombosis compared with wild-type mice. Transient middle cerebral artery ischemia-
+reperfusion injury model studies demonstrated that both PS-K196E mice and heterozy-
+gous PS-deficient mice had cerebral infarction similar to wild-type mice, consistent with human observations. Our in vitro and in vivo
+results support a causal relationship between the PS-K196E mutation and venous thrombosis and indicate that PS-K196E mice can
+provide an in vivo evaluation system to help uncovering racial differences in thrombotic diseases. ( Blood . 2015;126(19):2247-2253)
+Introduction
+Protein S (PS) is a vitamin K –dependent plasma glycoprotein that is
+mainly synthesized in liver and end othelial cells. PS acts as an anti-
+coagulant cofactor for activated protein C (APC) in the proteolytic in-
+activation of factor Va (FVa) and factor VIIIa (FVIIIa) and negatively
+regulates blood coagulation.1,2In human plasma, ;60% of PS forms
+a complex with C4b binding protein (C4BP), and the formation of this
+complex abolishes the APC cofactor activity of PS. PS also acts as
+a cofactor for tissue factor pathway inhibitor during the inhibition of
+factor Xa (FXa) in human plasma, but this cofactor activity has not been
+detected in mouse plasma.3
+PS de ﬁciency is a risk factor for developing venous thromboem-
+bolism (VTE).4Homozygous or compound heterozygous PS de ﬁ-
+ciency is an extremely rare disorder that causes purpura fulminans in
+affected newborns.5Heterozygous PS de ﬁciency is milder but ﬁrmly
+associated with an increased risk of VTE.4The risk of thrombosis in
+individuals with PS de ﬁciency is increased with other genetic or
+acquired factors predisposing to thrombosis.
+A rare variant in the PS gene, PROS1 , that is present in 1.8% of
+Japanese, which causes a Lys196 t o Glu substitution in PS (PS-K196E,
+rs 121918474, c.586A .G, also known as PS Tokushima,6PS-K155Ein the mature protein numbering7) is a genetic risk factor for VTE in the
+Japanese population (odds ratio 53.7-8.6).8-11The K196E mutation
+in PS is located in the second epid ermal growth factor (EGF)-like
+domain.2,7,9,11-14We estimate that ;1 out of every 12 000 Japanese in-
+dividuals is homozygous for the 196E allele, representing a total of as
+many as 10 000 individuals.13Thus, a substantial number of Japanese
+carry the mutant PS 196E allele, as a heterozygote or homozygote, and
+a likely risk of development of VTE. The phenotype-genotype analysis
+in individuals with PS-K196E mutation showed that heterozygotes
+had 16% lower PS anticoagulant activ ity than wild-type individuals,
+although the anticoagulant activities between heterozygotes and wild-
+types are substantially overlapped.12PS-K196E mutation appears to be
+a genetic risk for deep vein thrombosis (DVT) during pregnancy,15and
+PS-K196E mutation concomitant with other predisposing mutations for
+thrombosis was found in patients with VTE.

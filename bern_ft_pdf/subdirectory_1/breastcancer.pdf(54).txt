@@ -1,0 +1,71 @@
+32345, Received:  April 24, 2019; Revised: May 24, 2019; Accepted: May 28, 2019, Published online July 18, 2019 in Wiley Online Library 
+ (wileyonlinelibrary.com)
+﻿ESR1  Mutution/DMnuto eu tl
+3715
+Cancer   November 1, 2019BIOLOGY OF ESR1  MUTATIONS  
+IN PRECLINICAL STUDIES
+Several studies have shown that ESR1 LBD mutations 
+are constitutively active and are less sensitive to the ER 
+antagonists tamoxifen and fulvestrant.13-16 In vitro stud -
+ies have shown that the Y537S and D538G mutations required higher concentrations of antagonist to decrease 
+ER signaling compared with the wild-type (WT) recep -
+tor. Molecular modeling of the Y537S and D538G ESR1 LBD mutations showed that these mutations are in an 
+apo-receptor conformation and are constitutively active,  
+even upon antagonist binding.
+15,17 These mutations  
+induced changes in protein structure, which resulted in reduced ligand affinity, and this may be one potential 
+mechanism for their ligand-independent activity and ET 
+resistance. In the absence of ligand, the mutant receptors 
+exhibited increased hydrogen bonding between Y537S 
+and N348, which was similar to the estrogen-bound WT 
+receptor. Mutant receptors also had enhanced protein 
+stability compared with the WT receptor when bound 
+to fulvestrant. Several studies have shown that the most common ESR1 LBD mutations also recruited coactiva -
+tors, such as SRC-1 and SRC-3, in the absence of ligand that further potentiated ER transcription.
+18,19 Therefore, 
+it was concluded that the altered structure of ESR1 mu -
+tations conferred ET resistance and potentiated distinct mechanisms of resistance through enhanced coactivator 
+recruitment.
+The transcriptomes of WT and mutant ERs have 
+been described by several groups, showing there are shared, classical ER signaling signatures, as well as  
+mutant-specific transcriptional regulation.
+20-22 Using in 
+vitro–derived ESR1 mutant cell line models generated 
+using CRISPR/Cas9 technology, or through natural  
+selection of cells in hormone-deprived conditions, Martin  
+et al23 showed that there was a high overlap between  
+ER chromatin binding sites of estrogen-stimulated WT receptor and hormone-deprived mutant receptors. They 
+further showed that estrogen treatment of both the WT 
+and Y537S models exhibited a 74% concordance in ER 
+binding sites. These results suggest that there are hor -
+mone-dependent but also independent mechanisms of mutant gene regulation and that the unique constitu -
+tive mutant-specific ER binding sites and transcriptional regulation should be studied further to better under -
+stand the role of the ESR1 mutant in tumor growth and 
+progression.
+Recent studies by Jeselsohn et al
+20 demonstrated 
+that the models expressing the Y537S mutation was rel -
+atively more resistant to growth inhibition when treated with tamoxifen or fulvestrant compared with D538G 
+and WT, which is consistent with many published stud -
+ies. The Y537S and D538G mutations exhibited differ -
+ent cistromes and transcriptomes compared with WT  
+ESR1 . Specifically, gene expression analyses comparing 
+estrogen-bound WT receptor with hormone-deprived 
+Y537S and D538G mutant receptors showed little over -
+lap of shared gene expression (18% and 33%, respec -
+tively). Furthermore, there was minimal upregulation of gene expression when Y537S mutant cells were treated Figure 1.  Location of ESR1  missense mutations found in clinical samples. Of 62 identified mutations, 47 occurred in the ligand 
+binding domain, and several were associated with ligand-independent activation of estrogen receptor. AF1, activation function 1; 
+AF2, activation function 2; DBD, DNA binding domain; LBD, ligand binding domain. Data obtained from COSMIC (https  ://cancer.
+sanger.ac.uk/cosmic) and cBioPortal for Cancer Genomics (https  ://www.cbiop  ortal.org/). Accessed March 11, 2019.
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Review Article
+3716
+Cancer   November 1, 2019with estrogen (12 genes), but there was a significant  
+increase in gene expression when D538G mutant- 
+expressing cells were treated with estrogen (416 genes), 
+and many of these genes were unique to each mutation. 
+Transcriptome analysis of MBC patient tumors harbor -
+ing ESR1 mutations showed a high correlation with pro -
+files obtained from these cell line models as analyzed by 
+gene set enrichment analysis, validating the significance 
+of the in vitro–derived models.

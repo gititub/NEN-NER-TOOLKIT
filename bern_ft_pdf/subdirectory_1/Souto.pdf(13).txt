@@ -1,0 +1,39 @@
+ Twelveindividuals had deep-vein thrombosis and one to threeother venous or arterial thromboses; one person hadischemic stroke and transient ischemic attacks; one per-son had SFT and pulmonary embolism; and one had
+SFT and other venous thrombosis.
+Genetic Determinants of Liability to Thrombosis
+The evidence for a strong genetic in¯uence on risk of
+thrombosis was striking. Liability to thrombosis exhib-ited an additive genetic heritability of 0.61 5
+), indicating that, after correction
+250.16 ( Pp9#10
+for the effects of age and sex, 61% of the variation inliability to thrombosis at the population level can beattributed to genetic factors. No shared environmentaleffects were found among members of a household forliability to thrombosis. Therefore, the above heritabilityestimates are unlikely to be in¯ated by nongenetic cor-relations among family members, and environmentalfactors shared by members of a household, such as diet,do not have major effects on thrombosis susceptibility.When the diagnoses considered are restricted to venousthrombosis, excluding arterial thrombotic events, the ad-ditive genetic heritability is not signi®cantly differentfrom that obtained with any thrombosis. Similarly, whenvenous and arterial thrombosis are analyzed jointly astwo distinct traits, the phenotypic correlation betweenthese two manifestations of thrombosis is .333 ( Pp
+), and the genetic correlation is .55 ( ). Ad- .0126 Pp.09
+ditionally, the genetic correlation is not signi®cantly dif-ferent from 1. Both the robustness of the heritabilitywhen combining across venous and arterial diagnosesand the fact that the genetic correlation is not signi®-cantly different from one strongly suggest that arterialand venous thromboses are highly genetically correlatedand that our broad phenotypic characterization will beuseful to increase the power to detect genetic effects.1456 Am. J. Hum. Genet. 67:1452±1459, 2000
+Table 2
+Phenotypic, Genetic, and Environmental Correlations of
+Quantitative Risk Factors with Thrombosis
+Phenotypearp Pbrg P re Pb
+APCR 2.230 .0003 2.650 1 #1026.669 .0006
+FVII .025 NS 2.354 .0564 .568 .0091
+FVIII .288 .0002 .689 .0005 2.126 NS
+FIX .151 .0787 .597 .0131 2.198 NS
+FXI .209 .0180 .564 .0245 .070 NSFXII .172 .0339 .351 .0500 2.145 NS
+Homocysteine .227 .0018 .652 .0015 2.028 NS
+t-PA .180 .0002 .752 .0070 2.099 NS
+vWF .261 .0010 .729 .0005 2.181 NS
+aOnly phenotypes with one or more correlations having P!.05
+are shown.
+bNSpnonsigni®cant ( ). P1.10Correlations between Thrombosis Liability and
+Quantitative Risk Factors
+Table 2 shows the results of bivariate genetic analyses
+of thrombosis, with each of the quantitative physiolog-ical traits considered. Only the nine quantitative traitsshowing at least one signi®cant correlation ( ) are P
+!.05
+presented. Of these, seven exhibit signi®cant phenotypiccorrelations with thrombosis susceptibility, eight dem-onstrate signi®cant genetic correlations with thrombosis,and only two exhibit signi®cant environmental corre-lations. The largest phenotypic correlations ( Fr
+pF10.2)
+are seen between FVIII, vWF, APCR, FXI, homocysteine,and thrombosis.
+The genetic correlations provide strong evidence for
+signi®cant pleiotropy underlying the covariation be-tween several of the quantitative traits and thrombosisrisk. Those quantitative measures exhibiting the largestgenetic correlations ( Fr
+gF10.6) with thrombosis include
+vWF, t-PA, FVIII, homocysteine, and APCR. The onlytraits to exhibit signi®cant environmental correlationswith thrombosis were APCR and FVII. Table 2 providesa good demonstration of how low-phenotypic correla-tions may misrepresent the true underlying relationships.Both FIX and FVII failed to show signi®cant phenotypiccorrelations with thrombosis. However, both providestrong evidence for correlations between genetic effects(FIX) and environmental effects (FVII) with thrombosis.Similarly, the genetic and environmental correlations be-tween APCR and thrombosis are of similar magnitudesbut exhibit different directions. When such differencesin sign appear, the phenotypic correlation is attenuated,although the underlying components suggest muchstronger correlations. Relationships between APCR andthrombosis were unchanged when the presence of theFactor V Leiden mutation (there were nine heterozygotesin the sample) was statistically controlled. Similarly, thecorrelations between FVIII and thrombosis were un-changed when ABO blood type was incorporated intothe model.
+Discussion
+This is the ®rst study that formally documents the large
+genetic component for risk of thrombosis. By gatheringand analyzing data on extended pedigrees that have beenmethodically ascertained to allow general population in-ferences, we have begun to ®ll a critical gap in the studydesigns used in thrombosis genetics.

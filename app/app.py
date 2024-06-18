@@ -137,7 +137,7 @@ def server(input, output, session):
         elif input.input_type() == 'relations_query':
             return "e.g. melanoma"
         else:
-            return "e.g. 28721050, 22383897 or 27432226, PMC5010513, PMC1936307"
+            return "e.g. 28721050, 22383897 or 27432226, PMC1936307"
 
     @output
     @render.text

@@ -1,0 +1,62 @@
+2
+per 1000 person years for women), but similar for bothmen and women in the controls (0.3 per 1000 person yearsfor men and 0.2 per 1000 person years for women)(Table 3).
+The probability of being free of venous events before study
+entry in the thrombophilic individuals (probands excluded) was91% (95% CI 89–93%) at age 30, 82% (95% CI 79–86%) at
+age 45 and 70% (95% CI 65–76%) at age 60 (Fig. 1). Per type
+of defect, the probability of being free of venous events at age45 was 87% with protein C deﬁciency, 74% with protein Sdeﬁciency, 80% with antithrombin deﬁciency, 94% with FVLeiden and 67% with combined defects. In the controls, theprobability of being free of venous thrombosis at age 30, 45 and60 was, respectively, 100%, 99% (95% CI 98–100%) and 98%(95% CI 97–99%) (Fig. 1).
+The risk of venous thrombosis derived from the incidences
+of venous events experienced before study entry was 16 timeshigher in the relatives with thrombophilia compared with thecontrols (relative risk of 15.7; 95% CI 9.2–26.8) andremained similar after adjustment for center and sex (relativerisk of 16.4; 95% CI 9.6–28.0) (Table 4). Per type ofthrombophilia the relative risk differed greatly: the highestrisk was found in the relatives with combined defects. For
+the relatives with single defects, the risk was highest in
+relatives with protein S deﬁciency (32.4; 95% CI 16.7–62.9)and lowest in the relatives with the FV Leiden mutation (4.3;95% CI 1.9–9.7) (Table 4). Exclusion of homozygousindividuals with the FV Leiden mutation did not affectthese estimates. The relative risk was higher in men than inwomen: 18.1 (95% CI 9.0–36.3) and 13.9 (95% CI 6.0–32.4),respectively (Table 4).Table 2 Description of objectively conﬁ rmed venous events before study
+entry
+Thrombophilic
+individuals
+Controls
+(n¼1212)Probands
+(n¼600)Relatives
+(n¼846)
+Individuals with venous
+events before baseline ( n)532 139 15
+DVT ( n) 359 89 9
+PE (n) 154 45 3
+Other VT ( n)1 9 5 3
+PC deﬁciency ( n) 110 22 N/A
+PS deﬁciency ( n) 8 45 0N / A
+AT deﬁciency ( n) 9 02 5N / A
+FVL ( n) 152a14bN/A
+Combined defects ( n)9 6c28 N/A
+Age at onset all major
+events (mean (range))30 (0–71) 36 (13–71) 41 (24–68)
+PC deﬁciency 32 (11–71) 42 (23–71) N/A
+PS deﬁciency 29 (2–68) 37 (13–71) N/A
+AT deﬁciency 26 (0–53) 34 (17–64) N/AFVL 33 (14–68) 38 (17–61) N/ACombined defects 28 (3–69) 28 (13–59) N/A
+Abbreviations: DVT: deep venous thrombosis; PE: pulmonary
+embolism with or without DVT; VT: venous thrombosis; PC: protein
+C; PS: protein S; AT: antithrombin; FVL: FV Leiden; N/A: notapplicable.
+a30 were homozygous;b2 were homozygous;c6 were homozygous for
+FVL.
+Age at onset (yrs)100 80 60 40 20 0Event-free survival1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+Fig. 1. Venous event-free survival of the p robands (solid line), relatives
+(short dashed line) and controls (long dashed line) until study entry.Venous thrombosis in familial thrombophilia 1529
+/C2112004 International Society on Thrombosis and Haemostasis
+ 15387836, 2004, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/j.1538-7836.2004.00852.x by Readcube (Labtiva Inc.), Wiley Online Library on [25/08/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Discussion
+To obtain reliable estimates of the risk of venous thrombosis
+associated with familial thrombophilia caused by variousdefects, we started a prospectiv e collaborative multinational
+study including 1626 individuals with inherited thrombophiliaand 1212 controls from eight European countries.
+Data collected at study entry on the history of venous
+thrombosis prior to study inclusion showed a 16 timesincreased risk of VTEs for the individuals with inherited
+thrombophilia (only relatives of probands included) comparedwith the normal population (crude relative risk of 15.7 (95% CI
+9.2–26.8), adjusted relative risk of 16.4 (95% CI 9.6 –28.0)
+adjusted for sex and regional effects). The incidence of venousevents before study entry was 4.4 per 1000 person years in therelatives, compared with 0.3 per 1000 person years in thecontrols.
+The highest incidence of events and the lowest age at onset
+before study entry were found in the relatives with combineddefects (8.4 per 1000 person years; mean age at onset 28 years),
+as has been described by other authors [11,20–25], For single
+defects we found the highest risk with protein S deﬁciency (7.1per 1000 person years), and the lowest for FV Leiden (1.5 per1000 person years). Although there is one report that protein Sdeﬁciency confers the highest risk of VTE [26], several othershave shown that the greatest venous thromboembolic risk isassociated with antithrombin deﬁciency [23,24,27,28]. Whetherthere are real differences in the venous thrombotic risk in
+respect of antithrombin and protein S deﬁciency remains
+unresolved.

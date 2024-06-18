@@ -1,0 +1,70 @@
+ 
+Abstract presented at: San Antonio Breast Cancer Symposium 2016; 
+December 6-10, 2016; San Antonio, TX.
+ 26. Schiavon G, Hrebien S, Garcia-Murillas I, et al. Analysis of ESR1  
+mutation in circulating tumor DNA demonstrates evolution during 
+therapy for metastatic breast cancer. Sci Transl Med . 2015;7:313ra182.
+ 27. Clatot F, Perdrix A, Augusto L, et al. Kinetics, prognostic and pre -
+dictive values of ESR1  circulating mutations in metastatic breast 
+cancer patients progressing on aromatase inhibitor. Oncotarget . 
+2016;7:74448-74459.
+ 28. Spoerke JM, Gendreau S, Walter K, et al. Heterogeneity and clinical 
+significance of ESR1  mutations in ER-positive metastatic breast can -
+cer patients receiving fulvestrant. Nat Commun . 2016;7:11579.
+ 29. Andre F, Filleron T, Ng C, et al. Genomic characterization of met -
+astatic breast cancers. Abstract presented at: San Antonio Breast 
+Cancer Symposium 2018; December 4-10, 2018; San Antonio, TX.
+ 30. Takeshita T, Yamamoto Y, Yamamoto-Ibusuki M, et al. Droplet dig -
+ital polymerase chain reaction assay for screening of ESR1  mutations 
+in 325 breast cancer specimens. Transl Res . 2015;166:540-553.
+ 31. Liang X, Briaux A, Becette V, et al. Molecular profiling of hor -
+mone receptor-positive, HER2-negative breast cancers from patients 
+treated with neoadjuvant endocrine therapy in the CARMINA 02 
+trial (UCBG-0609). J Hematol Oncol . 2018;11:124.
+ 32. Shaw JA, Guttery DS, Hills A, et al. Mutation analysis of cell-free 
+dna and single circulating tumor cells in metastatic breast cancer patients with high circulating tumor cell counts. Clin Cancer Res . 
+2017;23:88-96.
+ 33. Baselga J, Campone M, Piccart M, et al. Everolimus in postmeno -
+pausal hormone-receptor-positive advanced breast cancer. N Engl  
+J Med . 2012;366:520-529.
+ 34. Fribbens C, Garcia Murillas I, Beaney M, et al. Tracking evolution of 
+aromatase inhibitor resistance with circulating tumour DNA analysis in metastatic breast cancer. Ann Oncol . 2018;29:145-153.
+ 35. Chung JH, Pavlick D, Hartmaier R, et al. Hybrid capture-based 
+genomic profiling of circulating tumor DNA from patients with 
+estrogen receptor-positive metastatic breast cancer. Ann Oncol . 
+2017;28:2866-2873.
+ 36. Takeshita T, Yamamoto Y, Yamamoto-Ibusuki M, et al. Comparison 
+of ESR1  mutations in tumor tissue and matched plasma samples from 
+metastatic breast cancer patients. Transl Oncol . 2017;10:766-771.
+ 37. Wang P, Bahreini A, Gyanchandani R, et al. Sensitive detection of 
+mono- and polyclonal ESR1  mutations in primary tumors, metastatic 
+lesions, and cell-free DNA of breast cancer patients. Clin Cancer Res . 
+2016;22:1130-1137.
+ 38. Johnston SR, Kilburn LS, Ellis P, et al. Fulvestrant plus anastrozole 
+or placebo versus exemestane alone after progression on non-steroidal  
+aromatase inhibitors in postmenopausal patients with hormone- 
+receptor-positive locally advanced or metastatic breast cancer 
+(SoFEA): a composite, multicentre, phase 3 randomised trial. Lancet Oncol . 2013;14:989-998.
+ 39. O’Leary B, Cutts RJ, Liu Y, et al. The Genetic landscape and clonal 
+evolution of breast cancer resistance to palbociclib plus fulvestrant in 
+the PALOMA-3 trial. Cancer Discov . 2018;8:1390-1403.
+ 40. Krop IE, Mayer IA, Ganju V, et al. Pictilisib for oestrogen recep -
+tor-positive, aromatase inhibitor-resistant, advanced or metastatic 
+breast cancer (FERGI): a randomised, double-blind, placebo-con -
+trolled, phase 2 trial. Lancet Oncol . 2016;17:811-821.
+ 41. Cristofanilli M, DeMichele A, Giorgetti C, et al. Predictors of pro -
+longed benefit from palbociclib plus fulvestrant in women with 
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+﻿ESR1  Mutution/DMnuto eu tl
+3727
+Cancer   November 1, 2019endocrine-resistant hormone receptor-positive/human epider -
+mal growth factor receptor 2-negative metastatic breast cancer in 
+PALOMA-3. Eur J Cancer . 2018;104:21-31.
+ 42. O’Leary B, Hrebien S, Morden JP, et al. Early circulating tumor 
+DNA dynamics and clonal selection with palbociclib and fulvestrant for breast cancer. Nat Commun . 2018;9:896.
+ 43. Lok SW, Whittle JR, Vaillant F, et al. A phase Ib dose-escalation and 
+expansion study of the BCL2 inhibitor venetoclax combined with tamoxifen in ER and BCL2-positive metastatic breast cancer. Cancer Discov . 2019;9:354-369.
+ 44. Allouchery V, Beaussire L, Perdrix A, et al. Circulating ESR1  muta -
+tions at the end of aromatase inhibitor adjuvant treatment and after 
+relapse in breast cancer patients. Breast Cancer Res . 2018;20:40.
+ 45. Ma CX, Sparano JA.

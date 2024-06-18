@@ -1,0 +1,79 @@
+ Access-
+ing the data using Semantic Web technologies enables tocombineDisGeNETdatawithothertypesofbiologicalin-
+formation available in the Linked Open Data (LOD) cloud
+(http://lod-cloud.net/ ). Finally, the disgenet2r R package
+facilitates exploring, analysing and visualizing the data us-
+ingthepowerfulgraphicalandstatisticalcapabilitiesofthe
+Renvironment.
+The web interface
+The DisGeNET web interface allows searching by single
+gene, disease and variant, using different types of identi-
+fiers.Searchingbyshortlistsofgenes,diseasesandvariantsis also possible. The user can also browse the data, using
+the Browser entry point. To ease the interpretation of the
+information, the different views of the web interface showannotations of the different biological entities to the afore-
+mentionedattributes.Theinterfacealsoenablessortingand
+filtering the data using the DisGeNET score, the DPI, theDSI, the publication year and the DisGeNET gene-disease
+associationtype.Linkstootherreferenceresources,suchas
+the NCBI gene, UniProt, UMLS and dbSNP, are also pro-
+vided.
+Programmatic access
+As a result of exploring DisGeNET data using the web in-
+terface, scripts in R, Perl, Python and Bash are automati-
+cally generated. These scripts can be downloaded and cus-
+tomizedtogeneratethesameorsimilarqueries,allowingto
+reproducetheresultsoftheanalysisperformedthroughthe
+web interface and to incorporate DisGeNET data as part
+ofautomaticcomputationalworkflows.Additionally,inthedownloads section of the website, several exemplary scripts
+areprovidedtoperformqueriestotheDisGeNETdatabase,
+with usecase examples.
+The DisGeNET Cytoscape App
+The DisGeNET Cytoscape plugin ( 1) has been updated to
+correspond to Cytoscape versions 3.0 or higher. The Dis-
+GeNET Cytoscape App allows visualization of the GDAs
+as bipartite networks, and also exploration of the data in a
+diseaseorgene-centricway.AvarietyoffeaturescanbeusedD836NucleicAcidsResearch,2017,Vol.45,Databaseissue
+Figure 1. TheDisGeNETplatformprovidesseveralwaystoaccessthedata.
+toconstructthenetworks,suchasfilteringbydiseaseclass,
+the DisGeNET gene-disease association type, data source
+and score range. The networks can also be built around
+a particular gene, or disease. The DisGeNET CytoscapeApp, and a detailed tutorial on how to use it, are available
+for download at http://disgenet.org/web/DisGeNET/menu/
+app.
+DisGeNET-RDF
+DisGeNET data are also published as machine-readable
+data through DisGeNET-RDF ( 23) and nanopublications
+(24) linked data sets, which increases the FAIRness of
+the data ( 25). Entities and properties in DisGeNET-RDFare semantically defined making extensive reuse of stan-
+dard identifiers, vocabularies and ontologies such as the
+National Cancer Institute thesaurus, for medical vocabu-
+lary and the Semanticscience Integrated Ontology ( 26)f o r
+general science. DisGeNET-RDF is interlinked to other
+biomedical databases available in the LOD cloud that en-
+ables performing complex queries that need the interroga-tion of different resources to be answered. The DisGeNET
+SPARQL endpoint allows exploration of the DisGeNET-
+RDF data set and query federation to expand DisGeNETgene-disease association information with data on gene ex-
+pression,drugactivityandbiologicalpathways,amongoth-
+ers. Representative queries linking the data to other re-NucleicAcidsResearch,2017,Vol.45,Databaseissue D837
+sources such as Wikipathways ( 27), ChEMBL ( 28) and the
+Gene Expression Atlas ( 29) are available at the RDF page
+in the website ( http://www.disgenet.org/web/DisGeNET/
+menu/rdf#sparql-queries ).
+The disgenet2r R package
+DisGeNETdatacanalsobeaccessedviaanRpackage,dis-
+genet2r. The package contains a series of functions to re-trievegene-diseaseandvariant-diseasedata,andtoperform
+mappingsbetweenseveralbiomedicalvocabularies.There-
+sultsofthequeriescanbevisualizedusingavarietyofplots,such as heatmaps, barplots and several types of networks.
+The package is especially well suited to explore the genetic
+basis of diseases, and disease comorbidities. Furthermore,thedisgenet2rpackagepermitsbenefitingfromtheSeman-
+tic Web technologies, without the need of special expertise
+inthisareathroughasetoffunctionsthatuseDisGeNET-RDFandotherresourcesavailableintheLODcloud.These
+functions include retrieving the druggable targets for a dis-
+ease of interest, or obtaining the biological pathways for alist of disease genes. The disgenet2r package also expedites
+the integration of DisGeNET data with other R packages.
+Thesourcecodeanddocumentationofdisgenet2rpackageare available at https://bitbucket.org/ibi
+group/disgenet2r .
+CONCLUSIONS AND FUTURE PERSPECTIVES
+New trends are starting to emerge in disease therapeutics.
+Someexamplesincludeimmunotherapies,genetherapy,the
+useofsiRNAandanti-senseoligonucleotides,andthemore
+recentpossibilityofgenomeeditingwithCRISPR-cas9sys-tems.

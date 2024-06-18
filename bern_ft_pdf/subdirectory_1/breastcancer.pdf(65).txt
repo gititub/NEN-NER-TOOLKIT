@@ -1,0 +1,60 @@
+
+An additional consideration for the development 
+of effective therapies to target ESR1 mutant tumors will 
+be to target common acquired mechanisms of resistance 
+between mutant and WT ER. The majority of patients 
+with advanced or ER-positive MBC will be treated with 
+a CDK4/6 or mTOR inhibitor in combination with ET during the course of their disease. Indeed, several studies 
+now demonstrate differential mechanisms of acquired re -
+sistance to either mTOR or CDK4/6 inhibitors in breast 
+and other cancers, including upregulation of MAPK sig -
+naling in everolimus- and palbociclib-resistant models, as well as mutations in RB1 , and upregulation of CDK2 , 
+CCNE1 , or PDK1  in palbociclib-resistant cells.
+80-86 
+These aberrations associated with targeted therapy re -
+sistance could be used to develop an effective treatment sequence to delay disease progression. Certainly, several 
+recent and ongoing clinical trials testing investigational 
+agents are recruiting patients who have been treated pre -
+viously with mTOR or CDK4/6 inhibitors, and com -
+parison of response between these patient populations is necessary to provide insight into whether certain patient 
+populations benefit from sequencing of targeted thera -
+pies or are inherently resistant to therapy.
+Conclusions
+Collectively, it has been demonstrated that ESR1 mu -
+tations are frequently acquired during AI therapy in the metastatic setting and may play a role in metastatic 
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+﻿ESR1  Mutution/DMnuto eu tl
+3725
+Cancer   November 1, 2019progression. Advances in DNA sequencing technol -
+ogy have led to more sensitive detection of ESR1 mu -
+tations in clinical samples, and there are now several 
+studies applying sequencing and ddPCR methods to 
+track ESR1 and other mutations during treatment and 
+progression. Targeted DNA sequencing and ddPCR technologies have shown that ESR1 mutations can pre -
+exist in approximately 5% of primary tumors and are 
+significantly enriched by 30% to 40% in the metastatic 
+setting. Analysis of ctDNA allows for an easy, nonin -
+vasive, and relatively inexpensive method to monitor driver mutations that may arise during treatment, 
+which may eventually be used to guide treatment deci -
+sions. Importantly, monitoring ESR1 mutations alone 
+has not been clinically predictive of treatment; how -
+ever, monitoring the acquisition of truncal or other mutations may predict response and/or progression of 
+treated cancers. Currently, patients who have tumors expressing ESR1 mutations are best treated with the 
+combination of fulvestrant and palbociclib, since this 
+combination has significantly improved PFS in pa -
+tients with the majority of identified ESR1 mutations. Ongoing clinical trials using fulvestrant with PI3K-
+alpha specific inhibitors are showing promising clini -
+cal results, but the analysis of whether patients with 
+specific ESR1 mutations will benefit from this treat -
+ment have yet to be published. Furthermore, immu -
+notherapies are becoming increasingly more effective 
+in solid tumors, and it is hoped that ongoing clinical 
+trials may show clinical benefit in selected ER-positive 
+MBC patients. Preclinical studies have identified novel targets that may be clinically important for targeting in 
+these patients. Further discovery and development of 
+targeted inhibitors is needed, and ongoing and future 
+clinical trials are necessary to discover new treatment 
+options for patients with MBC.Figure 2.  Targetable pathways in ESR1  mutant cells identified in preclinical studies. Growth factor receptor (GFR) signaling 
+through insulinlike growth factor 1R activates the PI3K pathway, which is inhibited with GFR inhibitors or PI3K inhibitors. Cyclin-
+dependent kinases 2 and 7 phosphorylate and activate estrogen receptor (ER). NOTCH, histone deacetylase, BET family proteins, ER coactivators, or ER itself are altered and implicated in resistance of ER mutant cancers. Immunotherapies targeting PD-1 are currently being investigated in breast cancer clinical trials. CDK, cyclin-dependent kinase; CoA, coactivator; EnR, endoplasmic reticulum; GFRs, growth factor receptors; HDAC, histone deacetylase; IGF, insulinlike growth factor; MHC, major histocompatibility complex; mTOR, mammalian target of rapamycin; TCR, T cell receptor.
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023].

@@ -1,0 +1,44 @@
+3714
+Cancer   November 1, 2019Review Article
+ESR1  Mutations in Breast Cancer
+Derek Dustin, BS1,2; Guowei Gu, PhD1,3,4; and Suzanne A. W. Fuqua, PhD1,3,4
+The acquisition of ligand-independent ESR1  mutations during aromatase inhibitor therapy in metastatic estrogen receptor  
+(ER)-positive breast cancer is a common mechanism of hormonal therapy resistance. Preclinical and clinical studies have demon -
+strated that ESR1  mutations can preexist in primary tumors and can be enriched during metastasis. Furthermore, ESR1  mutations 
+express a unique transcriptional profile that favors tumor progression, suggesting that selected ESR1  mutations may influence metas -
+tasis. Several groups have used sensitive detection methods using patient liquid biopsies to track ESR1  or truncal somatic mutations 
+to predict treatment outcome and tumor progression, and some of these techniques may eventually be used to guide sequential 
+treatment options in patients. Further development and standardization of mutation tracking in circulating tumor DNA is ongoing. Clinically, patients with ESR1  mutations derive clinical benefit when treated with fulvestrant and CDK4/6-targeted therapies, but 
+the development of more potent selective ER degraders and/or new targeted biotherapies are needed to overcome the endocrine-resistant phenotype of ESR1  mutant–bearing tumors. In this review, we discuss the mechanisms of resistance and dissemination of 
+ESR1  mutations as well as the detection methods for ESR1  mutation tracking, newly discovered potential therapeutic targets, and 
+the clinical implications and treatment options for treating patients with ESR1  mutant–bearing tumors. Cancer  2019;125:3714-3728 .  
+© 2019 American Cancer Society . 
+KEYWORDS:  breast cancer, estrogen receptor, metastasis, mutation.
+INTRODUCTION
+Approximately 70% of breast cancers are estrogen receptor (ER)-positive, and many of these patients are effectively 
+cured of their disease.1 However, despite effective hormonal and targeted therapies, half of these patients will relapse 
+or progress to incurable metastatic disease. Several mechanisms of de novo and acquired endocrine therapy (ET)  
+resistance have been described, including loss of ER expression, ER crosstalk with growth factor receptors, subclonal 
+genomic alterations of tumor suppressors or drivers, and acquisition of ESR1 fusions or activating ESR1 missense 
+mutations.2-4
+Current clinical strategies to effectively treat and prevent recurrence of ER-positive breast cancer is with ETs, which 
+target the ER through hormone deprivation or antagonistic binding of the receptor. ET cures about half of patients in the nonmetastatic setting, and clinical benefit is seen in about 30% of metastatic patients. However, most metastatic 
+breast cancer (MBC) patients will eventually progress on ET and succumb to their disease. Other targeted agents such as 
+the CDK4/6 inhibitors palbociclib, ribociclib, or abemaciclib, and the mammalian target of rapamycin (mTOR) inhib -
+itor everolimus are combined with ET in the metastatic setting, as these agents have shown improved progression-free survival (PFS) in patients compared with ET alone.
+5-8 However, patients with ESR1 mutant–positive metastases are 
+resistant to standard-of-care ET and exhibit a worse overall survival.9,10 Figure 1 shows the location within the ER where 
+these mutations occur in clinical samples. The most common and well-characterized mutations occur at the Y537 and D538 residues. However, missense mutations have been identified in at least 51 other residues, most of which occur 
+within the ER ligand-binding domain (LBD). The most common mutations have been functionally characterized as 
+hormone-independent activating mutations (Y537, D538), whereas others result in estrogen hypersensitivity (K303R, E380Q)
+11,12 or neutral, retaining hormone-dependent activation function (S432L, V534E).12 Furthermore, many of 
+these mutations are rare and have not yet been functionally annotated. There is a current clinical need to identify addi -
+tional effective hormonal and targeted therapies, as well as novel therapeutic sequencing strategies to best treat MBC. 
+This review focuses on the biology, detection, and treatment strategies of ESR1 LBD mutations as one of the most com -
+mon mechanisms of acquired endocrine resistance.
+Corresponding author:  Suzanne A. W. Fuqua, PhD, Lester and Sue Smith Breast Center, BCM 600, Baylor College of Medicine, One Baylor Plaza, Houston, TX 77030; 
+sfuqua@bcm.edu
+1 Lester and Sue Smith Breast Center, Baylor College of Medicine, Houston, Texas; 2 Translational Biology and Molecular Medicine, Baylor College of Medicine, Houston, 
+Texas; 3 Department of Medicine, Baylor College of Medicine, Houston, Texas; 4 Department of Molecular and Cellular Biology, Baylor College of Medicine, Houston, 
+Texas
+DOI: 10.1002/cncr.

@@ -1,0 +1,70 @@
+ To allow interoperability, and to bridge the
+research and the clinical settings, DisGeNET provides awide variety of disease vocabularies. These include MeSH,
+OMIM, Disease Ontology ( 15) (DO) and ICD9. Disease
+attributes include the MeSH disease class, the UMLSsemantic type, the Human Phenotype Ontology ( 16)a n d
+the DO upper level classes. In version 4.0, we distinguish
+between abnormal phenotypes, traits, signs and symptomsfrom actual diseases using the UMLS semantic types
+followed by manual curation. In addition, disease entries
+referring to very general classes such as ‘CardiovascularDiseases’, ‘Autoimmune Diseases’, ‘Neurodegenerative
+Diseases and ’Lung Neoplasms” are indicated as ‘disease
+group’.
+Gene HGNC symbols and UniProt identifiers are
+mapped to Entrez gene identifiers. The genes are describedNucleicAcidsResearch,2017,Vol.45,Databaseissue D835
+with their full name, the UniProt accession, the Reactome
+(17)upperlevelpathwayandthePanther( 18)pr oteinclass .
+DisGeNET 4.0 has made a stronger emphasis on the re-
+lationship between variants and diseases. Variant-diseaseinformation in DisGeNET originates from ClinVar, the
+GWAS Catalog, UniProt, GAD and from BeFree data.
+VariantsareidentifiedusingtheNCBIShortGeneticVaria-tions database (dbSNP) identifiers, and annotated with the
+chromosomal position, the reference and alternative alle-
+les and the variant class, obtained from dbSNP database(19). Additionally, variant allele frequencies computed by
+theExomeAggregationConsortium,whichaggregatesand
+harmonizesexomesequencingdatafromavarietyoflarge-scale sequencing projects ( 20), and by the 1000 Genomes
+Project, a public catalogue of human variation and geno-
+typedata( 21),areprovided.Finally,themostsevereconse-
+quencetypeofeachvariantisdisplayed,obtainedusingthe
+EnsemblVariant EffectPredictor( 22).
+For both, GDAs and VDAs, the publication(s) support-
+ing the association, a representative sentence from each
+publication and the original source are available. In Dis-GeNET 4.0 the full collection of publications supporting
+each association has been made available (in previous re-
+leasesonly10representativepaperswereshown).Addition-ally,theassociationscannowbesortedorfilteredbypubli-
+cationyear.Thenewreleasealsobenefitsfromanimproved
+disambiguationbetweengenesanddiseasesimplementedinthe BeFree text-mining system. Furthermore, false positive
+GDAshavebeensemi-automaticallyremovedfromalltext-
+miningdatasets(BeFree,GADandLHGDN).Lastly,eachGDAischaracterizedwiththeDisGeNETgene-diseaseas-
+sociation type ontology that has been updated to include
+newassociationtypes(highlightedinpurpleinSupplemen-taryFigure S2).
+PRIORITIZATION FEATURES TO GUIDE THE EXPLO-
+RATION OF THE GENETIC BASIS OF DISEASE
+To help navigating the more than 400 000 GDAs in Dis-
+GeNET, these are rated with a confidence score (the Dis-
+GeNET score) that reflects the recurrence of a GDAacross all data sources. The DisGeNET score takes into
+account the number of sources supporting the asso-
+ciation and the reliability of each of them (for fur-ther details see http://disgenet.org/web/DisGeNET/menu/
+dbinfo#score ). The score is updated in each release to in-
+cludethenew sourcesincorporated in thedatabase.
+In order to facilitate ranking the genes associated with a
+disease, in this release we introduced two new metrics. The
+Disease Specificity Index (DSI) ranges from 0 to 1, and isinverselyproportionaltothenumberofdiseasesassociated
+toaparticulargene.Ageneassociatedtoalargenumberof
+diseases (e.g. TNF, associated to more than 1500 diseases)willhaveaDSIclosetozero,whileageneassociatedtoonly
+one disease, is more ‘specific’ for that disease and has DSI
+of 1. The Disease Pleiotropy Index (DPI) ranges from 0 to1 and is proportional to the number of different (MeSH)
+disease classes a gene is associated to. Thus, a gene associ-
+atedtodiseasesofdiverseclasses(suchasAPOE,associated
+toCardiovascularDiseases,MentalDisorders,Neoplasms,
+Respiratory Tract Diseases, etc), will have a DPI close to1.Conversely,thePSCA,associatedto58diseases,mostof
+which areneoplasms has a relativelylowDPI.
+FLEXIBLE DATA ACCESS TO ANSWER DIFFERENT
+RESEARCH QUESTIONS
+The DisGeNET platform includes several ways of access-
+ing the data, which makes it a versatile resource to an-
+swer questions posed by different types of users, and to
+achieve diverse goals (Figure 1). The web interface is de-
+signedforuser-friendlyexplorationofsmallportionsofthe
+databyusersinterestedinaparticulardisease,geneorvari-
+ant.Usingcustomizedscriptsallowsqueryingthedatabase
+for large lists of genes, diseases or variants, and includ-
+ingDisGeNETdataincomputationalworkflows.TheDis-GeNETCytoscapeAppisespeciallysuitedtocarryoutnet-
+work medicine analyses and visualize their results.

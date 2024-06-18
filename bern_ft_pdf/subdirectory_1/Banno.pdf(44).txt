@@ -1,0 +1,77 @@
+ We previously observed that both FvQ/1and
+FvQ/Qmice showed increased infarct volumes compared with wild-type
+mice 24 hours after the ischemia-reperfusion injury induced by the
+same technique.42However, infarct volumes 24 hours after ischemia in
+Pros11/E,Pros1E/E,a n dPros11/2mice were not different from those in
+Pros11/1m i c e( F i g u r e5 ) .T h ee d e m ai n d e xa n dt h en e u r o l o g i cd e ﬁcit
+score were also not different among the mouse groups (data not shown).
+These results suggest that PS-K196E mutation in mice does not cause
+aggravation of ischemic stroke, unlike FV Leiden mutation.
+Discussion
+To assess the pathogenic causality of the PS K196E mutation for venous
+thrombosis, we established colonies of PS-K196E knockin mice and
+PS-KO mice.43Plasma from PS-K196E homozygous mice had 67%
+of normal APC cofactor activity, similar to puri ﬁed recombinant mu-
+rine PS-K196E that had 49% to 60% APC cofactor activity. Mouse
+C4BP does not contain the PS-binding subunit, the b-chain, which is
+Figure 2. APC anticoagulant cofactor activity of recombinant mouse PS. (A)
+Modified APTT assay. Increasing concentrations of recombinant mouse wild-type (WT)
+PS (d)o rP S - K 1 9 6 E( n) were added to normal mouse pooled plasma, and a modified
+APTT clotting assay was performed in the presence of recombinant mouse APC. (B)
+FXa 1-stage clotting assay. Increasing concentrations of recombinant mouse WT PS ( d)
+or PS-K196E ( n) were added to normal mouse pooled plasma, and an FXa 1-stage
+clotting assay was performed in the presence of recombinant mouse APC. Each assay
+was performed in triplicate, and data are shown as mean 6SD.2250 BANNO et al BLOOD, 5 NOVEMBER 2015 xVOLUME 126, NUMBER 19a pseudogene in mice,44so interpretation of APC cofactor activity
+is uncomplicated by C4BP considerations. The susceptibility of
+PS-K196E mice to venous thrombosis was determined in multiple
+models, including (1) an electrolytic IVC model of venous thrombosis
+that produces a nonocclusive and consistent IVC thrombus in the pres-
+ence of constant blood ﬂow, (2) TF-initiated pulmonary thrombosis, and
+(3) HMW-polyP –initiated pulmonary thrombosis. All thrombotic bio-
+markers or parameters in these thrombosis injury models, including
+mortality, showed that the PS-K196E mutation caused increased venous
+thrombosis, generally very similar to PS heterozygosity and to the
+murine FV Leiden mutation. Heterozygosity for this PS mutation gavea milder thrombotic phenotype than PS mutant homozygosity. These
+results unambiguously demonstrate a causal link between the PS-K196E
+mutation and thrombophi lia, strongly supporting the PS-K196E muta-
+tion as a human genetic risk factor for VTE.8-11
+The PS lysine residue 196 is located in the second EGF-like domain,
+a n di ti sh i g h l yc o n s e r v e di nP Sf r o mh u m a n ,c h i m p a n z e e ,r h e s u s
+monkey, mouse, rat, opossum, cattle, dog, pig, chicken, and Xenopus ,
+indicating its importance for the PS function. Based on modeling of the
+tertiary structure of the second EG F-like domain of PS, Lys-196 is on
+the surface of the molecule,2where it likely interacts with APC.
+Consistent with this interpretation for the molecular defect of PS-K196E,
+Figure 3. DVT model of electrolytic IVC injury. (A)
+Thrombus weight (TW) in IVC. (B) Platelet counts (PLT) in
+peripheral blood in mice with IVC injury. Platelet counts of
+nontreated control mice were not different among the groups
+(Pros11/1,1 1 8 . 4 64.53104/mL;Pros11/E, 131.9 6
+13.13104/mL;Pros1E/E,1 1 0 . 5618.73104/mL;Pros11/2,
+103.0614.53104/mL;FvQ/Q,1 1 1 . 9 617.43104/mL;
+mean6standard error of the mean [SEM] of 3 mice). (C)
+TAT in plasma. TAT of nontreated control mice was not
+different among the groups ( Pros11/1,3 . 260.5mg/L;
+Pros11/E,3 . 060.3mg/L;Pros1E/E,2 . 760.5mg/L;Pros11/2,
+3.360.8mg/L;FvQ/Q,3 . 560.9mg/L; mean 6SEM
+of 3 mice). (D) Interleukin-6 (IL-6) in plasma. IL-6 was not
+detected in nontreated mice of all genotypes (n 53).
+Data are mean 6SEM of 12 mice for Pros11/1,
+Pros11/E,Pros1E/E,Pros11/2,a n d FvQ/Qmice. * P,.05
+in comparison with Pros11/1mice. ** P,.001 in com-
+parison with Pros11/1mice.†P,.001 in comparison with
+Pros11/1mice, and P,.05 in comparison with Pros11/E
+mice.
+Figure 4. TF-induced PE and HMW-polyP–induced
+PE models. (A) Survival curve after TF infusion
+(n517/group). (B) Survival curve after HMW-polyP
+infusion (n 516/group). (C) Scale to measure lung
+perfusion defect scores. Score of 0 indicates complete
+perfusion of Evans blue with no vascular occlusion, and
+score of 4 indicates no Evans blue perfusion with com-
+plete vascular occlusion. (D) Lung perfusion defect
+scores after TF infusion. (E) Lung perfusion defect scores
+after HMW-polyP infusion. Symbols represent data from
+a single mouse. Bars represent the mean values of
+groups. * P,. 0 5i nc o m p a r i s o nw i t h Pros11/1mice.
+**P,.005 in comparison with Pros11/1mice.

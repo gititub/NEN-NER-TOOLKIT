@@ -1,0 +1,61 @@
+ Here, wedescribe a large-scale production strategy that exploitsautoactivation for the thrombin mutant W215A/E217A(WE) [6], which is currently in preclinical development,owing to its compelling proﬁle of efﬁcacy and safety asan anticoagulant/antithrombotic and anti-inﬂammatory
+agent in vivo , as documented by several preclinical studies
+in rodent and non-human primate models [7 –12]. The
+strategy offers a suitable alternative to existing protocolsfor the production of thrombin from activation of pre-thrombin-1 by prothrombinase [13,14] or prethrombin-2by ecarin [15,16], thereby obviating the need for, costs ofand possible contamination from external proteases.
+Materials and methods
+Puriﬁcation of WEDGE was performed in a similar way to
+puriﬁcation of WE expressed in Escherichia coli [4,16], with
+modiﬁcations for larger-scale production. Inclusion bodieswere produced by the use of fed-batch fermentation,employing 2 9M9 yeast extract glucose medium and a
+glycerol plus yeast extract feed solution. Refolding was ini-tiated by addition of reduced, denatured inclusion bodiesto rapidly stirred refolding buffer. Concentration and dia-
+ﬁltration of refolding reactions prior to heparin –Sepharose
+chromatography were carried out with a hollow-ﬁber ultra-ﬁltration cartridge. Autoactivation was allowed to proceedat room temperature and pH 8.0 after concentration of theheparin –Sepharose pool to 2 –3m gm L
+/C01. The progress of
+autoactivation was monitored by reversed-phase HPLCseparation of thrombin A and B chains, and other inter-mediate forms, with a Vydac C4 2.1 950 mm column.
+After sample reduction in 3
+Mguanidine-HCl by 10 m M
+dithiothreitol, acidiﬁed samples were subjected to chroma-
+tography with gradient elution from 15% to 65% acetoni-trile in 0.1% triﬂuoroacetic acid at a ﬂow rate of0.20 mL min
+/C01and UV detection at 214 nm. After auto-
+activation had reached completion, buffer exchange with aSephadex G-25 column was followed by cation exchangechromatography on SP-Sepharose in MES buffer (pH 6.0)
+with elution of active WEDGE with a gradient of NaCl
+before storage of bulk WEDGE at /C020°C. The overall
+yield from 14 g of inclusion bodies derived from 5 L of fer-mentation to ﬁnal ~33 mg of bulk product was 1.2%,
+which is quite similar to the 1.1% yield of WE produced inE. coli . This yield is typical for refolding of proteins with
+multiple disulﬁde bonds. Samples for in vivo studies were
+treated with Detoxi-Gel (Thermo-Fisher, Waltham, MA,
+USA) before use to remove residual endotoxin. Studies
+with baboons were approved by the Institutional AnimalCare and Use Committee of Oregon Health & Science Uni-versity. Baboons were given a single intravenous bolusdose of WEDGE in 1 mL of saline. On day 1, baboon 1received a single dose of 2.5 lgk g
+/C01WEDGE, and
+baboon 2 received a single dose of 1.0 lgk g/C01WEDGE.On day 2, baboon 2 received a single dose of 2.5 lgk g/C01
+WEDGE. The activated partial thromboplastin time
+(APTT) was measured after collection of blood samplesinto a 1 : 10 volume of 3.2% citrate buffer and then pro-cessed to platelet -poor plasma prior to treatment, and at 5,
+15, 30, 60 and 120 min post-treatment. The APTT wasread on a KC-1 with standard protocols. The effects of
+WEDGE were also assessed with the standard-template
+skin bleeding time test (Surgicutt; International Techni-dyne, Piscataway, NJ, USA) at 15, 30 and 60 min after thestart of treatment.
+Results and discussion
+The production of several constructs of prethrombin-2
+carrying the WE substitution with mutations in the acti-vation domain revealed a construct carrying the addi-
+tional three substitutions D14lA, G14mP and E18A
+(WEDGE) that was completely activated to thrombin in10 h when used at a concentration of 3 mg mL
+/C01. This
+time frame is consistent with protocols for large-scaleproduction in a biotechnological/pharmaceutical setting.WEDGE has functional activities towards physiologic
+Fibrinogen
+PAR1
+Protein C8
+7
+6
+543210
+WT WE (BHK)
+WE ( E. coli )WEDGElog kcat/Km (M–1 s–1)
+Fig. 1. Values of the log of the speciﬁcity constant kcat/Km(M/C01s/C01)
+for the hydrolysis of physiologic substrates (ﬁbrinogen, protease-
+activated receptor 1 [PAR1] fragment33ATNATLDPRSFLLRNP
+NDKYEPFWEDEEKN62and protein C in the presence of 10 n M
+thrombomodulin and 5 m MCaCl 2) by wild-type (WT) thrombin,
+W215A/E217A (WE) expressed in BHK cells as prethrombin-1 and
+activated with prothrombinase [6] or expressed in Escherichia coli as
+prethrombin-2 and activated with ecarin [16], and WEDGE pro-duced by autoactivation. The WE mutation causes a drastic loss ofactivity towards ﬁbrinogen and PAR1, but has only a modest effect
+on protein C activation in the presence of Ca
+2+and thrombomodu-
+lin. The additional mutations introduced in WEDGE relative to WEto enable autoactivation are inconsequential with regard to the func-
+tional properties of the construct.

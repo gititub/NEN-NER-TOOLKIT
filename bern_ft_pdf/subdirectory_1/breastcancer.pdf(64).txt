@@ -1,0 +1,66 @@
+  Potential Therapeutic Targets 
+Discovered in Preclinical Studies for Treating  
+ESR1  Mutant-Bearing Tumors
+Target Name Targeted Therapy Reference
+CDK7 THZ1 Jeselsohn et al,20 Harrod et al21
+BET family JQ1 Ladd et al72
+Class I and II 
+HDACVorinostat Ladd et al72
+SRC-3 SI-2 Gates et al18
+CDK2 Dinaciclib Scott et al73
+IGF-1R OSI-906 Gelsomino et al,14 Li et al24
+UPR BHPI Mao et al74
+NOTCH RO4929097 Gelsomino et al75
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Review Article
+3724
+Cancer   November 1, 2019ESR1 mutant models have been used to demonstrate 
+other potential targetable pathways, such as the unfolded 
+protein response (UPR) and stemness pathways. Mao  
+et al74 showed that Y537S and D538G mutant cells have 
+constitutive hyperactivation of the UPR pathway, and that this may contribute to the ET-resistant phenotype of ESR1 Y537S and D538G mutant cells. The ER bio -
+modulator BHPI activates UPR, which causes inhibition of protein synthesis and cell death. Treatment of T47D ESR1 WT and mutant cells with BHPI decreased estro -
+gen-stimulated growth and further enhanced growth reduction with tamoxifen or fulvestrant. Furthermore, activation of progesterone receptor with progestin was associated with increased resistance to anti-estrogen therapies and further activation of the UPR pathway in ESR1 mutant cells as measured by downstream markers, 
+such as spliced XBP1. Treatment with BHPI reduced 
+progestin-stimulated growth. Collectively, this study demonstrated that UPR activation contributes to the ET-resistant phenotype associated with ESR1 mutation 
+expression. Gelsomino et al
+75 demonstrated that the 
+Y537S ESR1 mutation increases a stem cell–like pheno -
+type. Y537S ESR1 mutant cells exhibited a higher per -
+centage of CD44 +/CD24 − cells compared with WT 
+ESR1 cells and had enhanced Notch signaling, indicat -
+ing that these cells represent a more stem-like progenitor. 
+Therapeutic screening of stem cell pathway inhibitors 
+enhanced Notch signaling in ESR1 mutant cells, which 
+was mediated through phosphorylation of residue S118 in Y537S ER. Furthermore, inhibition of Notch signal -
+ing using the RO4929097 selective inhibitor reduced mammosphere formation efficiency, but inhibitors of 
+other stem cell pathways such as the Wnt/B-catenein and 
+sonic hedgehog were not effective. These collective re -
+sults show that ESR1 mutant cells have enriched stem cell properties through Notch signaling and that this path -
+way could be potentially targeted in patients with ESR1 
+mutant-expressing tumors.
+An additional novel strategy to overcome ET resis -
+tance is to therapeutically target epigenetic modifying proteins to either inhibit ER transcriptional activity or 
+resensitize tumor cells to ET by modifying ER expression and chromatin binding. The JQ1 inhibitor targets the BET family of bromodomain proteins, and the HDAC inhibi -
+tor vorinostat has been tested in an ESR1 D538G model and demonstrated effective reduction of tumor growth and ER transcriptional activity when treated in combination 
+with fulvestrant.
+72 Unfortunately, the BET inhibitors have 
+shown widespread toxicity in clinical trials. The efficacy of 
+the HDAC inhibitor entinostat has been tested in clinical trials in combination with ET. In the phase 2 ENCORE301 
+trial, patients with ER-positive advanced breast cancer were treated with either exemestane or in combination with 
+entinostat.
+77,78 There was an improvement in PFS (4.3 
+vs 2.3 months) and OS (28.1 vs 19.8 months) with the combination, leading to the initiation of the larger phase 3 E2112 trial (NCT02115282).
+79 Because preclinical stud -
+ies suggest that ESR1 mutant cells are sensitive to HDAC inhibition in combination with ET, it would be valuable 
+to see whether clinical trials with tamoxifen or fulvestrant 
+can be developed further and whether patients with ESR1  
+mutations derive benefit from these combinations. Figure 2 shows potential targetable pathways in ESR1 m tumors and 
+highlights several inhibitors used in preclinical and clinical 
+studies to target these pathways. However, use of the PI3K 
+inhibitors alpelisib and taselisib will have to be evaluated 
+further to determine whether patients with ESR1 mutant − 
+bearing tumors derive clinical benefit. These studies demonstrate there are several new targets that could poten -
+tially be actionable in the clinic; however, there is an urgent 
+need to continue developing clinical trials of inhibitors of 
+these novel targets.

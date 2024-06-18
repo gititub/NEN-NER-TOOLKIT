@@ -1,0 +1,82 @@
+,De Pons,J.,Hayman,G.T.,Laulederkind,S.J.F.,
+Liu,W.,Nigam,R.,Petri,V.,Smith,J.R.,Tutaj,M.,Wang,S.-J. etal.
+(2015)TheRatGenomeDatabase2015:genomic,phenotypicand
+environmentalvariationsanddisease. NucleicAcidsRes. ,43,
+D743–D750.
+9. Eppig,J.T.,Blake,J.A.,Bult,C.J.,Kadin,J.A.andRichardson,J.E.
+(2015)TheMouseGenomeDatabase(MGD):facilitatingmouseasa
+modelforhumanbiologyanddisease. NucleicAcidsRes. ,43,
+D726–D736.
+10. Becker,K.G.,Barnes,K.C.,Bright,T.J.andWang,S.A.(2004)The
+geneticassociationdatabase. Nat.Genet. ,36,431–432.
+11. Bundschus,M.,Dejori,M.,Stetter,M.,Tresp,V.andKriegel,H.-P.
+(2008)Extractionofsemanticbiomedicalrelations fromtextusing
+conditionalrandomfields. BMCBioinformatics ,9,207.
+12. Bravo,A.,Cases,M.,Queralt-Rosinach,N.,Sanz,F.andFurlong,L.I.
+(2014)Aknowledge-drivenapproachtoextractdisease-relatedbiomarkersfromtheliterature. BiomedRes.Int. ,2014,253128.
+13. Bravo, `A.,Pi˜nero,J.,Queralt-Rosinach,N.,Rautschka,M.and
+Furlong,L.I.(2015)Extractionofrelations betweengenesanddiseasesfromtextandlarge-scaledataanalysis:implicationsfortranslationalresearch. BMCBioinformatics ,16,55.
+14. Bodenreider,O.(2004)TheUnifiedMedicalLanguageSystem
+(UMLS):integratingbiomedicalterminology. NucleicAcidsRes. ,32,
+D267–D2710.
+15. Kibbe,W.A.,Arze,C.,Felix,V.,Mitraka,E.,Bolton,E.,Fu,G.,
+Mungall,C.J.,Binder,J.X.,Malone,J.,Vasant,D. etal.(2015)Disease
+Ontology2015update:anexpandedandupdateddatabaseofhumandiseasesforlinkingbiomedicalknowledgethroughdiseasedata.NucleicAcidsRes. ,43,D1071–D1078.
+16. Groza,T.,K ¨ohler,S.,Moldenhauer,D.,Vasilevsky,N.,Baynam,G.,
+Zemojtel,T.,Schriml,L.M.,Kibbe,W.A.,Schofield,P.N.,Beck,T. etal.
+(2015)Thehumanphenotypeontology:semanticunificationof
+commonandraredisease. Am.J.Hum.Genet. ,97,111–124.
+17. Fabregat,A.,Sidiropoulos,K.,Garapati,P.,Gillespie,M.,
+Hausmann,K.,Haw,R.,Jassal,B.,Jupe,S.,Korninger,F.,McKay,S.etal.(2015)TheReactomepathwayKnowledgebase. NucleicAcids
+Res.,44,D481–D487.
+18. Mi,H.,Poudel,S.,Muruganujan,A.,Casagrande,J.T.and
+Thomas,P.D.(2016)PANTHERversion10:expandedproteinfamiliesandfunctions,andanalysistools. NucleicAcidsRes. ,
+44,
+D336–D342.
+19. Sherry,S.T.,Ward,M.H.,Kholodov,M.,Baker,J.,Phan,L.,
+Smigielski,E.M.andSirotkin,K.(2001)dbSNP:theNCBIdatabaseofgeneticvariation. NucleicAcidsRes. ,29,308–311.
+20. Lek,M.,Karczewski,K.J.,Minikel,E.V.,Samocha,K.E.,Banks,E.,
+Fennell,T.,O’Donnell-Luria,A.H.,Ware,J.S.,Hill,A.J.,Cummings,B.B. etal.(2016)Analysisofprotein-codinggenetic
+variationin 60,706humans. Nature,536,285–291.
+21. Auton,A.,Abecasis,G.R.,Altshuler,D.M.,Durbin,R.M.,
+Abecasis,G.R.,Bentley,D.R.,Chakravarti,A.,Clark,A.G.,Donnelly,P.,Eichler,E.E. etal.(2015)Aglobalreference forhuman
+geneticvariation. Nature,526,68–74.
+22. McLaren,W.,Gil,L.,Hunt,S.E.,Riat,H.S.,Ritchie,G.R.S.,
+Thormann,A.,Flicek,P.andCunningham,F.(2016)TheEnsemblVariantEffectPredictor. GenomeBiol. ,17,122.
+23. Queralt-Rosinach,N.,Pi ˜nero,J.,Bravo, `A.,Sanz,F.andFurlong,L.I.
+(2016)DisGeNET-RDF:harnessingtheinnovativepowerofthesemanticwebtoexplorethegeneticbasisofdiseases. Bioinformatics ,
+32,2236–2238.
+24. Queralt-Rosinach,N.,Kuhn,T.,Chichester,C.,Dumontier,M.,
+Sanz,F.andFurlong,L.I.(2016)PublishingDisGeNETasnanopublications. Semant.Web ,7,519–528.
+25. Wilkinson,M.D.,Dumontier,M.,Aalbersberg,Ij.J.,Appleton,G.,
+Axton,M.,Baak,A.,Blomberg,N.,Boiten,J.-W.,daSilvaSantos,L.B.,
+Bourne,P.E. etal.(2016)TheFAIRGuidingPrinciplesforscientific
+datamanagementandstewardship. Sci.Data ,3,160018.26. Dumontier,M.,Baker,C.J.,Baran,J.,Callahan,A.,Chepelev,L.,
+Cruz-Toledo,J.,DelRio,N.R.,Duck,G.,Furlong,L.I.,Keath,N. etal.
+(2014)TheSemanticscienceIntegratedOntology(SIO)forbiomedical
+researchandknowledgediscovery. J.Biomed.Semantics ,5, 14.
+27. Kutmon,M.,Riutta,A.,Nunes,N.,Hanspers,K.,Willighagen,E.L.,
+Bohler,A.,M ´elius,J.,Waagmeester,A.,Sinha,S.R.,Miller,R. etal.
+(2016)WikiPathways:capturingthefulldiversityofpathway
+knowledge. NucleicAcidsRes. ,44,D488–D494.
+28. Jupp,S.,Malone,J.,Bolleman,J.,Brandizi,M.,Davies,M.,Garcia,L.,
+Gaulton,A.,Gehant,S.,Laibe,C.,Redaschi,N. etal.(2014)TheEBI
+RDFplatform:linkedopendataforthelife sciences. Bioinformatics ,
+30,1338–1339.
+29. Petryszak,R.,Keays,M.,Tang,Y.A.,Fonseca,N.A.,Barrera,E.,
+Burdett,T.,F¨ ullgrabe,A.,Fuentes,A.M.-P.,Jupp,S.,Koskinen,S. etal.
+(2016)ExpressionAtlasupdate––anintegrateddatabaseofgeneand
+proteinexpressioninhumans,animalsandplants. NucleicAcidsRes .,
+44,D746–D752.
+30. Hopkins,A.L.andGroom,C.R.(2002)Thedruggablegenome. Nat.
+Rev.DrugDiscov.
+,1,727–730.
+31. Nelson,M.R.,Tipney,H.,Painter,J.L.,Shen,J.,Nicoletti,P.,Shen,Y.,
+Floratos,A.,Sham,P.C.,Li,M.J.,Wang,J. etal.(2015)Thesupportof
+humangeneticevidenceforapproveddrugindications. Nat.Genet. ,
+47,856–860.
+32. Amberger,J.S.,Bocchini,C.A.,Schiettecatte,F.,Scott,A.F.and
+Hamosh,A.(2015)OMIM.org:OnlineMendelianInheritancein
+Man(OMIM ®),anonlinecatalogofhumangenesandgenetic
+disorders.NucleicAcidsRes. ,43,D789–D798.
+33. Plaisier,C.L.,O’Brien,S.

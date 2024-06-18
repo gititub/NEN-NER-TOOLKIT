@@ -1,0 +1,76 @@
+
+Whether the analysis of circulating tumor cells 
+(CTCs) or circulating tumor DNA (ctDNA) will become 
+a superior technical approach to detect ESR1 mutations, 
+and monitor treatment response or progression is still 
+being evaluated. Shaw el al
+32 compared paired CTCs and 
+ctDNA samples from the same patient cohort. More mu -
+tations were discovered in ctDNA than the paired CTC 
+sample, and not all CTCs had the same mutations that 
+were found in the ctDNA. This finding suggests that 
+ctDNA analyses may be more sensitive for tracking gene 
+mutations rather than CTCs. However, there is a need to 
+evaluate mutations in liquid biopsies to those found in distant metastatic tumors biopsies to draw definitive con -
+clusions about discordances. Thus, digital PCR using liq -
+uid biopsies has been applied to evaluate ESR1 mutation 
+frequencies in several large phase 2/3 clinical trials such 
+as BOLERO 2, SoFEA, PALOMA3, and FERGI.
+9,10,28 
+With increasing use, the potential advantages of ctDNA 
+versus CTC sampling should become apparent.
+In the BOLERO-2 clinical trial, MBC patients 
+who had prior exposure to a nonsteroidal AI were ran -
+domized to the steroidal AI exemestane, or in combina -
+tion with the mTOR inhibitor everolimus.33 Y537S and 
+D538G ESR1 mutations were found in 29% (156/541) 
+of patients.10 Thirty patients exhibited polyclonal 
+Y537S and D538G mutations, and other studies have 
+also confirmed that ESR1 mutations are frequently polyclonal.
+9,28,34-37 Survival analyses showed that pa -
+tients with Y537S or D538G mutations exhibited worse 
+overall survival compared with patients who had only 
+WT ER (32.1 vs 20.7 months). Patients with polyclonal 
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+﻿ESR1  Mutution/DMnuto eu tl
+3719
+Cancer   November 1, 2019ESR1 mutations also exhibited a worse overall survival 
+(15.2 months). Treatment with everolimus was associ -
+ated with improved PFS for patients with the D538G 
+mutation that was similar to WT (5.78 months for 
+D538G, 8.48 months for WT), but the analysis of PFS 
+in patients with the Y537S mutation was underpow -
+ered to determine whether clinical benefit was achieved in this treatment arm. A potential limitation of this study was that only 2 ESR1 mutations were assessed using ddPCR, and the acquisition of other polyclonal 
+ESR1 mutations may have impacted the prognostic re -
+sults obtained in this trial.
+Fribbens et al
+9 developed a multiplex ddPCR assay 
+to simultaneously study 7 ESR1 mutations in ctDNA from the SoFEA and PALOMA3 clinical trials. In the 
+SoFEA clinical trial, patients who exhibited prior sen -
+sitivity to nonsteroidal AIs were randomized to receive fulvestrant plus anastrozole, fulvestrant plus placebo, or the steroidal AI exemestane.
+38 In this cohort of patients,  
+ESR1 mutations were found in 39.1% (63/161) of patient’s  
+ctDNA, and 49.1% (27/55) of these patients exhibited polyclonal mutations. Patients who had an ESR1 muta -
+tion and were treated with exemestane had worse PFS compared with patients who did not have detectable ESR1 mutations (2.6 vs 8.0 months). Patients who were 
+treated with fulvestrant derived significant clinical bene -
+fit regardless of whether they had detectable ESR1 muta -
+tions (PFS 5.7 months for ESR1 mutations, 5.4 months 
+for WT ER). Therefore, this study suggests that patients 
+with ESR1 mutations were relatively sensitive to a ful -
+vestrant-containing regiment and should be treated with 
+fulvestrant if there were detectable ESR1 mutations.
+In the PALOMA-3 clinical trial, patients who pro -
+gressed during ET were randomized to receive fulves -
+trant or fulvestrant plus palbociclib.
+5 ESR1 mutations 
+were detected in 25.3% (91/360) of the patients in this 
+cohort. Patients with ESR1 mutations had improved  
+PFS when treated with fulvestrant plus palbociclib ver -
+sus fulvestrant monotherapy (9.4 vs 3.6 months), as well as patients with WT ESR1 (9.5 vs 5.4 months). These 
+results suggest that patients who have progressed on a 
+nonsteroidal AI derive clinical benefit from fulvestrant 
+and palbociclib, regardless of whether the patient ctDNA exhibited ESR1 mutations. However, a more recent anal -
+ysis of the PALOMA-3 clinical trial demonstrated that although there was no overall enrichment of ESR1 mu -
+tations during treatment, the Y537S mutation was sele -
+ctively enriched in fulvestrant-based treatments in the metastatic setting, suggesting relative resistance to ful -
+vestrant and palbociclib.

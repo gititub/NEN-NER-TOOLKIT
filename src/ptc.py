@@ -133,8 +133,7 @@ class Pubtator():
     
         if output_format == 'biocjson':
             if list_of_pubtators:
-                return json.dumps(list_of_pubtators, indent=4), json.dumps(list_of_pubtators, indent=4), json.dumps(
-                    texts_list, indent=4), id_sum, error_sum
+                return list_of_pubtators, None, None, id_sum, error_sum
             else:
                 return f'No results found. Check if the PubMed or PMC ID is correct.'
         else:
@@ -160,9 +159,11 @@ class Pubtator():
 
     @staticmethod
     def run_extraction(ids, output_file):
+        id_sum = 0
+        error_sum = 0
 
         if output_file.endswith(".json"):
-            output_data = Pubtator.extract_pubtator(ids, 'biocjson')[1]
+            output_data, _, _, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'biocjson')
             with open(output_file, 'w') as output_file:
                 json.dump(output_data, output_file, indent=2)
             print(f"Biocjson data saved to {output_file}")
@@ -176,7 +177,10 @@ class Pubtator():
             all_relations_df.to_csv(relations_filename, sep='\t', index=False)
             print(f"All Relations DataFrames saved to {relations_filename}")
 
-            df_cleaned.to_csv('fulltext.tsv', sep='\t', index=False)
+            fulltext_filename = output_file.replace(".tsv", "_text.tsv")
+            df_cleaned.to_csv(fulltext_filename, sep='\t', index=False)
+            print(f"Original text saved to {fulltext_filename}")
+        
         else:
             print("Invalid output format. Please choose 'biocjson' or 'df'.")
 

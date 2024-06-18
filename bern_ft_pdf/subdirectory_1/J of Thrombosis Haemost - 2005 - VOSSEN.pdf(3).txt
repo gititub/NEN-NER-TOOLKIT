@@ -1,0 +1,40 @@
+ actual test results). Committee members
+were not blinded for whether a person was a thrombophiliacarrier or control, but were unaware of the type of defect of thecarriers. Venous thromboses were classiﬁed as deﬁnite venousevents when they were objectively conﬁrmed, i.e. for DVT byultrasound (duplex, Doppler), impedance plethysmography,venography or leg symptoms plus deﬁnite PE, and for PE byangiography, high probability ventilation-perfusion-scan,
+spiral computerized tomography or autopsy. STPs were
+considered deﬁnite events when diagnosed by a physician.For the analysis reported here, we included only deﬁnite venousevents. Consensus on the classiﬁcation of the venous events, i.e.that a majority of the steering committee members agreed, wasreached in 67 of the 72 (93%) reported events duringprospective follow-up (47 DVTs or PEs, 21 STPs, four majorhemorrhages). Of the remaining ﬁve events which were
+classiﬁed as deﬁnite DVT or PE ( n¼4) or no PE ( n¼1),
+consensus was reached after additional information wasprovided ( n¼4) or after reconsideration ( n¼1). For con-
+trols, immediate consensus was reached in 88% of the reported460 C. Y. Vossen et al
+/C2112005 International Society on Thrombosis and Haemostasis
+ 15387836, 2005, 3, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/j.1538-7836.2005.01197.x by Readcube (Labtiva Inc.), Wiley Online Library on [25/08/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+events (15 of 17) and in thrombophilic subjects in 95% of the
+reported events (52 of 55).
+Analysis and statistics
+We calculated the annual absolute risk (incidence) and relativerisk of a ﬁrst DVT or PE for various groups in the cohort. Theincidence of venous thrombotic events was calculated bydividing the number of events by the total of observation-years(follow-up time). Follow-up time was the time betweeninclusion and the event of interest, death or the last date offollow-up (the end of the study or last date before loss to
+follow-up), whichever occurred ﬁrst. A DVT or PE was
+considered ﬁrst event only when not preceded by a STP. If a PEfollowed a DVT within 3 months, these events were considereda single event. The 95% conﬁdence intervals (95% CI) werecalculated according to a Poisson distribution for the numberof events [15]. Hazard ratios as estimation of the relative risk ofvenous thrombosis were calculated by Cox-regression withvenous thrombosis as the dependent variable and presence or
+absence of thrombophilia as independent variable. Center, age
+(as stratum: age < 45 or ‡45) and sex were entered in the
+Cox-regression model to adjust for center, age and sex effects.
+Results
+We collected prospective data on 575 relatives with a throm-
+bophilic defect and 1118 controls (825 partners, 293 friends), allwithout a thrombotic event prior to inclusion and not on long-term oral anticoagulant treatment. The total follow-up timewas 3283 years in the individuals with thrombophilia (mean5.7; range 0.2–7.3) and 6289 years in the controls (mean 5.6;range 0.7–7.2). During follow-up, 20 thrombophilic subjectsand 64 controls were lost to follow-up (complete follow-up in
+95%), and eight thrombophilic individuals and 12 controls
+died. The causes of death in the carriers were heart disease(n¼3), suspected pulmonary embolism ( n¼1) and other
+causes ( n¼4). Causes of death in controls were not related to
+venous thrombosis (cancer ( n¼4), myocardial infarction
+(n¼4), accidents in trafﬁc or at work ( n¼3) or surgery
+(n¼1)). The main characteristics at inclusion are shown in
+Table 1. A preponderance of the thrombophilic individuals
+was female (62%), whereas sex was distributed more equally
+among the controls.
+Risk of a ﬁrst event
+Of the 575 thrombophilic individuals, 26 thrombophilicsubjects experienced a ﬁrst DVT or PE during follow-up(4.5%) (one relative had a mesenteric vein thrombosis)compared with seven of the 1118 controls (0.6%) (Table 2).The events occurred spontaneously, i.e. did not occur afterexposure to a known acquired risk factor, in 15 thrombophilicindividuals (58%) and three controls (43%). The risk factors
+present at the time of the event in the remaining 11 thrombo-
+philic individuals were hospitalization ( n¼3), hormonereplacement therapy ( n¼2), infection ( n¼2), pregnancy
+(n¼2), cancer ( n¼1) and oral contraceptives ( n¼1), and in
+the four remaining controls surgery ( n¼2), hospitalization
+(n¼1) and cancer ( n¼1). The incidence of a ﬁrst DVT or PE
+was higher in the thrombophilic individuals than in thecontrols, respectively, 0.8% per year (95% CI 0.5–1.2) com-pared with 0.1% per year (95% CI 0.0–0.2) (Table 2) with arelative risk of 9.0 (95% CI 3.8–21.1), adjusted for sex, age at
+entry and center effects (crude relative risk: 7.3; 95% CI 3.2–
+16.

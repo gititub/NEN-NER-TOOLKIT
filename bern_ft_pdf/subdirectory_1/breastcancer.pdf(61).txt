@@ -1,0 +1,75 @@
+ First, preclinical studies 
+rely on the generation of ESR1 mutation models through 
+genetic manipulation using CRISPR/Cas9 or through 
+overexpression systems, thus any results must be validated 
+in patient-derived material. Patient-derived xenografts 
+(PDX) can preserve clonal representation and are becom -
+ing a useful tool to study ESR1 mutations and test new 
+therapeutic strategies.
+47 Indeed, several studies have shown 
+treatment responses in PDX models in in vivo transplant experiments or ex vivo organoid culture strongly correlated 
+to treatment responses seen in patients.
+48-50 Unfortunately, 
+there is a paucity of ER-positive PDX models from MBC 
+patients, especially patients with ESR1 mutations. There is 
+an urgent need to establish more mutation-positive PDX 
+models from metastatic patients.
+It is hoped that the development of novel oral and 
+more potent SERDs will provide a more effective ET 
+backbone to target WT and mutant ERs. Preclinical 
+studies have shown the effectiveness of the newer SERDs AZD9496, GDC-0810, and elacestrant (RAD1901) in reducing tumor growth of ESR1 WT and mutant  
+tumors.
+51-54 AZD9496 exhibited higher activity against 
+ESR1 mutant cells than fulvestrant, as demonstrated through transcriptional and growth assays and in xe -
+nograft growth models. However, the short half-life of AZD9496 and reduced efficacy of GDC0810 are sig -
+nificant limitations for clinical development of these agents. Elacestrant is an orally available selective estro -
+gen receptor degrader currently in phase 3 clinical trial to compare its efficacy and safety with standard of care 
+ET (EMERALD trial; NCT03778931). Patients in this 
+study who have WT or mutant ESR1 and have pro -
+gressed on up to 2 lines of ET with a CDK4/6 inhibitor were randomized to either elacestrant or standard of care 
+ET (fulvestrant, anastrozole, letrozole, or exemestane). 
+Preclinical studies demonstrated elacestrant inhibited 
+both WT and mutant ESR1 signaling and reduced the 
+growth of mutant ESR1- bearing PDX models. If clinical 
+studies demonstrate significant efficacy in the elacestrant arm, it would be one of the first clinically approved oral 
+SERDs that may also be useful for patients with ESR1 
+mutations.
+Proteolysis targeting chimeras (PROTACs) are being 
+developed to degrade the ER and may prove useful in 
+patients who have ER-positive breast cancer.
+55 PROTAC 
+molecules contain an ER ligand covalently linked to an 
+E3 ligase, which promotes proteasomal degradation of 
+ER. Preclinical studies showed that the ER PROTAC 
+ARV-471 promoted potent degradation of ER in mul -
+tiple ER-positive cell line models.56 Furthermore, ARV-
+471 showed robust growth inhibition of WT and mutant ESR1 xenograft models. Clinical development of ARV-
+471 is ongoing and, if successful, will represent a novel 
+class of ER protein degraders that can also be applied to 
+targeting other proteins in breast and other cancers.
+The development of additional targeted therapies 
+for vulnerable pathways in breast cancer is needed to 
+prolong progression and survival of patients with met -
+astatic disease. Clinical trials using pan-PI3K inhibitors 
+and isoform-specific inhibitors have been recently devel -
+oped. A phase 1 trial in ER-positive MBC patients using the pan-PI3K inhibitor buparlisib in combination with 
+fulvestrant showed that 2 patients with ESR1 mutations 
+derived clinic benefit.
+57 Larger studies using fulvestrant 
+with buparlisib, such as BELLE-2 and BELLE-3, are cur -
+rently being evaluated. The BELLE-2 clinical trial was a phase 3 trial in which patients who had ER-positive breast 
+cancer and progressed on AI therapy received either ful -
+vestrant or fulvestrant plus buparlisib.
+58 The BELLE-3 
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Review Article
+3722
+Cancer   November 1, 2019trial evaluated the efficacy of these therapies in patients 
+who progressed after being treated with an mTOR in -
+hibitor.59 Although combinations exhibited a marginally  
+better PFS (BELLE-2, 6.9 vs 5.0 months; BELLE-3, 
+3.9 vs 1.8 months) the toxicity profile of buparlisib plus fulvestrant does not support its further development in 
+this setting. However, the use of isoform-specific PI3K 
+inhibitors are showing promising clinical benefit. In the phase 3 SOALR-1 clinical trial, patients with ER-positive MBC who progressed on AI therapy were randomized 
+to fulvestrant with or without the mutant PI3K-alpha 
+specific inhibitor alpelisib.

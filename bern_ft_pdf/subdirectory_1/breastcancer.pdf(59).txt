@@ -1,0 +1,72 @@
+
+39In the FERGI clinical trial, AI-resistant, locally  
+advanced, or MBC patients were treated with fulvestrant 
+alone or in combination with the pan-PI3K inhibitor pic-
+tilisib.40 BEAMing Digital PCR assays were developed to 
+detect 12 ESR1 mutations using ctDNA. Liquid biopsies 
+were evaluated at progression on an AI, and ESR1 muta-
+tions were found in 37% (57/153) of patient ctDNA.28 
+The authors also compared ctDNA data with those found using tumor tissue from a subset of the patients. 
+No ESR1 mutations were detected in primary tumor tis-
+sue from biopsies collected at diagnosis (0/81). However,  
+9.7% (3/31) of metastatic samples obtained before AI therapy contained ESR1 mutations, and the prevalence increased to 63% (12/19) in tumor samples collected after AI progression. In patients with both ctDNA and 
+tumor tissues, the ctDNA often showed increased ESR1 
+mutant content than match tumor tissue. This suggests 
+that ctDNA might better reflect the total ESR1 mutation 
+burden across multiple metastatic sites.
+There was no significant difference in PFS between 
+patients according to ESR1 mutation status in both the 
+fulvestrant only or the combination fulvestrant plus  
+pictilisib arms of FERGI. These findings support that 
+patients derive benefit from fulvestrant treatment regard -
+less of ESR1 mutation status when mutations are ana -
+lyzed in aggregate. This is in contrast to the retrospective 
+analysis of PALOMA-3,
+5 where end of treatment ctDNA 
+was used to demonstrate that the Y537S was significantly 
+increased and associated with resistance to fulvestrant or 
+fulvestrant plus palbociclib.
+Collectively, these results demonstrate a need for the 
+routine use of targeted sequencing of liquid biopsies, and if possible, tumor samples. These collective results show that ESR1 mutations represent a small subclonal popu -
+lation in primary breast tumors that are most probably 
+enriched during the course of treatment in the metastatic 
+setting. Table 1 summarizes the frequencies of ESR1  
+mutations found in clinical tumor biopsies. These fre -
+quencies show that overall, the use of ctDNA may be a more reliable and representative detection of total ESR1 mutation status compared with genomic DNA from pri -
+mary or metastatic tumors.
+CLINICAL IMPLICATIONS  
+AND THERAPEUTIC STRATEGIES  
+TO TREAT MBC WITH ESR1  MUTATIONS
+There are effective ETs to treat patients with ER-positive 
+metastatic disease. ET and biotherapy combinations  
+are now commonly used to treat ET-resistant MBC, as 
+opposed to sequencing of single endocrine agents. There 
+ 10970142, 2019, 21, Downloaded from https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.32345 by Consorci De Serveis Universitaris De Catalunya, Wiley Online Library on [07/06/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+Review Article
+3720
+Cancer   November 1, 2019are 2 biological targets that have been approved for  
+ER-positive breast cancer: mTOR and cyclin-dependent 
+kinases (CDKs) 4/6. Treatment guidelines recommend 
+that patients who develop MBC 12 months after adju -
+vant ET or who are de novo metastatic should be treated in a first-line setting with an AI in combination with a 
+CDK4/6 inhibitor.
+45 This recommendation is based on 
+the results of the PALOMA-2 trial, which showed that the combination of letrozole and palbociclib extended 
+PFS by 13.1 months compared with letrozole alone (27.6 
+vs 14.5 months).
+46 However, other approaches, such as the 
+selective estrogen receptor degrader fulvestrant alone or in combination with a CDK4/6 inhibitor, are also often 
+used in a first-line metastatic setting. Subsequent ther -
+apy of an AI- and/or CDK4/6 inhibitor–treated patient includes fulvestrant monotherapy (or in combination 
+with a CDK4/6 inhibitor in treatment-naïve patients), a  
+steroidal AI with or without an mTOR inhibitor, tamox -
+ifen, or chemotherapy. Preclinical development and proof 
+of clinical utility of additional targeted biotherapies are 
+needed to delay the eventual progression to unresponsive metastatic disease. A better understanding of when to 
+use targeted therapies and the sequence of combination 
+therapies is critical to effectively manage ER-positive dis -
+ease. Importantly, there has not been a direct comparison of the efficacy of fulvestrant monotherapy versus an AI 
+with a CDK4/6 inhibitor. Furthermore, there has not 
+been a direct comparison between the CDK4/6 inhibi -
+tors palbociclib, ribociclib, and abemaciclib in clinical trials. These comparisons will help us understand effec -
+tive sequencing of therapies to delay acquired resistance to targeted therapies and manage metastatic disease.

@@ -1,0 +1,73 @@
+ Lungs were
+excised, photographed, and scored for Evans blue perfusion defects using a
+scoring scale (from 0 for no occlusion to 4 for complete occlusion). The scores
+were evaluated by 2 individuals anonymously.
+Transient middle cerebral artery (MCA) occlusion model
+Cerebral ischemia-reperfusion injury was induced using the 3-vessel occlusion
+technique as described previously.38,39In brief, the left common carotid artery
+was isolated and occluded by a vascular clip (1-vessel occlusion [1-VO]) under
+halothane inhalation-anesthesia. A skin incision was made at the midpoint
+between the left orbit and the external auditory canal. After the removal of the
+zygomatic bone and downward retraction of the mandibular bone, a craniectomy
+was made using an electric drill. The distal M1 portion of left MCA, peripheral to
+the perforating arteries of the basal ganglia, was permanently occluded (2-vessel
+occlusion [2-VO]) by elect rocauterization and cut at the lateral edge of the
+olfactory tract. Finally, the right common carotid artery was occluded (3-vessel
+occlusion [3-VO]) using a vascular clip. After 15-minute focal ischemia induced
+b yt h e3 - V O ,2c l i p sa tt h ec o m m o nc a r o t i da r t e r i e sw e r er e m o v e dt oe s t a b l i s h
+reperfusion through the collateral arteries (the source of the vascular reserve)
+distal to the 1-VO in the cortex. During the operation, blood pressure was mon-
+itored by an indirect blood pressure meter (BP-98A; Softron, Tokyo, Japan) and
+rectal temperature was regulated within the range of 36.5 to 37.5°C by a tem-
+perature controller (NS-TC10; Neuroscience, Tokyo, Japan). After 24 hours,
+neurologic de ﬁc i t sw e r ea s s e s s e du s i n gas c o r i n gs c a l e( f r o m0t o4 )a sd e s c r i b e d
+previously,38,39and the brains were excised and stained with 2,3,5-triphenyl
+tetrazolium chloride. The infarcted and th e total hemispheric areas of each section
+were measured using a computer-assisted image-analysis system (WinROOF;
+Mitani, Tokyo, Japan).31,39The infarct volume was adjusted for edema by dividing
+the volume by the edema index (left hemisphere volume/right hemisphere volume).
+Statistical analysis
+Statistical signi ﬁcance was assessed by the 1-way analysis of variance
+followed by the post hoc Bonferroni ’s multiple comparison test. Data for
+nonnormal and nonparametric distributions were assessed by the Kruskal-Wallis
+test followed by the post hoc Dunn ’s multiple comparison t est. Survival rates
+were analyzed by the Mantel-Cox log-rank test. Differences were considered to
+be signi ﬁcant at P,.05.
+Results
+Generation of PS-K196E and PS-KO mice
+To generate PS-K196E mice, we introduced the K196E mutation into
+the endogenous Pros1 gene by homologous recombination (supple-
+mental Figure 1A). We con ﬁrmed the expected struc ture of the targeted
+locus by polymerase chain reactio n (data not shown) and Southern
+blotting (supplemental Figure 1B). Pros1 messenger RNA was de-
+tected in PS-K196E mice with normal sizes ( ;3.5 kb) and amounts by
+the northern blot analysis of liver to tal RNA (supplemental Figure 1C).
+Expression of the mutant messenger RNA in PS-K196E mice was
+veriﬁed by the appearance of 238-bp and 171-bp fragments in reverse-
+transcription polymerase chain reaction products after digestion with NruI
+(supplemental Figure 1D) and by direct sequencing of the products. To
+generate PS-KO mice, we disrupted the Pros1 gene in a similar manner
+using a targeting vector that eliminated exon 3 (supplemental Figure 2).
+Genotyping of 299 offspring by intercrosses in heterozygous
+PS-K196E ( Pros11/E) mice showed the expected 1:2:1 Mendelian
+distribution of Pros11/1(82/299, 27.4%), Pros11/E(149/299,
+49.8%), and Pros1E/E(68/299, 22.7%). Pros1E/Emice were viableand fertile. In contrast, no Pros12/2pups were obtained in a total of
+316 pups from Pros11/2intercrosses, as previously reported.3,28
+Pros11/1andPros11/2mice were born in the 1:2 distribution
+(109/316 [34.5%] and 207/316 [65.5%], respectively) by Pros11/2mice
+intercrosses, and Pros11/2mice grew normally. Thus, although PS
+is essential for embryonic development in mice, the homozygous
+PS-K196E mutation did not cause embryonic lethality. In addition,
+Pros1E/2mice were viable when Pros1E/Emice were bred with
+Pros11/2mice.
+Plasma APC cofactor activities and PS antigens in PS-K196E
+and PS-KO mice
+We measured plasma APC cofactor activity by an APTT-based clotting
+assay in the absence and presence of recombinant mouse APC as
+previously reported.33The APC cofactor activity determined from
+the prolongation of clotting time by APC was signi ﬁcantly reduced in
+Pros11/E,Pros1E/E,a n d Pros11/2mice compared with Pros11/1mice
+(Figure 1A). Similar to human Pros11/Esubjects, Pros11/Emice had
+;18% lower activity (82.0% 69.5%, mean 6SD) than Pros11/1mice
+(100%618.0%). More severe reductions in the activity were observed
+inPros1E/E(67.1% 67.

@@ -1,0 +1,61 @@
+ Treatment approach to metastatic hormone 
+receptor-positive, HER2-negative breast cancer: endocrine ther -
+apy and targeted agents. https  ://www.uptod  ate.com/conte  nts/treat 
+ment-appro  ach-to-metas  tatic-hormo  ne-recep tor-posit  ive-her2-negat  
+ive-breast-cancer-endoc  rine-thera  py-and-targe  ted-agents. Accessed 
+December 18, 2018.
+ 46. Finn RS, Dieras V, Rugo HS, et al. Palbociclib (PAL) + letrozole 
+(L) as first-line (1L) therapy (tx) in estrogen receptor-positive (ER +)/
+human epidermal growth factor receptor 2-negative (HER2 −) ad-
+vanced breast cancer (ABC): efficacy and safety across patient (pt) subgroups. J Clin Oncol . 2017;35:1039-1039.
+ 47. Li S, Shen D, Shao J, et al. Endocrine-therapy-resistant ESR1  variants 
+revealed by genomic characterization of breast-cancer-derived xeno -
+grafts. Cell Rep . 2013;4:1116-1130.
+ 48. Hidalgo M, Bruckheimer E, Rajeshkumar NV, et al. A pilot clinical 
+study of treatment guided by personalized tumorgrafts in patients with advanced cancer. Mol Cancer Ther . 2011;10:1311-1316.
+ 49. Gao H, Korn JM, Ferretti S, et al. High-throughput screening using 
+patient-derived tumor xenografts to predict clinical trial drug re -
+sponse. Nat Med . 2015;21:1318-1325.
+ 50. Aboulkheyr Es H, Montazeri L, Aref AR, Vosough M, Baharvand 
+H. Personalized cancer medicine: an organoid approach. Trends Biotechnol . 2018;36:358-371.
+ 51. Weir HM, Bradbury RH, Lawson M, et al. AZD9496: an oral es -
+trogen receptor inhibitor that blocks the growth of ER-positive 
+and ESR1 -mutant breast tumors in preclinical models. Cancer Res . 
+2016;76:3307-3318.
+ 52. Joseph JD, Darimont B, Zhou W, et al. The selective estrogen recep -
+tor downregulator GDC-0810 is efficacious in diverse models of ER + 
+breast cancer. Elife . 2016;5.
+ 53. Bihani T, Patel HK, Arlt H, et al. Elacestrant (RAD1901), a selec -
+tive estrogen receptor degrader (SERD), has antitumor activity in 
+multiple ER( +) breast cancer patient-derived xenograft models. Clin 
+Cancer Res . 2017;23:4793-4804.
+ 54. Garner F, Shomali M, Paquin D, Lyttle CR, Hattersley G. RAD1901: 
+a novel, orally bioavailable selective estrogen receptor degrader that demonstrates antitumor activity in breast cancer xenograft models. Anticancer Drugs . 2015;26:948-956.
+ 55. Wang L, Guillen VS, Sharma N, et al. New class of selective estrogen 
+receptor degraders (SERDs): expanding the toolbox of PROTAC de -
+grons. ACS Med Chem Lett . 2018;9:803-808.
+ 56. Flanagan J, Qian Y, Gough S, et al. ARV-471, an oral estrogen recep -
+tor PROTAC™ protein degrader for breast cancer. Abstract presented 
+at: San Antonio Breast Cancer Symposium 2018; December 4-10, 2018; San Antonio, TX.
+ 57. Ma CX, Luo J, Naughton M, et al. A phase I trial of BKM120 (Buparlisib) in combination with fulvestrant in postmenopausal women with estrogen receptor-positive metastatic breast cancer. Clin Cancer Res . 2016;22:1583-1591.
+ 58. Baselga J, Im SA, Iwata H, et al. Buparlisib plus fulvestrant versus 
+placebo plus fulvestrant in postmenopausal, hormone receptor-pos -
+itive, HER2-negative, advanced breast cancer (BELLE-2): a ran -
+domised, double-blind, placebo-controlled, phase 3 trial. Lancet Oncol . 2017;18:904-916.
+ 59. Di Leo A, Johnston S, Lee KS, et al. Buparlisib plus fulvestrant in 
+postmenopausal women with hormone-receptor-positive, HER2-negative, advanced breast cancer progressing on or after mTOR inhi -
+bition (BELLE-3): a randomised, double-blind, placebo-controlled, phase 3 trial. Lancet Oncol . 2018;19:87-100. 60. Andre F. Alpelisib (ALP) + fulvestrant (FUL) for advanced breast 
+cancer (ABC): results of the phase 3 SOLAR-1 trial [abstract LBA3_PR]. Abstract presented at: ESMO 2018 Congress; October 19-23, 2018; Munich, Germany.
+ 61. Baselga J, Faye Dent S, Cortes J, et al. Phase III study of taselisib 
+(GDC-0032) plus fulvestrant versus fulvestrant in patients with es -
+trogen receptor-positive, PIK3CA-mutant, locally advanced or met -
+astatic breast cancer: primary analysis from SANDPIPER [abstract LBA1006]. J Clin Oncol . 2018;36.
+ 62. Ma CX, Suman V, Goetz MP, et al. A phase II trial of neoadjuvant 
+MK-2206, an AKT inhibitor, with anastrozole in clinical stage II or III PIK3CA-mutant ER-positive and HER2-negative breast cancer. Clin Cancer Res . 2017;23:6823-6832.
+ 63. Kim SB, Dent R, Im SA, et al. Ipatasertib plus paclitaxel versus pla -
+cebo plus paclitaxel as first-line therapy for metastatic triple-negative 
+breast cancer (LOTUS): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial. Lancet Oncol . 2017;18:1360-1372.
+ 64. Kornblum N, Zhao F, Manola J, et al. Randomized phase II trial 
+of fulvestrant plus everolimus or placebo in postmenopausal women with hormone receptor-positive, human epidermal growth factor re -
+ceptor 2-negative metastatic breast cancer resistant to aromatase in -
+hibitor therapy: results of PrE0102. J Clin Oncol .

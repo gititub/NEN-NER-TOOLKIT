@@ -1,0 +1,62 @@
+ Histone H4 carries anet positive charge and binds to prothrombin through anelectrostatically driven mechanism [7]. The crystal struc-
+ture of prothrombin devoid of residues 146 –167 [3] reveals
+a cluster of solvent-exposed acidic residues interspersedthrough hydrophobic residues in the Gla domain and adja-cent kringle-1 (Fig. 2). The locale is associated with anarea of strong and negative electrostatic potential that mayhelp steer the positively charged histone H4 to its site anddirectly compete for cofactor Va binding. Interestingly, thenaturally occurring mutations Y44C [20,21] and D118Y
+[22] affect this region of prothrombin and their bleeding
+phenotype may be explained by a weakened binding ofcofactor Va. Alternatively, the epitope of prothrombin rec-ognizing histone H4 may change upon binding to pro-thrombinase and the inhibitory effect on prothrombinasemay originate from interference with FXa, rather than, orin addition to, cofactor Va. Furthermore, conformational
+transitions induced by histone H4 binding may have long-range effects on kringles and the protease domain, therebydisrupting interactions with prothrombinase at multiplesites beyond the Gla domain. A rigorous dissection of themolecular origin of the intriguing effect of histone H4 on
+prothrombin will therefore require extensive mutagenesis
+and functional and structural analysis using the strategydeveloped recently for the study of this zymogen [17]. Thetranslational appeal of such an analysis should also beemphasized. Identiﬁcation of the locale for histone H4binding to prothrombin may point to new targets of thera-peutic intervention where the activity of prothrombinase isinhibited through interference with prothrombin rather
+than with the enzyme FXa or cofactor Va.
+Addendum
+N. Pozzi and E. Di Cera designed the research and ana-
+lyzed the data; N. Pozzi performed the research; E. DiCera wrote the manuscript.
+Acknowledgments
+This work was supported in part by a Grant from the
+American Heart Association, 15SDG25550094 (N. Pozzi.),
+and the National Institutes of Health Research Grants
+HL049413, HL073813 and HL112303 (E. Di Cera).
+Ac AcBc Bc
+K1K1
+D118
+A46
+GD GDA36D38W41E48
+Y44
+Y24
+E7E29V8F4K2K2
+Fig. 2. Regions of prothrombin for potential interaction with histone H4. The crystal structure of prothrombin devoid of residues 146 –167 in
+the linker connecting the two kringles [3] reveals the general assembly of the modular components of the zymogen (GD, Gla domain;K1, kringle-1; K2, kringle-2; Ac, A chain; Bc, B chain). The left panel shows acidic (red) and hydrophobic (gold) residues with solvent expo-
+sure>70% in the Gla domain and adjacent kringle-1 that are prime candidates for mutagenesis screens aimed at identifying the epitope of
+prothrombin recognizing histone H4. Two of these residues (Y44 and D118) are associated with naturally occurring mutations causing severebleeding [20 –22]. The panel at right shows the electrostatic potential surface (red, negative; blue, positive), contoured at /C62kT/eunder condi-
+tions of 140 m
+MNaCl, pH 7.4. The surface identiﬁes the Gla domain and neighbor kringle-1 as regions of charge complementarity to the posi-
+tively charged histone H4.
+©2016 International Society on Thrombosis and HaemostasisEffect of histone H4 on prothrombin activation 1817Disclosure of Conﬂict of Interests
+N. Pozzi is a co-founder of Hemadvance, LLC; E. Di
+Cera has a ﬁnancial interest in the Verseon Corporation.
+References
+1 Degen SJ, Davie EW. Nucleotide sequence of the gene for
+human prothrombin. Biochemistry 1987; 26: 6165 –77.
+2 Pozzi N, Chen Z, Gohara DW, Niu W, Heyduk T, Di Cera E.
+Crystal structure of prothrombin reveals conformational ﬂexibil-
+ity and mechanism of activation. J Biol Chem 2013; 288: 22734 –
+44.
+3 Pozzi N, Chen Z, Pelc LA, Shropshire DB, Di Cera E. The lin-
+ker connecting the two kringles plays a key role in prothrombin
+activation. Proc Natl Acad Sci USA 2014; 111: 7630 –5.
+4 Krishnaswamy S. The transition of prothrombin to thrombin.
+J Thromb Haemost 2013; 11(Suppl. 1): 265 –76.
+5 Pozzi N, Chen Z, Zapata F, Niu W, Barranco-Medina S, Pelc
+LA, Di Cera E. Autoactivation of thrombin precursors. J Biol
+Chem 2013; 288: 11601 –10.
+6 Wood DC, Pelc LA, Pozzi N, Wallisch M, Verbout NG, Tucker
+EI, Gruber A, Di Cera E. WEDGE: an anticoagulant thrombin
+mutant produced by autoactivation. J Thromb Haemost 2015; 13:
+111–4.
+7 Barranco-Medina S, Pozzi N, Vogt AD, Di Cera E. Histone H4
+Promotes Prothrombin Autoactivation. J Biol Chem 2013; 288:
+35749 –57.
+8 Engelmann B, Massberg S. Thrombosis as an intravascular effec-
+tor of innate immunity. Nat Rev Immunol 2013; 13:3 4–45.
+9 Yamamoto E, Kitano Y, Hasumi K. Elucidation of crucial struc-
+tures for a catechol-based inhibitor of plasma hyaluronan-bind-ing protein (factor VII activating protease) autoactivation. Biosci
+Biotechnol Biochem 2011; 75: 2070 –2.

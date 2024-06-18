@@ -1,0 +1,29 @@
+ For the ﬁrst 2 years
+this was the quality assurance scheme developed for theEuropean Concerted Action on Thrombosis (ECAT/EQAS)(Leiden, the Netherlands) and for the subsequent years, theUK NEQAS quality assurance scheme (Shefﬁeld, UK).Diagnostic criteria were based on those used in these centers,which for the deﬁciencies was based on repeated testing, and insome cases also on genotypic conﬁrmation.
+Recruitment was before identiﬁcation of the G20210A
+mutation in the prothrombin gene. During prospective fol-low-up, we gathered information on the presence of thismutation as a second defect for 504 relatives and 424 probandsincluded in the analyzes. Thus we only have information on theprothrombin G20210A mutation as a second defect in 64% ofthe participants with inherited thrombophilia.
+Analysis and statistics
+For the analysis of the baseline data collected at study inclusionon the history of venous thrombotic events prior to study entry,
+we included only probands and relatives from families in which
+thrombophilia testing was done because of the occurrence ofvenous thrombosis in the proband or family, and not when thiswas done solely for research purposes or family planning. Thisrestriction was to avoid selection bias and to stay as close aspossible to the real-life situation of an individual from asymptomatic thrombophilia family asking a physician foradvice.Venous thrombosis in familial thrombophilia 1527
+/C2112004 International Society on Thrombosis and Haemostasis
+ 15387836, 2004, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/j.1538-7836.2004.00852.x by Readcube (Labtiva Inc.), Wiley Online Library on [25/08/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+We were interested in the number, type, age at onset, event-
+free survival, incidence, and relative risk of venous thrombo-embolic events (VTEs) experienced before inclusion in thestudy. Only objectively conﬁrmed events (by ultrasound,Duplex or venography for DVT, and by ventilation-perfusionscanning or angiography for PE) and conﬁrmed events at otherlocations were counted as such; non-deﬁnite events, i.e. based
+on clinical or patient diagnosis were recorded but not
+considered in the analysis reported here, including superﬁcialthrombophlebitis. Spontaneous venous thrombosis was de-ﬁned as venous thrombosis without known precipitating riskfactors (hospital admission, surgery, immobilization, plastercast, uninterrupted travels over 8 h, pregnancy, delivery).Thrombotic events in which the only risk factor was use of oralcontraceptives were also labeled as spontaneous.
+As probands were selected on having had venous thrombo-
+sis, we determined only the number and type of events, the ageof onset and the age at which 50% of the probands hadexperienced venous thrombosis (median survival) prior tostudy entry. The probability of being free of events at any givenage was analyzed by constructing Kaplan–Meier life tables.From these survival analyses we estimated the cumulativeincidence of thrombosis with conﬁdence intervals at age 30, 45
+and 60.
+The incidence of venous thrombotic events in relatives and
+controls was calculated by dividing the number of events by thetotal of observation years, i.e. the time between birth and theﬁrst event of interest, or until the end of study, i.e. the inclusionin the EPCOT study without a history of DVT, PE or othermajor event. The 95% conﬁdence intervals (CIs) were calcu-lated according to a Poisson distribution for the number of
+events [19]. Hazard ratios as an estimation of the relative risk
+were calculated by Cox-regression, with thrombosis as thedependent variable and presence of thrombophilia as anindependent variable. Center (as stratum) and sex (as categor-ical variable) were entered in the Cox-regression model toadjust for regional and sex effects. Event-free survival,incidence and hazard ratios we re calculated regardless of
+previous manifestations of superﬁcial thrombophlebitis.
+Results
+A total of 2838 participants were enrolled in the cohort of
+whom 1626 had a thrombophilic defect (672 probands, 954relatives of probands) and 1212 were controls (900 partners,
+312 friends). In total, 600 probands and 846 relatives met the
+criteria that they were initially investigated because ofthrombosis themselves or because of thrombosis in a familymember.
+The main characteristics at inclusion of probands, relatives
+and controls are depicted in Table 1. Among individuals withthrombophilia, men were slightly underrepresented (40% inprobands and relatives).

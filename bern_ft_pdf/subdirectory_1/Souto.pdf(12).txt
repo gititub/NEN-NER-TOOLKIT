@@ -1,0 +1,40 @@
+However, the decomposition of phenotypic correlationsinto genetic and environmental components is poten-tially valuable, since hidden relationships between traitscan be revealed (Comuzzie et al. 1996). For example, iftrait and trait , where g and e ypg1ey pg1e
+11 1 22 2
+denote genetic and environmental effects, the observed
+correlations between the phenotypic traits are deter-mined by the latent genetic and environmental corre-lations between the component variables. By studyingboth traits in extended families, we can estimate boththe genetic ( r
+g) and the environmental ( re) correlations
+between traits. The phenotypic correlation ( rp) is derived
+from these two constituent correlations and the herita-bilities of the traits:
+22 2 2ÎÎ Î( )() () rp hhr112h 12hrp 12 g 12 e.
+We have incorporated the threshold model (Duggirala
+et al. 1997, 1999 a) and the mixed discrete/continuous
+trait variance component method (Williams et al. 1999 b)
+into our statistical genetic computer package, SOLAR
+(Almasy and Blangero 1998). All statistical genetic anal-yses were performed using SOLAR, with these modi®-
+cations. Estimates of variance component parameters,including the heritabilities of thrombosis and the quan-titative measures and all the phenotypic, genetic, andenvironmental correlations between thrombosis and thequantitative phenotypes, were obtained by use of max-imum-likelihood estimation. All hypothesis tests wereperformed using likelihood-ratio test statistics (Kendalland Stuart 1972; Self and Liang 1987).
+Because 12 of the 21 pedigrees were ascertainedSouto et al.: Genetics of Thrombosis: The GAIT Study 1455
+Table 1
+Number and Percent of Individuals in Each Diagnostic Category of
+Thrombosis and Age at Diagnosis
+DiagnosisNo. (and %)
+of Individuals
+with ThrombosisMean Age
+at Diagnosis
+(years)
+Venous thrombosis:
+Deep-vein thrombosis 28 (52.8) 40.3Pulmonary embolism 9 (17.0) 45.6SFT 14 (26.4) 41.2Other venous thrombosis 3 (5.7) 58.0Any venous thrombosis 40 (75.5) 39.7
+Arterial thrombosis:
+Myocardial infarction 4 (7.5) 66.5Angina pectoris 4 (7.5) 57.3Ischemic stroke 6 (11.3) 61.0Transient ischemic attack 5 (9.4) 55.4Any arterial thrombosis 17 (32.1) 61.0
+Any thrombosis 53 (100.0) 44.5
+NOTE.ÐSome individuals are represented in multiple diagnostic
+categories.through a thrombophilic proband, all analyses included
+an ascertainment correction, to allow unbiased estima-tion of parameters relevant to the general population.To achieve this, the likelihood for each family ascer-tained through a thrombophilic proband was condi-tioned on the phenotype of the proband (Hopper andMathews 1982; Boehnke and Lange 1984). Since twofamilies were ascertained, in part, because of the familyhistory of the proband, analyses were repeated condi-tioning on both the original proband and the affected®rst-degree relative in these two families. However, theresults of the analyses were unchanged.
+Results
+Characteristics of Affected Individuals
+A total of 53 people with venous or arterial throm-
+bosis were identi®ed, 47 in the families ascertainedthrough thrombophilic probands and 6 in the randomlyascertained families. The number of affected individualsper family ascertained through a thrombophilic probandwas 2±8, with a mean of 3.9. The distribution of throm-botic subjects in these extended families included manyinstances of affected ®rst-degree relatives (siblings orparents and children) but also grandparents, aunts oruncles, and ®rst cousins. Eight of these families con-tained cases of both arterial and venous thrombosis. Twoof the randomly ascertained families each had two in-dividuals with thrombophlebitis. One of these was aparent-child pair, but the other consisted of two unre-lated individuals (in-laws). One randomly ascertainedfamily had a single individual with deep-vein throm-bosis, and one had an individual with transient ischemicattacks.
+There were slightly more affected females ( , np31
+58.5%) than males ( , 41.5%), and the age at np22
+diagnosis of ®rst thrombosis was 12±76 years, with amean of 44.5 (table 1). When venous and arterial throm-bosis were considered separately, 40 individuals, withan average age at ®rst diagnosis of 39.7 years, had oneor more diagnoses of venous thrombosis; 17 individuals,with an average age at ®rst diagnosis of 61.0 years, hadone or more arterial thromboses. The early observedage at diagnosis for venous thrombosis is partially afunction of the ascertainment criteria. Deep-vein throm-bosis was the most common condition ( ) and np28
+super®cial thrombophlebitis (SFT) the second most com-mon ( ). Fifteen (28%) of the 53 affected people np14
+had multiple thrombotic diagnoses, and ®ve (9.4%) ofthese people had both venous and arterial events.
