@@ -1,5 +1,5 @@
 
-This repository provides the code for automatic system to retrieve annotations of biomedical concepts such as genes, mutations and chemicals, from PubMed abstracts, PMC full-text articles, or plain text. The system utilizes API tools such as PubTator, BERN2, and Variomes for Named Entity Recognition (NER), Named Entity Normalization (NEN), and related entities (RE) with PubTator3. Additionally, it incorporates Auto-CORPus+GWASMiner that allows retrieval of information about diseases, variants, and significance values (p-values) from full-text articles, including data from inner tables. LitVar and SynVar are used for NEN. The workflow is integrated into the development of a web application using Shiny for Python.
+This repository provides the code for automatic system to retrieve annotations of biomedical concepts such as genes, mutations and chemicals, from PubMed abstracts, PMC full-text articles, or plain text. The system utilizes API tools such as [PubTator3][def2], [BERN2][def], [SIBiLS][def5], and [Variomes][def4] for Named Entity Recognition (NER), Named Entity Normalization (NEN), and related entities (RE). Additionally, it incorporates [Auto-CORPus][def1] and [GWAS-Miner][def0] that allows retrieval of information about diseases, variants, and significance values (p-values) from full-text articles, including data from inner tables. [LitVar][def6] and [SynVar][def7] are used for NEN. The workflow is integrated into the development of a web application using Shiny for Python.
 
 ## Biomedical Entity Recognition, Normalization and Relation Extraction
 
@@ -63,7 +63,7 @@ Or of a single file:
 If the output filename concludes with '.tsv', you will receive the results as a DataFrame. However, if it concludes with '.json', the results will be provided in the bioCjson format.
 
 
-## NER, NEN and RE for full-text articles with PubTator3 from PubMedIDs or PMCIDs.
+## NER, NEN and RE for full-text articles with [PubTator3][def2] from PubMedIDs or PMCIDs.
 
 $ python src/ptc.py -i [file_path_pmids/pmcids] -o [output_filename]
 
@@ -77,7 +77,7 @@ python src/ptc.py -i example/pmcs_sample.txt -o output.tsv
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
 
-## NER, NEN and Relations with PubTator from a query.
+## NER, NEN and Relations with [PubTator3][def2]from a query.
 
 This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by '+' sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
 
@@ -97,10 +97,8 @@ python src/ptc.py -q multiple+sclerosis -o MS.json -max 10
 
 ```
 
+## NER and NEN for PubMed abstracts with [BERN2][def]
 
-# BERN2
-
-## NER and NEN for PubMed abstracts with BERN2
 
 $ python src/bern_extract_pmids.py [file_path_pmids] [output_filename]
 
@@ -111,7 +109,7 @@ python src/bern_extract_pmids.py example/pmids_sample2.csv output_bern.tsv
 python src/bern_extract_pmids.py example/pmids_sample.tsv output_bern.json
 ```
 
-## NER and NEN for plain text with BERN2
+## NER and NEN for plain text with [BERN2][def]
 
 Plain text is limited to 5000 characters. To speed up the process, texts (each no longer than 5000 characters) are distributed into subdirectories within the designated input directory (with no more than 120 files per subdirectory). This process is parallelized to concurrently process the subdirectories. The outcome is acquired in a file bearing the same name as the subdirectory, following the specified format (JSON or TSV) – one result file per subdirectory. 
 
@@ -199,16 +197,17 @@ python src/pmid_from_pmc.py example/pmcs_sample.txt '.' _pmid
 
 
 1. Make a query:  
-- PMCID or PubMedID to **PubTator** (One or more, comma separated).
+- PMCID or PubMedID to [PubTator][def2] (One or more, comma separated).
   For example, "36064841, PMC9797458" (They can be mixed together).  
-- PMCID or PubMedID to **PubTator3 Relation Extraction** (One or more, comma separated).
+- PMCID or PubMedID to [PubTator - Relations][def2] (One or more, comma separated).
   For example, "36064841"
-- Entities or relations from a query with **PubTator**: Word (replace space with ‘&’) + Publication Date + max. Retrievals
-- Plain Text to **BERN2** (max. 5000 characters)
-- PubMedID to **BERN2** (one or more, comma separated)
-- Plain Text to **Drug Named Entity Recognition**
-- PMCID or PubMedID to **Drug Named Entity Recognition** (one or more, comma separated. They can be mixed together)
-- PubMedID to **Variomes**: Retrieves genes and drugs from abstracts.
+- [PubTator - Relations][def2] from a word query (replace space with ‘&’) + Publication Date + max. Retrievals
+- Plain Text to [BERN2][def] (max. 5000 characters)
+- PubMedID to [BERN2][def] (one or more, comma separated)
+- Plain Text to [Drug Named Entity Recognition][def3]
+- PMCID or PubMedID to [Drug Named Entity Recognition][def3] (one or more, comma separated. They can be mixed together)
+- PubMedID to [Variomes][def4]: Retrieves genes and drugs from abstracts.
+- PMCID or PubMedID to [SIBiLS][def5] (Swiss Institute of Bioinformatics Literature Services)
 
 2. Select output type: DataFrame or BioCjson.  
 3. Download results
@@ -239,9 +238,9 @@ cd appNEN;shiny run --reload
   style="display: block; width: 400px">
 
 1.	Make a query  
-- LitVar Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV/TSV/TXT  file with two mandatory columns,'gene' and 'HGVS. → dbSNP rs ID  
-- SynVar Normalization : e.g. 19915144, MEK1(p.Q56P) or upload CSV file with three mandatory columns: 'pmid', gene' and 'HGVS'.
-- Gene Normalization to gene ID (one by one, only a gene name or gene + specie)  
+- [LitVar][def6] Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV/TSV/TXT  file with two mandatory columns,'gene' and 'HGVS. → dbSNP rs ID  s
+- [SynVar][def7] Normalization : e.g. 19915144, MEK1(p.Q56P) or upload CSV file with three mandatory columns: 'pmid', gene' and 'HGVS'.
+- Gene ncbi Normalization to gene ID (one by one, only a gene name or gene + specie)  
 - Gene ID → Gene Name (one or more, comma separated)  
 - Rs id → Gene Info (one or more, comma separated)
 - PubMed ID to PMC ID (one or more, comma separated, or upload CSV/TSV/TXT file with tab separated IDs)*
@@ -251,3 +250,14 @@ cd appNEN;shiny run --reload
   
 2.	Download results  
 
+
+
+[def]: http://bern2.korea.ac.kr/
+[def0]: https://github.com/Thomas-Rowlands/GWAS-Miner
+[def1]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8885717/
+[def2]: https://www.ncbi.nlm.nih.gov/research/pubtator3/api
+[def3]: https://fastdatascience.com/drug-named-entity-recognition-python-library/
+[def4]: https://variomes.text-analytics.ch/apis
+[def5]: https://sibils.text-analytics.ch/doc/api/search/
+[def6]: https://www.ncbi.nlm.nih.gov/research/litvar2/
+[def7]: https://synvar.text-analytics.ch/
