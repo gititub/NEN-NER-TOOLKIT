@@ -45,14 +45,12 @@ class Pubtator():
                 response = requests.get(url)
                 response.raise_for_status()
                 json_data = response.json()
-    
-                # Extracting PubTator data from new JSON structure
+
                 for item in json_data["PubTator3"]:
                     passages = item.get("passages", [])
                     if passages:
                         list_of_pubtators.append(item)
                         id_sum += 1
-                        # Extract relations DataFrame and append to the list
                         relations_df = Pubtator.extract_relations(item, id)
                         all_relations_df_list.append(relations_df)
     
@@ -136,16 +134,16 @@ class Pubtator():
         if output_format == 'biocjson':
             if list_of_pubtators:
                 return json.dumps(list_of_pubtators, indent=4), json.dumps(list_of_pubtators, indent=4), json.dumps(
-                    texts_list, indent=4)
+                    texts_list, indent=4), id_sum, error_sum
             else:
                 return f'No results found. Check if the PubMed or PMC ID is correct.'
-        elif output_format == 'df':
+        else:
             if not df_list:
                 print("No articles with annotations found.")
-                return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+                return pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), id_sum, error_sum
             else:
                 merged_df = pd.concat(df_list, ignore_index=True)
-                return merged_df, all_relations_df, df_cleaned
+                return merged_df, all_relations_df, df_cleaned, id_sum, error_sum
     
 
     @staticmethod
@@ -162,18 +160,23 @@ class Pubtator():
 
     @staticmethod
     def run_extraction(ids, output_file):
+
         if output_file.endswith(".json"):
-            output_data, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'biocjson')
+            output_data = Pubtator.extract_pubtator(ids, 'biocjson')[1]
             with open(output_file, 'w') as output_file:
                 json.dump(output_data, output_file, indent=2)
             print(f"Biocjson data saved to {output_file}")
+
         elif output_file.endswith(".tsv"):
-            merged_df, all_relations_df, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'df')
+            merged_df, all_relations_df, df_cleaned, id_sum, error_sum = Pubtator.extract_pubtator(ids, 'df')
             merged_df.to_csv(output_file, sep='\t', index=False)
             print(f"DataFrame saved to {output_file}")
+
             relations_filename = output_file.replace(".tsv", "_relations.tsv")
             all_relations_df.to_csv(relations_filename, sep='\t', index=False)
             print(f"All Relations DataFrames saved to {relations_filename}")
+
+            df_cleaned.to_csv('fulltext.tsv', sep='\t', index=False)
         else:
             print("Invalid output format. Please choose 'biocjson' or 'df'.")
 
