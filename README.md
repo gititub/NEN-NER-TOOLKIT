@@ -5,16 +5,78 @@ This repository provides the code for automatic system to retrieve annotations o
 
 [Biomedical Entity Recognition, Normalization and Relation Extraction](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
 
+
+<img
+  src="https://github.com/gititub/test/blob/main/rsc/APP.png"
+  alt="Alt text"
+  style="display: block; width:400px">
+
+
+1. Make a query:  
+- PMCID or PubMedID to [PubTator][def2] (One or more, comma separated).
+  For example, "36064841, PMC9797458" (They can be mixed together).  
+- PMCID or PubMedID to [PubTator - Relations][def2] (One or more, comma separated).
+  For example, "36064841"
+- [PubTator - Relations][def2] from a word query (replace space with ‘&’) + Publication Date + max. Retrievals
+- Plain Text to [BERN2][def] (max. 5000 characters)
+- PubMedID to [BERN2][def] (one or more, comma separated)
+- Plain Text to [Drug Named Entity Recognition][def3]
+- PMCID or PubMedID to [Drug Named Entity Recognition][def3] (one or more, comma separated. They can be mixed together)
+- PubMedID to [Variomes][def4]: Retrieves genes and drugs from abstracts.
+- PMCID or PubMedID to [SIBiLS][def5] (Swiss Institute of Bioinformatics Literature Services)
+
+2. Select output type: DataFrame or BioCjson.  
+3. Download results
+
+<img
+  src="https://github.com/gititub/test/blob/main/rsc/app.png"
+  alt="Alt text"
+  style="display: block; width:400px">
+
+
+### Run the APP in Linux
+```
+cd app;shiny run --reload
+```
+You can also run NER-App in Windows.  
+
+
 ## Biomedical Entity Normalization
 
 [Biomedical Entity Normalization](https://nerversetoolkit.shinyapps.io/normamedtoolbox1/)
 
+
+### Run the APP in Linux
+```
+cd appNEN;shiny run --reload
+```
+
+<img
+  src="https://github.com/gititub/test/blob/main/rsc/NEN.png"
+  alt="Alt text"
+  style="display: block; width: 400px">
+
+1.	Make a query  
+- [LitVar][def6] Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV/TSV/TXT  file with two mandatory columns,'gene' and 'HGVS. → dbSNP rs ID  s
+- [SynVar][def7] Normalization : e.g. 19915144, MEK1(p.Q56P) or upload CSV file with three mandatory columns: 'pmid', gene' and 'HGVS'.
+- Gene ncbi Normalization to gene ID (one by one, only a gene name or gene + specie)  
+- Gene ID → Gene Name (one or more, comma separated)  
+- Rs id → Gene Info (one or more, comma separated)
+- PubMed ID to PMC ID (one or more, comma separated, or upload CSV/TSV/TXT file with tab separated IDs)*
+- PMC ID to PubMed ID (one or more, comma separated, or upload CSV/TSV/TXT file with tab separated IDs)*
+  
+  (*) It is not necessary a column name and there can be more than one column, it just will read the first column.  
+  
+2.	Download results  
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/workflow2.png"
   alt="Alt text"
   style="display: block; height:450px; width:800px">
 
+
+
+# Run Full Pipeline 
 
 ## Installation
 
@@ -37,7 +99,7 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 
   2. In your terminal window, run: bash Anaconda-latest-Linux-x86_64.sh
 
-## Run from the Command Line on Linux:
+## Run Full Pipeline from the Command Line on Linux:
 
 $ ./ann.sh [input file or directory] [json/tsv]
 
@@ -77,7 +139,7 @@ python src/ptc.py -i example/pmcs_sample.txt -o output.tsv
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
 
-## NER, NEN and Relations with [PubTator3][def2]from a query.
+## NER, NEN and Relations with [PubTator3][def2] from a query.
 
 This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by '+' sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
 
@@ -156,8 +218,7 @@ python src/bern_extract_ann.py bern_ft_pdf bern_ft_pdf_results df
 ```
 
 
-
-## Normalize Variants with SynVar and LitVar
+## Normalize Variants with [SynVar][def7] and [LitVar][def6]
 
 To run example use test.tsv or test2.csv as input file, or use your own data with 3 columns: pmid, gene, HGVS. Returns two files in the specified output directory, one with LitVar normalization and the second one with SynVar normalization and gene+drug NER.
 
@@ -183,72 +244,6 @@ Run example:
 ```
 python src/pmid_from_pmc.py example/pmcs_sample.txt '.' _pmid
 ```
-
-# NER-NEN-RE-App 
-
-## Biomedical Entity Recognition, Normalization and Relation Extraction
-
-[Biomedical Entity Recognition, Normalization and Relation Extraction](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
-
-<img
-  src="https://github.com/gititub/test/blob/main/rsc/APP.png"
-  alt="Alt text"
-  style="display: block; width:400px">
-
-
-1. Make a query:  
-- PMCID or PubMedID to [PubTator][def2] (One or more, comma separated).
-  For example, "36064841, PMC9797458" (They can be mixed together).  
-- PMCID or PubMedID to [PubTator - Relations][def2] (One or more, comma separated).
-  For example, "36064841"
-- [PubTator - Relations][def2] from a word query (replace space with ‘&’) + Publication Date + max. Retrievals
-- Plain Text to [BERN2][def] (max. 5000 characters)
-- PubMedID to [BERN2][def] (one or more, comma separated)
-- Plain Text to [Drug Named Entity Recognition][def3]
-- PMCID or PubMedID to [Drug Named Entity Recognition][def3] (one or more, comma separated. They can be mixed together)
-- PubMedID to [Variomes][def4]: Retrieves genes and drugs from abstracts.
-- PMCID or PubMedID to [SIBiLS][def5] (Swiss Institute of Bioinformatics Literature Services)
-
-2. Select output type: DataFrame or BioCjson.  
-3. Download results
-
-<img
-  src="https://github.com/gititub/test/blob/main/rsc/app.png"
-  alt="Alt text"
-  style="display: block; width:400px">
-
-**Run previous version of NerVerseToolkit in Linux:**
-```
-cd app;shiny run --reload
-```
-You can also run NER-App in Windows.  
-
-## Biomedical Entity Normalization
-
-[Biomedical Entity Normalization](https://nerversetoolkit.shinyapps.io/normamedtoolbox1/)
-
-**Run NormaMed Toolbox in Linux:**
-```
-cd appNEN;shiny run --reload
-```
-
-<img
-  src="https://github.com/gititub/test/blob/main/rsc/NEN.png"
-  alt="Alt text"
-  style="display: block; width: 400px">
-
-1.	Make a query  
-- [LitVar][def6] Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV/TSV/TXT  file with two mandatory columns,'gene' and 'HGVS. → dbSNP rs ID  s
-- [SynVar][def7] Normalization : e.g. 19915144, MEK1(p.Q56P) or upload CSV file with three mandatory columns: 'pmid', gene' and 'HGVS'.
-- Gene ncbi Normalization to gene ID (one by one, only a gene name or gene + specie)  
-- Gene ID → Gene Name (one or more, comma separated)  
-- Rs id → Gene Info (one or more, comma separated)
-- PubMed ID to PMC ID (one or more, comma separated, or upload CSV/TSV/TXT file with tab separated IDs)*
-- PMC ID to PubMed ID (one or more, comma separated, or upload CSV/TSV/TXT file with tab separated IDs)*
-  
-  (*) It is not necessary a column name and there can be more than one column, it just will read the first column.  
-  
-2.	Download results  
 
 
 
