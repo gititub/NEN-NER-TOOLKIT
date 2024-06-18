@@ -52,10 +52,10 @@ chmod +x *.sh
 ```
 Or of a single file:
 ```
-./ann.sh example/pmids.tsv json
+./ann.sh example/pmids_sample.tsv json
 ```
 ```
-./ann.sh example/pmcs.txt tsv
+./ann.sh example/pmcs_sample.txt tsv
 ```
 
 ℹ️ **Accepted file input extensions for all commands include .txt, .tsv, or .csv. The data must be organized into a single column of elements. If it's a number, interpret it as a PubMedID; if it starts with "PMC," interpret it as a PMC ID. The first row may also include a column name, which can be either 'pmid' or 'PMC'.**
@@ -69,10 +69,10 @@ $ python src/ptc.py -i [file_path_pmids/pmcids] -o [output_filename]
 
 Run example: 
 ```
-python src/ptc.py -i example/pmids.tsv -o output.json
+python src/ptc.py -i example/pmids_sample.tsv -o output.json
 ```
 ```
-python src/ptc.py -i example/pmcs.txt -o output.tsv
+python src/ptc.py -i example/pmcs_sample.txt -o output.tsv
 ```
 In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
 
@@ -105,10 +105,10 @@ python src/ptc.py -q multiple+sclerosis -o MS.json -max 10
 $ python src/bern_extract_pmids.py [file_path_pmids] [output_filename]
 
 ```
-python src/bern_extract_pmids.py example/pmids2.csv output_bern.tsv
+python src/bern_extract_pmids.py example/pmids_sample2.csv output_bern.tsv
 ```
 ```
-python src/bern_extract_pmids.py example/pmids.tsv output_bern.json
+python src/bern_extract_pmids.py example/pmids_sample.tsv output_bern.json
 ```
 
 ## NER and NEN for plain text with BERN2
@@ -123,7 +123,7 @@ $ python src/download_pmc_fulltext.py [file_path_pmcs] [output_dir]
 
 Run example: 
 ```
-python src/download_pmc_fulltext.py example/pmcs.txt bern_ft
+python src/download_pmc_fulltext.py example/pmcs_sample.txt bern_ft
 ```
 Or from a one or more PMCs:
 ```  
@@ -135,7 +135,7 @@ Additionally, you can use **Selenium** and **ChromeDriver**. ℹ️ The ChromeDr
 $ python src/download_fulltext_bern.py [file_path_pmcs] [output_dir]
 
 ```
-python src/download_fulltext_bern.py example/pmcs.txt bern_ft
+python src/download_fulltext_bern.py example/pmcs_sample.txt bern_ft
 ```
 From **PDF files**:
 
@@ -143,7 +143,7 @@ $ python src/convert_pdf.py [pdf_directory] [output_directory]
 
 Run example: 
 ```
-python src/convert_pdf.py pdf_files bern_ft_pdf
+python src/convert_pdf.py example/pdf_files bern_ft_pdf
 ```
 Then, you can run **BERN2**. 
 
@@ -166,7 +166,7 @@ To run example use test.tsv or test2.csv as input file, or use your own data wit
 $ python src/normalize.py [input_file] [output_directory] 
 
 ```
-python src/normalize.py example/test2.csv '.'
+python src/normalize.py example/pmid_gene_HGVS.csv '.'
 ```
 
 ## ID converter
@@ -178,12 +178,12 @@ $ python src/pmc_from_pmid.py [pmids] [output_directory] [_pmc]
  
 Run example: 
 ```
-python src/pmc_from_pmid.py example/pmids.tsv '.' _pmc
+python src/pmc_from_pmid.py example/pmids_sample.tsv '.' _pmc
 ```
 **Convert PMC ids to PubMedIDs**  
 Run example: 
 ```
-python src/pmid_from_pmc.py example/pmcs.txt '.' _pmid
+python src/pmid_from_pmc.py example/pmcs_sample.txt '.' _pmid
 ```
 
 # NER-NEN-RE-App 
