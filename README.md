@@ -45,12 +45,6 @@ You can also run NER-App in Windows.
 
 [Biomedical Entity Normalization](https://nerversetoolkit.shinyapps.io/normamedtoolbox1/)
 
-
-### Run the APP in Linux
-```
-cd appNEN;shiny run --reload
-```
-
 <img
   src="https://github.com/gititub/test/blob/main/rsc/NEN.png"
   alt="Alt text"
@@ -69,14 +63,20 @@ cd appNEN;shiny run --reload
   
 2.	Download results  
 
+
+### Run the APP in Linux
+```
+cd appNEN;shiny run --reload
+```
+
+
+# Run Full Pipeline 
+
 <img
   src="https://github.com/gititub/test/blob/main/rsc/workflow2.png"
   alt="Alt text"
   style="display: block; height:450px; width:800px">
 
-
-
-# Run Full Pipeline 
 
 ## Installation
 
@@ -205,7 +205,7 @@ Run example:
 ```
 python src/convert_pdf.py example/pdf_files bern_ft_pdf
 ```
-Then, you can run **BERN2**. 
+Then, you can run [BERN2][def]:
 
 ⚠️ This process might take several minutes. 
 
@@ -220,7 +220,7 @@ python src/bern_extract_ann.py bern_ft_pdf bern_ft_pdf_results df
 
 ## Normalize Variants with [SynVar][def7] and [LitVar][def6]
 
-To run example use test.tsv or test2.csv as input file, or use your own data with 3 columns: pmid, gene, HGVS. Returns two files in the specified output directory, one with LitVar normalization and the second one with SynVar normalization and gene+drug NER.
+To run example use `pmid_gene_HGVS.csv/tsv` as input file, or use your own data with 3 columns: pmid, gene, HGVS. Returns two files in the specified output directory, one with [LitVar][def6]normalization and the second one with [SynVar][def7] normalization and gene+drug NER.
 
 $ python src/normalize.py [input_file] [output_directory] 
 
@@ -230,8 +230,9 @@ python src/normalize.py example/pmid_gene_HGVS.csv '.'
 
 ## ID converter
 
-**Convert PubMed ids to PMC ids**  
-Here, PubMedIDs is your input file containing the list of PubMedIDs (tsv, csv and txt format allowed), output_directory is the directory where you want to save the output file, and _pmc is the suffix you want to add to the output file's name. This script will read the input PubMedIDs, retrieve PMC IDs, and save the output file in the specified directory with the desired name.
+### Convert PubMed ids to PMCIDs
+
+Here, PubMedIDs is your input file containing the list of PubMedIDs (tsv, csv and txt format allowed), `output_directory` is the directory where you want to save the output file, and _pmc is the suffix you want to add to the output file's name. This script will read the input PubMedIDs, retrieve PMCIDs, and save the output file in the specified directory with the desired name.
 
 $ python src/pmc_from_pmid.py [pmids] [output_directory] [_pmc]
  
@@ -244,7 +245,6 @@ Run example:
 ```
 python src/pmid_from_pmc.py example/pmcs_sample.txt '.' _pmid
 ```
-
 
 
 [def]: http://bern2.korea.ac.kr/
