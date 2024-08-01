@@ -51,8 +51,8 @@ You can also run NER-App in Windows.
   style="display: block; width: 400px">
 
 1.	Make a query  
-- [LitVar][def6] Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV/TSV/TXT  file with two mandatory columns,'gene' and 'HGVS. → dbSNP rs ID  s
-- [SynVar][def7] Normalization : e.g. 19915144, MEK1(p.Q56P) or upload CSV file with three mandatory columns: 'pmid', gene' and 'HGVS'.
+- [LitVar][def6] Normalization: e.g. BRAFp.V600E  (one or more, comma separated) or upload CSV/TSV/TXT  file with two mandatory columns,"gene" and "HGVS". → dbSNP rs ID  s
+- [SynVar][def7] Normalization : e.g. 19915144, MEK1(p.Q56P) or upload CSV file with three mandatory columns: "pmid", "gene" and "HGVS".
 - Gene ncbi Normalization to gene ID (one by one, only a gene name or gene + specie)  
 - Gene ID → Gene Name (one or more, comma separated)  
 - Rs id → Gene Info (one or more, comma separated)
@@ -103,7 +103,7 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 
 $ ./ann.sh [input file or directory] [json/tsv]
 
-This code first checks if the input is a directory and then process each file within the directory while applying the appropriate logic based on the file content, PubMed ID or PMC ID. Based on which function is being executed, the output files will have distinct names: "pmids", "PMC", "bern" (only PubMedIDs), "gwasminer" (only PMCIDs) and "ptc" will be appended to the output file name. Additionally, the script distinguishes between two output formats: 'biocjson' or 'dataframe' depending on whether the second argument is 'json' or 'tsv' respectively.
+This code first checks if the input is a directory and then process each file within the directory while applying the appropriate logic based on the file content, PubMed ID or PMC ID. Based on which function is being executed, the output files will have distinct names: "pmids", "PMC", "bern" (only PubMedIDs), "gwasminer" (only PMCIDs) and "ptc" will be appended to the output file name. Additionally, the script distinguishes between two output formats: "biocjson" or "dataframe" depending on whether the second argument is "json" or "tsv" respectively.
 
 Results will be saved in a directory named "results_[datetime]".
 
@@ -120,9 +120,9 @@ Or of a single file:
 ./ann.sh example/pmcs_sample.txt tsv
 ```
 
-ℹ️ **Accepted file input extensions for all commands include .txt, .tsv, or .csv. The data must be organized into a single column of elements. If it's a number, interpret it as a PubMedID; if it starts with "PMC," interpret it as a PMC ID. The first row may also include a column name, which can be either 'pmid' or 'PMC'.**
+ℹ️ **Accepted file input extensions for all commands include .txt, .tsv, or .csv. The data must be organized into a single column of elements. If it"s a number, interpret it as a PubMedID; if it starts with "PMC", interpret it as a PMC ID. The first row may also include a column name, which can be either "pmid" or "PMC".**
 
-If the output filename concludes with '.tsv', you will receive the results as a DataFrame. However, if it concludes with '.json', the results will be provided in the bioCjson format.
+If the output filename concludes with ".tsv", you will receive the results as a DataFrame. However, if it concludes with ".json", the results will be provided in the bioCjson format.
 
 
 ## NER, NEN and RE for full-text articles with [PubTator3][def2] from PubMedIDs or PMCIDs.
@@ -136,14 +136,14 @@ python src/ptc.py -i example/pmids_sample.tsv -o output.json
 ```
 python src/ptc.py -i example/pmcs_sample.txt -o output.tsv
 ```
-In case you choose 'tsv', it returns two dataframes: `output.tsv` with entities, and `output_relations.tsv` with correlations between entities. 
+In case you choose "tsv", it returns three different files: `output.tsv` with entities, `output_relations.tsv` with correlations between entities, and `output_text.tsv` with the full text of the references by sections. 
 
 
 ## NER, NEN and Relations with [PubTator3][def2] from a query.
 
-This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by '+' sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
+This command will search for PMC articles related to a query, for example *biotin* or *Hodgkin+Lymphoma* (it is not case sensitive), using Bio.Entrez (Spaces may be replaced by "+" sign). Retrieves and processes PubTator annotations and save the results in the specified output file in biocjson or tsv format.
 
-The fourth command-line argument is the number of IDs to retrieve. The last command-line argument is the oldest publication date. If you don't want to filter by date, simply omit the `-date` argument. This last argument is not mandatory.
+The fourth command-line argument is the number of IDs to retrieve. The last command-line argument is the oldest publication date. If you don"t want to filter by date, simply omit the `-date` argument. This last argument is not mandatory.
 
 
 $ python src/ptc_extract_pmc_query.py -q [query] -o [output_filename] -max [max retrievals] -date ["YYYY/MM/DD"]
@@ -156,7 +156,6 @@ python src/ptc.py -q biotin -o biotin.tsv -max 20 -date "2022/01/01"
 
 ```
 python src/ptc.py -q multiple+sclerosis -o MS.json -max 10
-
 ```
 
 ## NER and NEN for PubMed abstracts with [BERN2][def]
