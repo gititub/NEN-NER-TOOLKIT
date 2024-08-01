@@ -23,29 +23,30 @@ def get_gene_info_by_gene_number(gene_numbers):
 
 def get_gene_info_by_gene_name(gene, species=None):
     data = []
-
-    if species is None:
-        url = f"https://www.ncbi.nlm.nih.gov/gene/?term={gene}"
-    else:
-        sp1, sp2 = species.split(' ')
-        url = f"https://www.ncbi.nlm.nih.gov/gene/?term={sp1}+{sp2}+{gene}"
-
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-
-    gene_elements = soup.find_all('td', class_='gene-name-id')
-    for gene_element in gene_elements:
-        gene_name = gene_element.a.get_text()
-        number_element = gene_element.find_next('span', class_='gene-id')
-        gene_number = number_element.get_text() if number_element else "Not Found"
-        species_element = gene_element.find_next('td').find_next('em')
-        species_name = species_element.get_text() if species_element else "Not Found"
-
+    gene_list = [num.strip() for num in gene.split(',') if num.strip()]
+    for gene in gene_list: 
         if species is None:
-            data.append([gene_name, species_name, gene_number, url])
+            url = f"https://www.ncbi.nlm.nih.gov/gene/?term={gene}"
         else:
-            data.append([gene_name, species_name, gene_number, url])
-            break  # Break the loop after finding the first entry for the specified species
+            sp1, sp2 = species.split(' ')
+            url = f"https://www.ncbi.nlm.nih.gov/gene/?term={sp1}+{sp2}+{gene}"
+
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        gene_elements = soup.find_all('td', class_='gene-name-id')
+        for gene_element in gene_elements[:5]:
+            gene_name = gene_element.a.get_text()
+            number_element = gene_element.find_next('span', class_='gene-id')
+            gene_number = number_element.get_text() if number_element else "Not Found"
+            species_element = gene_element.find_next('td').find_next('em')
+            species_name = species_element.get_text() if species_element else "Not Found"
+
+            if species is None:
+                data.append([gene_name, species_name, gene_number, url])
+            else:
+                data.append([gene_name, species_name, gene_number, url])
+                break  # Break the loop after finding the first entry for the specified species
 
     df = pd.DataFrame(data, columns=['gene_name', 'sp', 'id', 'url'])
     return df

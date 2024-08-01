@@ -1,0 +1,11 @@
+shiny
+requests
+pandas
+shinyswatch
+beautifulsoup4
+PyPDF2
+tqdm
+biopython
+Bio
+drug_named_entity_recognition 
+spacy

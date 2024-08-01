@@ -1,4 +1,4 @@
-name: env_toolkit
+name: myenv
 channels:
   - nvidia
   - conda-forge
@@ -52,7 +52,6 @@ dependencies:
       - fsspec==2023.12.2
       - fuzzywuzzy==0.18.0
       - gprofiler-official==1.0.0
-      - gwas-miner==0.0.1
       - huggingface-hub==0.20.3
       - idna==3.6
       - importlib-metadata==4.6.3

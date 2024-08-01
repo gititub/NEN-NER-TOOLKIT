@@ -1,82 +1,102 @@
-body 
-{
-    background-color:#F8B88B;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+body {
+    background-color: #F0F4F8;
+    padding: 20px 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 16px;
 }
 
-h3
-{
-    background: white;
+h3 {
+    background: #ffffff;
     width: 100%;
-    border: 4px #eee solid;
-    border-radius: 35px;
-    color: #2F539B;
-    height: 35px;
-    font-family: verdana, sans-serif;
-    font-size: 16pt;
-    font-weight: bold;
+    border: 2px solid #D3D3D3;
+    border-radius: 10px;
+    color: #3C4858;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
     text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+table {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
     padding: 10px;
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
-p
-{
-    font-family: verdana, sans-serif;
+td, th {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
-
-table
-{
-    border: 5px solid #FFA500;
-    border-radius: 25px;
-    font-size: 6pt;
-    padding: 20;
-    width: 60%;
-    font-family: verdana, sans-serif;
-}
-
-td
-{
-    padding: 30;
-    font-size: 10pt;
-    border: 1px solid #D0D0D0;
-    border-radius: 25px;
-}
-
-th
-{
-    padding: 10;
+th {
+    background-color: #f4f4f4;
     font-weight: bold;
-    font-size: 10pt;
     text-align: left;
     text-transform: uppercase;
 }
 
-a:link
-{
-    color: blue;
+a:link, a:visited {
+    color: #007BFF;
     text-decoration: none;
-    font-weight: bold;
-}
-button:action
-{
-    color: blue;
-    text-decoration: none;
-    font-weight: bold;
-}
-pre
-{
-    color: black;
-    background: #E5E4E2;
-    font-size: 8pt;
+    font-weight: 600;
 }
 
-input
-{
-    width:300px;
+a:hover, a:active {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
+button {
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
+button:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    color: #333;
+    background: #f8f8f8;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}

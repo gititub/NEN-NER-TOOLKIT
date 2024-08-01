@@ -3,7 +3,7 @@ This repository provides the code for automatic system to retrieve annotations o
 
 ## Biomedical Entity Recognition, Normalization and Relation Extraction
 
-[Biomedical Entity Recognition, Normalization and Relation Extraction](https://2maxto-amelia-martinez0sequera.shinyapps.io/nerversetoolkit2/)
+[Biomedical Entity Recognition, Normalization and Relation Extraction](https://mtools.shinyapps.io/ner-nen-re/)
 
 
 <img
@@ -43,7 +43,7 @@ You can also run NER-App in Windows.
 
 ## Biomedical Entity Normalization
 
-[Biomedical Entity Normalization](https://nerversetoolkit.shinyapps.io/normamedtoolbox1/)
+[Biomedical Entity Normalization](https://mtools.shinyapps.io/varnorm/)
 
 <img
   src="https://github.com/gititub/test/blob/main/rsc/NEN.png"
@@ -85,10 +85,10 @@ git clone https://github.com/gititub/NEN-NER-TOOLKIT.git
 cd NEN-NER-TOOLKIT
 
 ```
-Create a new Conda environment from environment.yml file.
+Create a new Conda environment from yml file.
 ```
 conda env create -f myenv.yml
-conda activate env_toolkit
+conda activate myenv
 pip install -r requirements.txt
 ```
 Here is a step-by-step guide to installing Conda and creating your own Conda environment:

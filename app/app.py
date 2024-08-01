@@ -3,14 +3,16 @@ import json
 import os
 import pandas as pd
 import shinyswatch
+from shinyswatch import theme
 from shiny import App, Inputs, Outputs, Session, reactive, render, req, ui
 from shiny.types import ImgData
 from code import count_characters, extract_pubtator, query_plain, \
     query, plain_drugs, bern_extract_pmids, synvar_ann, apply_db_from_wikipedia, extract_sibils
 
+#theme.darkly()
+
 app_ui = ui.page_fluid(
-    shinyswatch.theme.superhero(),
-    # ui.include_css("style.css"),
+    ui.include_css("style.css"),
     ui.br(),
     ui.row(
         ui.column(
@@ -35,7 +37,7 @@ app_ui = ui.page_fluid(
         ),
     ),
     ui.layout_sidebar(
-        ui.panel_sidebar(
+        ui.sidebar(
             ui.input_select(
                 "input_type",
                 "Select:",
@@ -69,7 +71,7 @@ app_ui = ui.page_fluid(
             ui.input_switch("all_results", "Show All", True),
             class_="mb-3",
         ),
-        ui.panel_main(
+        ui.card(
             ui.div(
 
                 ui.div(
@@ -131,6 +133,8 @@ def server(input, output, session):
         elif input.input_type() == 'plain_text':
             return "e.g. Progressive multifocal leukoencephalopathy (PML) is a rare demyelinating disorder of the brain caused by reactivation of the JC virus (JCV), a polyomavirus that infects at least 60% of the population but is asymptomatic or results in benign symptoms in most people. "
         elif input.input_type() == 'pmid_bern':
+            return "e.g. 27432226, 22383897"
+        elif input.input_type() == 'pmid_synvar':
             return "e.g. 27432226, 22383897"
         elif input.input_type() == 'plain_drugs':
             return "e.g. Ruxolitinib also is approved for treatment of patients with polycythemia vera who have had an inadequate response to or are intolerant of hydroxyurea."
