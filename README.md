@@ -7,7 +7,7 @@ This repository provides the code for automatic system to retrieve annotations o
 
 
 <img
-  src="https://github.com/gititub/test/blob/main/rsc/APP.png"
+  src="https://github.com/gititub/test/blob/main/rsc/ner.png"
   alt="Alt text"
   style="display: block; width:400px">
 
@@ -28,11 +28,6 @@ This repository provides the code for automatic system to retrieve annotations o
 2. Select output type: DataFrame or BioCjson.  
 3. Download results
 
-<img
-  src="https://github.com/gititub/test/blob/main/rsc/app.png"
-  alt="Alt text"
-  style="display: block; width:400px">
-
 
 ### Run the APP in Linux
 ```
@@ -46,7 +41,7 @@ You can also run NER-App in Windows.
 [Biomedical Entity Normalization](https://mtools.shinyapps.io/varnorm/)
 
 <img
-  src="https://github.com/gititub/test/blob/main/rsc/NEN.png"
+  src="https://github.com/gititub/test/blob/main/rsc/nen.png"
   alt="Alt text"
   style="display: block; width: 400px">
 
